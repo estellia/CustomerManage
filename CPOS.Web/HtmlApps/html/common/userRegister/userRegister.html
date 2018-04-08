@@ -1,0 +1,98 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="x-rim-auto-match" content="none">
+		<link href="../../../css/base/global.css?v1.2" rel="stylesheet" type="text/css" />
+		<title name="UserRegister">注册</title>
+        <style>
+			html,body{height:100%;}
+			input{width:100%;border:none;background:none;}
+        	.userRegisterArea{min-height:100%;padding:15px 0;background:#eee;color:#333;}
+			.userRegisterArea .itemBox{margin-bottom:18px;background:#fff;}
+			.userRegisterArea .itemBox.phoneBox{border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;}
+			.userRegisterArea .itemBox.authCodeBox{margin-left:13px;margin-right:13px;overflow:hidden;border-radius:3px;}
+			.userRegisterArea .tit{float:left;width:75px;line-height:40px;text-align:right;font-size:13px;color:#666;}
+			.userRegisterArea label{display:block;height:40px;margin-left:75px;}
+			.userRegisterArea .authCodeBox label{margin-left:0;}
+			.userRegisterArea .authCodeBox label input{padding-left:10px;}
+			.userRegisterArea label input{height:40px;font-size:13px;color:#666;}
+			.userRegisterArea label select{height: 40px;width: 100%;border: none;background: #fff;}
+			.userRegisterArea .authBox{height:40px;border:1px solid #d9dce3;border-radius:3px}
+			.getAuthCodeBtn{float:right;width:105px;height:38px;line-height:38px;text-align:center;font-size:13px;border-radius:0 3px 3px 0;background:#fd6138;color:#fff;}
+			.authCodeBox label{margin-right:105px;border:none;}
+			
+			.submitBtn{display:block;line-height:37px;margin:30px 30px 0;font-size:13px;text-align:center;border-radius:3px;background:#fd6138;color:#fff;}
+        </style>
+	</head>
+	<body>
+		<div class="wx_loading" id="masklayer" style="display:none;background-color:#FFF;">
+			<div class="wx_loading_inner">
+				<i class="wx_loading_icon"></i>正在加载...
+			</div>
+		</div>
+        
+        
+        <div class="userRegisterArea">
+        	<div id="userRegisterBox">
+                <div class="itemBox phoneBox">
+                	<span class="tit">手机号：</span>
+                    <label><input id="mobileInput" type="tel" placeholder=""></label>
+                </div>
+                
+                <div class="itemBox authCodeBox">
+                    <div class="authBox">
+                        <a href="javascript:;" class="getAuthCodeBtn">获取验证码</a>
+                        <label><input id="authCardVal" type="text" placeholder=""></label>
+                    </div>
+                </div>
+                <a href="javascript:;" class="submitBtn" id="submitContactWay">下一步</a>
+            </div>
+            
+            <div id="vipUserInfoBox" style="display:none;">
+            	<!--
+                <div class="itemBox">
+                    <p class="tit">姓名</p>
+                    <label><input type="text" placeholder="请输入"></label>
+                </div>
+                
+                <div class="itemBox">
+                    <p class="tit">地址</p>
+                    <label><input type="text" placeholder="请输入"></label>
+                </div>
+                -->
+                <a href="javascript:;" class="submitBtn" id="submitVipInfo">确定</a>
+            </div>
+
+            
+            
+        </div>
+        
+		
+
+	</body>
+    
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+<!--注册的动态表单模板-->
+<script id="tpl_block_item" type="text/html">
+<div class="itemBox">
+    <p class="tit"><%=ControlInfo.ColumnDesc%>：</p>
+    <label>
+	<!--input类型-->
+	<%if(ControlInfo.DisplayType==1||ControlInfo.DisplayType==2||ControlInfo.DisplayType==3||ControlInfo.DisplayType==4||ControlInfo.DisplayType==7){%>
+		<input type="text" data-type="<%=ControlInfo.DisplayType%>" data-text="<%=ControlInfo.ColumnDesc%>" data-isMustDo="<%=ControlInfo.IsMustDo%>"  name="vipinfo" wid="<%=ID%>" placeholder="请输入" />
+	<%}else if(ControlInfo.DisplayType==5){%>
+		<select name="vipinfo" class="select-form" data-isMustDo="<%=ControlInfo.IsMustDo%>" wid="<%=ID%>">
+			<%for(var i=0;i<ControlInfo.OptionValues.length;i++){ var val=ControlInfo.OptionValues[i];%>
+				<option value="<%=val.Key%>"><%=val.Value%></option>
+			<%}%>
+		</select>
+	<%}else if(ControlInfo.DisplayType==6){%>
+		<input type="date" data-isMustDo="<%=ControlInfo.IsMustDo%>" data-type="<%=ControlInfo.DisplayType%>" data-text="<%=ControlInfo.ColumnDesc%>" name="vipinfo" wid="<%=ID%>" id="txtDate" class="date" placeholder="选择日期"  />
+	<%}%>
+	</label>
+</div>
+</script>
+</html>

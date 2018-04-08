@@ -1,0 +1,44 @@
+﻿@charset "utf-8";
+body { padding-bottom:800px;  height: 30px;}
+.bargainover{position: fixed;top: 0;left: 0;bottom: 0;right: 0;z-index: 9999; background-color: transparent;width: 100%;height: 100%;}
+.bargainover img{width:100%;height:100%}
+ .commonSnappedBar{height:31px;padding:0px 15px 0 10px;font:12px/30px "黑体";border-top:1px solid #ccc;border-bottom:1px solid #ccc;background:#ebebeb;color:#fe7c23;}
+.commonSnappedBar .tit{float:left;font-size:13px;font-weight:bold;}
+.commonSnappedBar .countDownBox{float:right;}
+.commonSnappedBar .text{float:left;font-size:12px;font-weight:bold;}
+.commonSnappedBar .timeBox{float:left;margin:8px 0 0 4px;}
+.commonSnappedBar .timeBox>*{float:left;height:14px;margin-left:1px;text-align:center;font:12px/14px "Arial";color:#fff;}
+.commonSnappedBar .timeBox em{width:10px;border-radius:2px;background:#4f4242;}
+.commonSnappedBar .timeBox  .resize{width:auto;border-radius:2px;background:#4f4242;}
+.commonSnappedBar .timeBox span{width:7px;color:#4f4242;}
+
+.snappedList-item{position:relative;height:141px;padding:0 15px 0 12px;border-bottom:1px solid #ccc;color:#999;display:-webkit-box;}
+.snappedList-item  .picWrap .SoldOut{position: absolute; width: 60px;height: 60px; top: 50%;left: 50%;margin-left: -30px;margin-top: -30px;}
+.snappedList-item .picWrap{width:109px;height:109px;margin-top:16px;border:1px solid #e0e0e0;}
+.snappedList-item .picWrap img{display:block;width:107px;height:107px;position: relative;}
+.snappedList-item .infoBox{position:relative;-webkit-box-flex:1;margin:16px 0 0 12px;color: #999999;}
+.snappedList-item .title{height:60px;font:15px/17px "黑体";overflow:hidden;}
+.snappedList-item .priceBox{margin-top:4px;}
+.snappedList-item .priceBox>*{float:left;}
+.snappedList-item .discount{width:25px;margin-top:4px;height:15px;font:12px/15px "Arial";text-align:center;background:#ff3200;color:#fff;}
+/*-webkit-transform:scale(0.5);position:relative;left:-10px;*/
+.snappedList-item .floorPrice{line-height:24px;margin:0 8px 0 1px;font-size:15px;font-family:Arial;}
+.snappedList-item .floorPrice span{color:#ff3200;}
+
+.snappedList-item .stock{line-height:24px;margin:0 8px 0 1px;font-size:15px;font-family:Arial;  float: left;}
+.snappedList-item .stock span {margin-left: 5px;}
+.snappedList-item .partake{line-height:24px;margin:0 8px 0 1px;font-size:15px;font-family:Arial;float: right;}
+.snappedList-item .percent{display:none;}
+.snappedList-item .percent span{position:absolute;top:0;left:0;height:100%;background:#fe7c23;opacity:0.45;}
+.snappedList-item .robTip{display:none;position:absolute;top:0px;left:0px;width:58px;height:58px;background:url(/HtmlApps/images/public/shop_default/robTip.png) no-repeat 0 0;background-size:100%;}
+.snappedList-item .more{position:absolute;top:88px;left:0px;width:115px;font:15px/1.5em "黑体";background:url(/HtmlApps/images/public/shop_default/arr.png) no-repeat 100px center;background-size:8px 15px;color:#fe7c23;}
+/*即将推出*/
+.snappedList.on .buyCount{display:block;}
+.snappedList.on .percent{display:block;}
+.snappedList.on .more{display:none;}
+/*抢光了*/
+.snappedList .snappedList-item.on .robTip{display:block;}
+.snappedList-item.on .title{color:#999;}
+.snappedList-item.on .discount{background:#999;}
+.snappedList-item.on .percent{display:none;}
+.snappedList-item.on .curPrice{color:#fe7c23;}

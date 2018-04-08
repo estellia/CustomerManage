@@ -1,0 +1,8 @@
+
+2018/2/5 13:30:45 :  获取凭证接口： 
+
+2018/2/5 13:30:45 :  appID： wx677d57057f5bc14f
+
+2018/2/5 13:30:45 :  appSecret： 9c7f64e593c422834110e330d4b8e11c
+
+2018/2/5 13:30:45 :  调用获取凭证接口返回值： {"access_token":"6_GxOQeHv-mAqXYTSOkW9IOTKh9j99JrEYcA7HVJp0ICGsVH161uogTAWD-QgkQgSYfES_iFtIoP4VF-vy2qGn1OCnN9uvnBu1zYTfGuGYyAHQ9xPP8Segk0fHKK1nfAcOH5p_YySoDEETk6K-EMPiAHALTW","expires_in":7200}

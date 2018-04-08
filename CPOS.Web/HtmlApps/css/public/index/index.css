@@ -1,0 +1,122 @@
+@charset "utf-8";
+html,body{height:100%;}
+.indexPage{background:#f6f6f6;}
+.indexPage .content{width:640px;margin:0 auto;}
+.content{background-color: #f0f3f5;}
+/*commonSearch   new*/
+.commonSearchArea{height: 88px;padding: 12px 19px;background:#eee;color:#fff;width: 100%;}
+.commonSearchArea .allClassify{display:none;float:left;height:100%;width: 60px;background:url(/HtmlApps/images/public/index_shop/logo.png) no-repeat center center; }
+.commonSearchBox{margin-left:60px;height: 100%;border-radius: 64px;background:#fff;}
+.commonSearchBox .searchBtn{float:right;width: 88px;height:100%;background:url(/HtmlApps/images/public/index_shop/searchIcon.png) no-repeat center center;}
+.commonSearchBox .searchBtn input{width:100%;height:100%;opacity: 0;/* margin-right: 20%; */}
+.commonSearchBox .searchInput{height: 100%;margin-right: 60px;}
+.commonSearchBox .searchInput input{display:inline-block;width: 94%;height: 70%;text-indent:10px;font-size: 22px;background:none;border:none;border-right:1px solid #ccc;color:#8c8e92;padding-left: 16px;margin-top: 2%;}
+.commonSearchBox .searchInput input::-webkit-input-placeholder { color:#8c8e92;}
+
+/*commonBanner*/
+#PicScroll{position:relative;overflow:hidden;}
+#PicScroll .picList{width:100%;}
+#PicScroll .picList li{float:left;text-align:center;}
+#PicScroll .picList li a{display:block;}
+#PicScroll .picList li img{display:block;width:100%;height:auto;}
+#PicScroll .asideShow{width:100%;position:absolute;bottom:0;text-align:center;}
+#PicScroll .dot{display:inline-block;}
+#PicScroll .dot em{float:left;width:15px;height:15px;margin-left:15px;border-radius:15px;background:rgba(136,210,146,0.7);}
+#PicScroll .dot .on{background:rgba(254,254,254,0.9);}
+
+/*图文导航列表*/
+/*图文导航列表*/
+.navPicArea{height:228px; background:#fff;width: 100%;  border-bottom: 1px solid #cdcece}
+.navPicArea a{float:left;width:25%;text-align: center;height: 114px;vertical-align: middle;}
+
+/*****活动列表*****/
+.activity,.originalityList{text-align: center;  border-top:1px solid #cdcece; border-bottom: 1px solid #cdcece;display: inline-block;}
+
+.timeList{padding-left: 15px; line-height: 57px;color: #929292; font-size: 20px;  white-space: nowrap }
+.timeList em{display:inline-block; text-align:center;font-size: 20px;background: #999;color: #fff; line-height: 30px; width: 42px; height: 30px;border-radius: 3px;margin-right: 3px;}
+.end{ font-size: 12px; color:#ff6822; line-height: 22px}
+.timeList .textL{color: #434546;margin-top:8px; font-size: 13px;width: 18px;float: left; }
+.timeList .textL span{display:block; line-height:14px;}
+.activity .tit{height: 76px; width:100%; text-align:left;vertical-align:middle;padding-left: 25px;line-height: 76px;  margin:0 auto; display:inline-flex;  }
+.activity .tit b{color:#333;  font-size: 30px; font-weight:700;}
+.activity .tit img{ width: 30px; height: 32px; margin-top: 20px; margin-left: 15px;}
+.activity .tit .timeList { margin-top: 8px;}
+.activity .tit .end {font-size:22px; line-height:56px;}
+/*noticeList*/
+.noticeList{/*height: 346px;*/  display: inline-block; text-align:center;font-size:12px; border-bottom: 1px solid #cdcece;position: relative;border-top: 1px solid #cdcece;}
+.noticeList .noticeArea{position:relative;width:33%;float:left; background: #fff;}
+.noticeList .noticeArea .center{width:100%;/*height:242px;*/border-left:1px solid #d7d6d2;border-right:1px solid #d7d6d2;}
+.noticeList .box .tint{color:#f33;}
+.noticeList h2.title{font-size:24px;line-height:52px;font-weight:bold;text-align:center; height: 52px; }
+.noticeList .timeList ,.noticeList .end{ margin-top: -7px;}
+.noticeList .end{height:50px; line-height: 50px; font-size:20px; }
+.line{width: 100%;position: absolute;height: 1px;background-color: #cdcece;left:0;top:99px; z-index: 12;  }
+
+/***商品列表***/
+
+
+.imagePanel{ width: 100%; display: inline-block; text-align: center;}
+.imagePanel .item{ width: 601px; display: inline-block; text-align: center; margin:0 0 20px 0;  background-color:#fff;}
+.imagePanel .txtPanel{padding-top: 10px; height: auto; font-size: 22px; border-top: solid 1px #e0e0e0;}
+.imagePanel .txtPanel p{ line-height: 26px; padding-left: 8px;text-align: left; width: 100%; display: inline-block;}
+.imagePanel .txtPanel p b{ line-height: 26px;float: left; margin-right: 8px;color: #ff5d13; font-size: 30px;}
+.imagePanel .txtPanel p.name{ line-height: 30px; font-size: 22px; font-weight: bold;}
+.imagePanel .itemL{ width: 290px; float: left;border: solid 1px #e0e0e0; }
+.imagePanel .itemR{ width: 290px; float: right;border: solid 1px #e0e0e0;}
+.imagePanel .txtPanel .discount{ float: right; color: #fff; width: 64px; height: 34px; background-color: #fd6138; font-size: 20px; text-align: center; line-height: 34px; border-radius: 6px;}
+.imagePanel .txtPanel .original{ font-size: 20px;color: #ccc;text-decoration:line-through}
+.imagePanel .txtPanel .sales b{color: #999;font-size: 22px;}
+.imagePanel .rightPanel{width: 400px;display:inline-block; float: right;}
+.imagePanel .imgL{ float: left;display:inline-block; max-width: 200px;}
+.imagePanel .txtPanel .hide{ display: none;}
+.imagePanel .rightPanel  p.name{ height: 108px; }
+.imagePanel .noTopBorder{ border: solid 1px #e0e0e0;border-top: 1px solid transparent;}
+.imagePanel .noLeftBorder{ border: solid 1px #e0e0e0;border-left:none; height: 200px;}
+
+/*标题*/
+.titlePanel{ height: 78px; width: 100%}
+.titlePanel .titleTxt{padding-left:25px;text-align: left; line-height: 78px; font-size: 30px; font-weight:bold; color: #434546;}
+.titlePanel .titleTxt.center{ text-align: center;}
+/*图文列表*/
+.commonIndexArea{position:relative;min-height: 269px; max-height:345px;background:#fff; }
+.commonIndexArea .allBox{width:100%;}
+.commonIndexArea .allBox a{display:block;height:100%;width:100%;text-align:center;overflow:hidden;}
+.commonIndexArea .borderLBox{border-left:1px solid #ccc;}
+.commonIndexArea .borderRBox{border-right:1px solid #ccc;}
+.commonIndexArea .leftBox,.commonIndexArea .rightBox{float:left;width:50%;}
+.commonIndexArea .rightBox a{display:block;height:50%;}
+.commonIndexArea .rightBox a:nth-child(2){border-top:1px solid #ccc; }
+.activity .commonIndexArea{max-height:642px;}
+
+/*关注*/
+
+.follow{max-width: 640px; margin:0 auto; width:100%; height: 100px;position:relative;}
+.follow p{float:left; padding-left:20px;font-size: 28px; color: #fff;line-height: 100px;position: relative;}
+.follow .followBtn{width:140px; height: 64px; line-height: 64px;font-size: 28px; margin:18px 20px; color: #fff; background-color: #00cccc;float: right;text-align: center;position: relative;border-radius: 6px;}
+.follow .backBg{width:100%; height:100%; background-color:#000; position:absolute; top:0; left:0;opacity: 0.7;}
+
+
+/**活动**/
+.hotBuy{display: none;}
+
+/*底部导航*/
+#navigation { border-top:solid 1px #ddd;border-bottom:solid 1px #ddd; min-width:320px; width: 100%;z-index: 9999;left:0; position: fixed;bottom:0px; background:#eee; height: 90px;padding-top:10px;}
+#navigation .navlist { width: 100%;  height: 53px;  margin: 0 auto;
+}
+#navigation .navlist li {
+    float: left;width: 25%;text-align: center; font-size: 22px;
+}
+#navigation .navlist li img {
+    max-height: 64px;
+    max-width: 64px;
+}
+.action{
+    margin-bottom: 20px;
+    background-color: #fff;
+    width: 100%;
+    display: inline-block;
+}
+#navigation,#search ,#PicScroll{margin-bottom:0; background-color: #eee}
+#shopList div.commonIndexArea:nth-of-type(2){border-top:none;}
+#shopList {border-top:1px solid #d3d4d4;}
+#followInfo{ position: fixed; top:0;left: 0; width: 100%; z-index: 9999}

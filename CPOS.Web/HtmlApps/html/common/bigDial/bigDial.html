@@ -1,0 +1,158 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<title name="BigDial">大转盘</title>
+<style>
+body{background:#f04a4f;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.bigDialBanner{position:relative;}
+.bigDialBanner img{width:100%;}
+.bigDialBanner .ruleBtn{position:absolute;bottom:13%;right: 2%;width:74px;height:26px;background:url(../../../images/common/bigDial/bigDialRule.png) no-repeat center center;background-size:74px 26px;background-color: red;border-radius: 5px;}
+.bigDialArea{position:relative;width:80%;height:247px;margin:0px auto;border-radius:30px;box-shadow:0px 1px  5px rgba(102,102,102,0.7);}
+.bigDialArea ul{width:100%;height:100%;}
+.bigDialArea li{position:absolute;width: 20%; height: 20%;}
+ .bigDialArea li img{width: 100%;height: 100%;border-radius: 50px;}
+.bigDialArea li.current em{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:28px;background:rgba(0,204,255,0.5);}
+#beginBtn{position:absolute;    width: 46%;height: 46%;left: 27%;top: 27%;background:url(../../../images/common/bigDial/00.png) no-repeat center center;background-size:106px 106px;text-indent:-999em;}
+
+.bigDialArea li:nth-of-type(1){left:6px;top:6px;}
+.bigDialArea li:nth-of-type(2){left:66px;top:6px;}
+.bigDialArea li:nth-of-type(3){left:126px;top:6px;}
+.bigDialArea li:nth-of-type(4){left:186px;top:6px;}
+.bigDialArea li:nth-of-type(5){left:186px;top:66px;}
+.bigDialArea li:nth-of-type(6){left:186px;top:126px;}
+.bigDialArea li:nth-of-type(7){left:186px;top:186px;}
+.bigDialArea li:nth-of-type(8){left:126px;top:186px;}
+.bigDialArea li:nth-of-type(9){left:66px;top:186px;}
+.bigDialArea li:nth-of-type(10){left:6px;top:186px;}
+.bigDialArea li:nth-of-type(11){left:6px;top:126px;}
+.bigDialArea li:nth-of-type(12){left:6px;top:66px;}
+
+.ruleArea{display:none;position:fixed;top:0;right:0;bottom:0;left:0;overflow:auto;background-color: #fff;    z-index: 2;  }
+.coverRule {
+display:block;}
+.gameRule {
+display:none;}
+._BGImageSrc {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.cover {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+        z-index: 1;
+}
+.startbtn {
+    position: absolute;
+    bottom: 15%;
+    width: 80%;
+    float: left;
+    line-height: 2em;
+    border-radius: 5px;
+    text-align: center;
+    left: 10%;
+    font-size: 2em;
+}
+
+.regular {
+    position: absolute;
+    bottom: 5%;
+    float: left;
+    right: 10%;
+    font-size: 2em;
+}
+
+#LT_bgpic1{   position: absolute; width: 100%;}
+#LT_bgpic2{border-radius: 30px;position: absolute;  height: 100%;}
+.LT_regularpic{border-radius: 40px;box-shadow: 0 0 0 6px rgba(6, 6, 6, 0.09);}
+
+
+#scrollDiv{ overflow:auto; position: relative;width: 90%;margin: 10px auto 0 auto;height: auto;}
+#scrollDiv ul,li{margin:0;padding:0}
+#scrollDiv li span{color:#fff;display: inline-block;}
+#scrollDiv li .span1 {width: 35%;}
+#scrollDiv li .span2 {width: 25%;}
+#scrollDiv li .span3 {width: 40%;}
+.scrollText{background-color:#e94045;width: 100%;height: auto;min-height: 100px;max-height: 150px;line-height:25px; float:left;overflow:hidden;border: #df3035 1px solid;border-radius: 10px;}
+.scrollText li{height:25px;padding-left:10px;}
+#LT_Rule {  min-height: 100%;width: 100%;}
+</style>
+
+   
+</head>
+
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#f04a4f;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+
+<section>
+      <div class="cover">
+        <div class="startimg">
+            <img class="_BGImageSrc" src="" />
+              
+            <span class="startbtn">进入</span>
+            <span class="regular">活动规则></span>
+                       
+        </div>
+    </div>
+
+    <div class="bigDialBanner">
+        <img id="LT_kvPic" src="../../../images/common/bigDial/bigDialBanner.jpg" title="大转盘">
+        <a class="ruleBtn" href="javascript:;"></a>
+    </div>
+    
+    
+    <img id="LT_bgpic1" src="" />
+
+    <div class="bigDialArea">
+        <img id="LT_bgpic2" src="" />
+        <ul id="bigDialContent">
+            <li style="left:4%;top:4%;"><img id="Img1" data-index=1 data-prizeLocationid="" src="../../../images/common/bigDial/THX.png" /><em></em></li>
+            <li style="left:28%;top:4%;"><img id="Img2" data-index=2 data-prizeLocationid="" src="../../../images/common/bigDial/THX.png" /><em></em></li>
+            <li style="left:52%;top:4%;"><img id="Img3" data-index=3 data-prizeLocationid="" src="../../../images/common/bigDial/THX.png" /><em></em></li>
+            <li style="left:76%;top:4%;"><img id="Img4" data-index=4 data-prizeLocationid="" src="../../../images/common/bigDial/THX.png" /><em></em></li>
+            <li style="left:76%;top:28%;"><img id="Img5" data-index=5 data-prizeLocationid="" src="../../../images/common/bigDial/THX.png" /><em></em></li>
+            <li style="left:76%;top:52%;"><img id="Img6" data-index=6 data-prizeLocationid="" src="../../../images/common/bigDial/THX.png" /><em></em></li>
+            <li style="left:76%;top:76%;"><img id="Img7" data-index=7 data-prizeLocationid="" src="../../../images/common/bigDial/THX.png" /><em></em></li>
+            <li style="left:52%;top:76%;"><img id="Img8" data-index=8 data-prizeLocationid="" src="../../../images/common/bigDial/THX.png" /><em></em></li>
+            <li style="left:28%;top:76%;"><img id="Img9" data-index=9 data-prizeLocationid="" src="../../../images/common/bigDial/THX.png" /><em></em></li>
+            <li style="left:4%;top:76%;"><img id="Img10" data-index=10 data-prizeLocationid="" src="../../../images/common/bigDial/THX.png" /><em></em></li>
+            <li style="left:4%;top:52%;"><img id="Img11" data-index=11 data-prizeLocationid="" src="../../../images/common/bigDial/THX.png" /><em></em></li>
+            <li style="left:4%;top:28%;"><img id="Img12" data-index=12 data-prizeLocationid="" src="../../../images/common/bigDial/THX.png" /><em></em></li>
+        </ul>
+        <img class="LT_regularpic"  id="beginBtn" />
+     </div>
+
+    <div id="scrollDiv">
+        <div class="scrollText">
+          <ul class="PrizeList" style="margin-top: 0px; ">
+              
+          </ul>
+        </div>
+    </div>
+
+</section>
+
+<div class="ruleArea"></div>
+
+ <div class="ruleArea"><div class="coverRule"><img id="LT_Rule1" src="#" ><span class="RuleContent1 "></span></div><div class="gameRule"><img id="LT_Rule" src="../../../images/common/bigDial/ruleBg.jpg?v1.0" title="规则"></div></div>
+		
+
+
+
+<section id="shareMask" class="hide" style="position:absolute;top:0;left:0">
+    <div class="mask" onclick="JitPage.hideSharePanel();"></div>
+    <div class="tips-share"><img src="/HtmlApps/images/common/lotteryAll/tips-share.png"></div>
+</section>
+
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+
+
+</body>
+</html>

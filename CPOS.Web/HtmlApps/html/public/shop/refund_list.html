@@ -1,0 +1,91 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<title name="RefundList"></title>
+		<link href="../../../css/base/global.css?v1.0" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+	</head>
+
+	<body>
+		<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+        <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+    </div>
+		<section class="refundOrderListPage">
+        	<!--
+			<nav id="topNav">
+				<ul>
+					<li>
+						<a href="javascript:Jit.AM.pageBack();"></a>
+					</li>
+					<li>
+						<a href="javascript:Jit.AM.toPage('MyOrder');"></a>
+					</li>
+					<li>
+						<a href="javascript:Jit.AM.toPage('GoodsCart');"><span id="menuCartCount"></span> </a>
+					</li>
+					<li>
+						<a href="javascript:Jit.AM.toPage('IndexShop');"></a>
+					</li>
+				</ul>
+			</nav>
+            -->
+            <div id="refundOrderList" class="refundOrderList">
+            	<ul>
+                	<!--
+                	<li>
+                    	<div class="refundMark">
+                        	<span>审核中</span>
+                        	<p>退货单号:<strong>20150526001</strong></p>
+                        </div>
+                        <div class="refundItem">
+                        	<a href="javascript:;" class="cancelRefundBtn">取消申请</a>
+                            <div class="imgBox">
+                                <img src="../../../images/public/my_shop/pic.jpg">
+                            </div>
+                            <div class="infoBox">
+                                <div class="topInfo">
+                                    <p class="countBox">
+                                        <b>￥25.6</b>
+                                        <span>X2</span>
+                                    </p>
+                                    <p class="nameBox">芬迪2015新款小羊皮手腕包买手必收</p>
+                                </div>
+                                <div class="traitBox">袋:200克;</div>
+                            </div>
+                        </div>
+                	</li>
+                    -->
+                </ul>
+            </div>
+			
+		</section>
+	</body>
+    
+    <script id="tplRefundList" type="text/html">
+    	<li data-refundid="<%=SalesReturnID%>">
+			<div class="refundMark">
+				<span><%=Status%></span>
+				<p>退货单号:<strong><%=SalesReturnNo%></strong></p>
+			</div>
+			<div class="refundItem">
+				<a href="javascript:;" class="cancelRefundBtn <%=Status!='待审核'?'on':''%>">取消申请</a>
+				<div class="imgBox">
+					<img src="<%=ImageUrl%>">
+				</div>
+				<div class="infoBox">
+					<div class="topInfo">
+						<p class="countBox">
+							<b>￥<%=SalesPrice%></b>
+							<span>X<%=Qty%></span>
+						</p>
+						<p class="nameBox"><%=ItemName%></p>
+					</div>
+					<div class="traitBox"><%=SkuDetail%></div>
+				</div>
+			</div>
+		</li>
+    </script>
+
+</html>

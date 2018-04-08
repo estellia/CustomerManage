@@ -1,0 +1,203 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+    <title name="IndexShopApp"></title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../../lib/require.js" cache defer async data-main="../../../launch"></script>
+</head>
+
+
+<body class="indexPage">
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+<section class="content">
+    <!-- <div class="commonSearchArea">
+         &lt;!&ndash;<a href="javascript:Jit.AM.toPage('Category')" class="allClassify">全部分类</a>&ndash;&gt;
+
+        <div class="commonSearchBox">
+            <p class="searchBtn"><input id="searchBtn" type="button"></p>
+
+            <p class="searchInput"><input id="searchContent" type="text" value="" placeholder="搜索..."></p>
+        </div>
+    </div>-->
+    <div id="seach" class="commonSearchArea action">
+        <a href="javascript:Jit.AM.toPage('Category')" class="allClassify"></a>
+
+        <div class="commonSearchBox">
+            <p class="searchBtn"><input id="searchBtn" type="button"/></p>
+
+            <p class="searchInput"><input id="searchContent" type="search" value=""
+                                          placeholder="搜索店铺内的宝贝..."/></p>
+        </div>
+
+
+    </div>
+    <div class="commonBanner action" id="PicScroll">
+        <ul class="picList clearfix">
+        </ul>
+        <div class="asideShow asideBottom">
+            <p class="dot">
+                <em class="on"></em>
+                <em></em>
+                <em></em>
+                <em></em>
+            </p>
+        </div>
+    </div>
+
+    <div id="entranceList" class="action navPicArea clearfix">
+
+    </div>
+
+    <div class="snapupArea  clearfix action" id="mainEntry">
+
+    </div>
+
+    <div id="secondKill" class="action">
+
+
+    </div>
+    <div id="navigation" class="action">
+
+    </div>
+    <div id="shopList" class="action"></div>
+</section>
+<script id="tpl_classify_item" type="text/template">
+    <a href="{{href}}">
+        <img src="{{ImageUrl}}" alt=""/>
+    </a>
+</script>
+<script id="title_1" type="text/template">
+    <div class="titlePanl">
+        <div class="titleTxt">
+            <div class="span">{{titleName}}</div>
+        </div>
+    </div>
+</script>
+<script id="title_2" type="text/template">
+    <div class="titlePanl">
+        <div class="titleTxt bg">
+            <div class="span">{{titleName}}</div>
+        </div>
+    </div>
+</script>
+<script id="Tpl_rush_shop" type="text/template">
+
+    <a class="snapupWrap" onclick="Jit.AM.toPage('ActivityGoodsList','eventTypeId=2')">
+        <div class="snapupBox">
+            <div class="snapupTit"></div>
+            <div class="time" time-date="{{EndTime}}">
+                <span tn="time-h-max">0</span><span tn="time-h-min">0</span><em>:</em>
+                <span tn="time-m-max" class="minute">0</span><span span tn="time-m-min">0</span><em>:</em>
+                <span tn="time-s-max">0</span><span tn="time-s-min">0</span>
+            </div>
+        </div>
+        <img src="{{ImageUrl}}" alt="">
+    </a>
+</script>
+<script id="Tpl_group_shop" type="text/template">
+    <a onclick="Jit.AM.toPage('ActivityGoodsList','eventTypeId=1')" class="grouponWrap">
+        <img src="{{ImageUrl}}" alt="">
+    </a>
+</script>
+<script id="Tpl_hot_shop" type="text/template">
+    <a onclick="Jit.AM.toPage('ActivityGoodsList','eventTypeId=3')" class="newProductWrap">
+        <img src="{{ImageUrl}}" alt="">
+    </a>
+</script>
+
+<script id="Tpl_item_1" type="text/template">
+    <div class="commonIndexArea">
+        <!--em class="icon"></em-->
+        <div class="allbox">
+            <a href="{{0.href}}">
+                <img src="{{0.ImageUrl}}">
+            </a>
+
+        </div>
+    </div>
+</script>
+<script id="Tpl_item_2" type="text/template">
+    <div class="commonIndexArea">
+        <!--em class="icon"></em-->
+        <div class="leftbox">
+            <a href="{{0.href}}">
+                <img src="{{0.ImageUrl}}">
+            </a>
+        </div>
+        <div class="rightbox">
+            <a style="height:100%;" href="{{1.href}}">
+                <img src="{{1.ImageUrl}}">
+            </a>
+        </div>
+    </div>
+</script>
+<script id="Tpl_item_3" type="text/template">
+
+    <div class="commonIndexArea">
+        <!--em class="icon"></em-->
+        <div class="leftbox">
+            <a href="{{0.href}}">
+                <img src="{{0.ImageUrl}}">
+            </a>
+        </div>
+        <div class="rightbox">
+            <a href="{{1.href}}">
+                <img src="{{1.ImageUrl}}">
+            </a>
+            <a href="{{2.href}}">
+                <img src="{{2.ImageUrl}}">
+            </a>
+        </div>
+    </div>
+</script>
+<script id="Tpl_entrance" type="text/html">
+    <a href="{{href}}">
+        <img src="{{ImageUrl}}" alt="">
+    </a>
+</script>
+<script id="secondKillItem" type="text/template">
+    <div class="commonSelectArea" >
+        <div class="tit"><b>{{name}}</b> <img src=../../../images/public/index_shop/time.png width="15">
+
+            <div class="timeList"><span>{{_h}}</span>: <span>{{_m}}</span>: <span>{{_s}}</span></div>
+        </div>
+        <ul class="imgList">
+            <li>
+                <a href="javascript:Jit.AM.toPage('ActivityGoodsList','eventTypeId={{0.TypeID}}')"><div>
+                    <img src="{{0.ImageUrl}}">
+                    <p>￥{{0.SalesPrice}}</p> <span>{{0.discount}}折</span></div> </a>
+            </li>
+            <li class="center">
+                <a href="javascript:Jit.AM.toPage('ActivityGoodsList','eventTypeId={{1.TypeID}}')"><div>
+                    <img src="{{1.ImageUrl}}">
+                    <p>￥{{1.SalesPrice}}</p> <span>{{1.discount}}折</span></div> </a>
+            </li>
+            <li>
+                <a href="javascript:Jit.AM.toPage('ActivityGoodsList','eventTypeId={{2.TypeID}}')"><div>
+                    <img src="{{2.ImageUrl}}">
+                    <p>￥{{2.SalesPrice}}</p> <span>{{2.discount}}折</span></div> </a>
+            </li>
+        </ul>
+    </div>
+
+</script>
+
+<script id="navListItem" type="text/template">
+    <div class="navlist">
+        <ul>
+            <li><a href="{{0.href}}"><img src="{{0.ImageUrl}}"><p>{{0.navName}}</p></a></li>
+            <li><a href="{{1.href}}"><img src="{{1.ImageUrl}}"><p>{{1.navName}}</p></a></li>
+            <li><a href="{{2.href}}"><img src="{{2.ImageUrl}}"><p>{{2.navName}}</p></a></li>
+            <li><a href="{{3.href}}"><img src="{{3.ImageUrl}}"><p>{{3.navName}}</p></a></li>
+        </ul>
+    </div>
+
+</script>
+</body>
+</html>
+

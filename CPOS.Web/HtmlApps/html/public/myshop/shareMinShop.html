@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+<title name="ShareMinShop">小店主页</title>
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/public/myshop/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<input id="channelIdSize" type="hidden" value="6">
+    <div class="w_640 myMinShopArea" style="overflow-x:hidden;">
+    	<!--<header class="toolsBox" style="display:none">
+        	<span class="generalizeBox"></span>
+            <span class="sortBox">分类
+            	<div class="sortList">
+                	<a href="javascript:;">商家推荐</a>
+                    <a href="javascript:;">热销商品</a>
+                    <a href="javascript:;">最新上架</a>
+                    <a href="javascript:;">冬季靴子</a>
+                    <a href="javascript:;">单鞋系列</a>
+                </div>
+            </span>
+            <span class="editBox">编辑</span>
+        </header>-->
+        
+        <div class="homeHeader">
+        	<div class="homeHeader-info">
+            	<div class="myStoreCollect generalizeBox"></div>
+            	<p class="picBox"><img src="../../../images/public/my_shop/headPic.jpg"></p>
+                <div class="textInfo">
+                	<p class="storeName"><span></span>的小店</p>
+                    <p class="storeBaby">店内宝贝<span></span></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="goodsList myMinShopHome-goodsList">
+        	<div class='commonDataHint'>正在加载商品...</div>
+        	<!--<div class="goodsList-item">
+            	<em class="delBox"></em>
+            	<p class="picBox"><img src="../../../images/public/my_shop/pic.jpg" alt=""></p>
+                <div class="infoBox">
+                	<p class="tit">2015最新款冬季时尚粉色雪地靴带充电功能</p>
+                    <div>
+                    	<p class="salesNum">销量 1622</p>
+                    	<p class="priceNum">￥1089.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="goodsList-item">
+            	<em class="delBox"></em>
+            	<p class="picBox"><img src="../../../images/public/my_shop/pic.jpg" alt=""></p>
+                <div class="infoBox">
+                	<p class="tit">2015最新款冬季时尚粉色雪地靴带充电功能</p>
+                    <div>
+                    	<p class="salesNum">销量 1622</p>
+                    	<p class="priceNum">￥1089.00</p>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        
+        
+        <!-- 底部菜单 -->
+        <div class="myMinShopHome-nav">
+        	<a class="nav-home action" href="javascript:;">首页</a>
+            <a class="nav-classify" href="javascript:;">分类
+            	<span class="sortList">
+                    
+                </span>
+            </a>
+            <a class="nav-order" href="javascript:Jit.AM.toPage('MyOrder');">订单</a>
+        </div>
+    	
+    </div>
+    
+<div id="share-mask" style="display:none"></div>
+<img id="share-mask-img" style="width:584px;height:226px;right:30px;display:none" src="../../../images/public/my_shop/icon-collectTip.png">
+
+</body>
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+<script id="tpl_myMinShop" type="text/html">
+<div class="goodsList-item" data-itemid="<%=itemId%>">
+	<em class="delBox"></em>
+	<p class="picBox"><img src="<%=imageUrl%>" alt=""></p>
+	<div class="infoBox">
+		<p class="tit"><%=itemName%></p>
+		<div>
+			<p class="salesNum">销量 <%=salesQty%></p>
+			<p class="priceNum">￥<%=salesPrice%></p>
+		</div>
+	</div>
+</div>
+</script>
+</html>

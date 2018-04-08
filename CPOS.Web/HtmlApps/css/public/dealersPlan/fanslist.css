@@ -1,0 +1,28 @@
+﻿@charset "utf-8";
+body {font-size: 12px;}
+.search {text-align: center;height: 45px;background-color:#ededee;}
+.search input{width: 90%;height: 28px;margin: 8px auto;border: 1px solid #e4e4e5;border-radius: 4px;background:url("/HtmlApps/images/public/dealersPlanPact/search.png") no-repeat;background-size:13px;    background-position: 6px;padding-left: 25px;}
+
+.tit {float: left;width: 33%;background-color:#fff;height: 32px;text-align: center;line-height: 32px;border-top:1px solid #e1dfdf;border-bottom:1px solid #e1dfdf;    color: #a0a0a0;position:relative;}
+.verticalline {    display: block;width: 1px;height: 17px;margin-top: 7px;background-color: #e5e5e5;position:absolute;    top: 0px;right: 0px;}
+.select {color:#ff9600;}
+
+.listcontent {display:inline-block;width: 100%;background-color: #fff;    padding: 8px 0px 0px 8px;}
+.item {border-bottom: 1px solid #eaebec;display: inline-block;width: 100%;}
+.headimg img {width:36px;border-radius: 50%;}
+.headimg {float:left;}
+.itemcontent .content {float:left;    margin-left: 8px;    color: #6f6f6f;}
+.itemcontent .content .state{    color: #639ee7;}
+.item .money {float:right;    line-height: 35px;    color: #828282;}
+.item .phone {float:right;    line-height: 45px;    margin: 0px 10px 0px 16px;}
+.item .phone img{width:16px;}
+
+/*弹层*/
+.mask{display: none;z-index: 1000;width:100%;height:100%;    position: fixed; background: #000;opacity: 0.40; top: 0;}
+.layer {font-size: 17px;display: none;position:absolute;height:150px;background-color: #fff; border-radius: 10px;z-index: 1001;  overflow: hidden;    width: 94%;    margin: 3%;bottom: 75px;}
+.closelayer {font-size: 17px;display: none;position:absolute;    bottom: 7px;height:50px;background-color: #fff; border-radius: 10px;z-index: 1001;  overflow: hidden;    width: 94%;    margin: 3%;}
+.layer .l_title{    text-align: center;color: #161616;line-height: 50px;    border-bottom: 1px solid #d3d3d3;}
+.layer .l_content{    text-align: center;color: #161616;line-height: 50px;border-bottom: 1px solid #d3d3d3;}
+.layer .l_content span{color: #ff3824;}
+.layer .l_foot{    text-align: center;color: #007aff;line-height: 50px;}
+.closelayer .l_foot {    text-align: center;color: #007aff;line-height: 50px;}

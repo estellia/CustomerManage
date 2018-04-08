@@ -1,0 +1,85 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<link href="/HtmlApps/css/base/global.css" rel="stylesheet" type="text/css" />
+		<title name="RedPacket"></title>
+	</head>
+	<body>
+		<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+	        <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+	    </div>
+		
+		<section id="unget">
+           
+            <div class="cover">
+                    <div class="startimg">
+                        <img class="_BGImageSrc" src="" />
+              
+                        <span class="startbtn">进入</span>
+                        <span class="regular">活动规则></span>
+                       
+                    </div>
+                </div>
+
+        	<img id="redBgImg" src="">
+            <div class="Redbg">
+        	<img  src="">
+            <span class="Redrule ruleBtn">游戏规则&gt;</span>
+            <a class="getRedBtn" href="javascript:;">领取红包</a>
+                </div>
+            <p class="redpackText hide"><span class="redpackNum"></span></p>
+            
+            <p class="redpackLogo"><img src=""></p>
+            
+            <!-- 领红包后 -->
+            <div class="hide" id="redpackBackWrap">
+                <div id="redpackBackBox">
+                    <img class="backRedbg" src="">
+                    <p class="redpackBackText"></p>
+                    <a class="shareFriendBtn" href="javascript:JitPage.showSharePanel();">分享给好友</a>
+                    <p class="redpackBackNum"><span class="ParValue">100</span><span class="Parunit">元</span></p>
+                </div>
+            </div>
+            <!-- 分享页面 -->
+            <div id="share" class="share hide">
+                <img class="sharebg" src="">
+                <div class="sharelayer">
+                    <div class="tips">长按二维码关注有奖</div>
+                    <div class="QRcode"><img src="" /></div>
+                    <div class="sharebtn">分享有奖</div>
+                    <div class="registerbtn">注册有奖</div>
+                </div>
+            </div>
+		</section>
+
+        <div class="ruleArea"><div class="coverRule"><img id="LT_Rule1" src="#" ><span class="RuleContent1 "></span></div><div class="gameRule"><img id="LT_Rule"  src="#" ><span class="RuleContent gameRule"></span></div></div>
+		
+		<section id="shareMask" class="hide" style="position:absolute;top:0;left:0">
+			<div class="mask" onclick="JitPage.hideSharePanel();"></div>
+    		<div class="tips-share"><img src="/HtmlApps/images/common/lotteryAll/tips-share.png" alt="请点击此处将本页面转发给好友或转发到朋友圈。"></div>
+		</section>
+        
+
+<script id="tpl_dialog" type="text/template">
+	<section id="dialog" class="zoomIn">
+		<div class="mask">
+			<div class="popup">
+				<div class="popup-t">{{title}}</div>
+				<div class="popup-m">
+					<p>{{content}}</p>
+				</div>
+				<div class="popup-b">
+					{{#labelOk}}<a onclick="{{callback_ok}}">{{labelOk}}</a>{{/labelOk}}
+					{{#labelCancel}}<a onclick="{{callback_cancel}}">{{labelCancel}}</a>{{/labelCancel}}
+				</div>
+			</div>
+		</div>
+	</section>
+</script>
+        
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+
+</body>
+</html>

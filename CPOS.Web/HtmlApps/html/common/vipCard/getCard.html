@@ -1,0 +1,212 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="x-rim-auto-match" content="none">
+		<link href="../../../css/base/global.css?v1.2" rel="stylesheet" type="text/css" />
+		<title name="GetVipCard">会员中心</title>
+		<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch.js?v1.0"></script>
+	</head>
+	<body>
+		<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+			<div class="wx_loading_inner">
+				<i class="wx_loading_icon"></i>正在加载...
+			</div>
+		</div>
+		<div id="mask" class="mask" style="display:none;"></div>
+		
+		<!-- 领卡之前 -->
+		<section id="leadCardBefore">
+			<div class="vipCardArea">
+				<img class="vipCardPic" src="">
+				<a class="" href="javascript:Jit.AM.toPage('UserRegister');">点击领取</a>
+			</div>
+
+			<div class="centerItemBox">
+            	<div class="itemBox vipEquity">
+                	<em class="iconBox"></em>
+                    <a href="javascript:Jit.AM.toPage('VipLegal');" class="tit">会员权益</a>
+                </div>
+				<div class="itemBox boundCard">
+                	<em class="iconBox"></em>
+                    <a href="javascript:Jit.AM.toPage('UserRegister','registerType=2');" class="tit">绑定已有实体卡</a>
+                </div>
+            </div>
+		</section>
+		<!-- 领卡之后 -->
+		<section id="leadCardAfter">
+			<div class="vipCardArea">
+				<div class="headBox">
+                    <div class="settingPass"></div>
+                 <!--   <p class="settingPassTxt"  style="margin-left:10px;font-size:26px;line-height: 50px;float:left;">忘记密码</p>-->
+                    <div class="PromptMessage"><img class="ReadMessageIcorn" src="../../../images/common/vipCard/message.png"></div>
+                </div>
+				<div class="vipCardBox" onclick="Jit.AM.toPage('VipCardQRCode')">
+					<img class="vipCardPic" src="">
+					<span class="arrVipCode"></span>
+					<div class="vipCardInfo">
+						<p class="vipName">会员昵称 : <span></span></p>
+						<p class="vipNo">会员编号 : <span></span></p>
+					</div>
+					<div class="itemListBox">
+						<a id="balaneUrl" href="javascript:;">余额：<span id="balanceMoney"></span></a>
+						<a href="javascript:Jit.AM.toPage('MyDividend');">集客红利：<span id="bonusMoney"></span></a>
+						<a id="myScoreUrl" href="javascript:Jit.AM.toPage('MyScore');">积分：<span id="integralCount"></span></a>
+					</div>
+				</div>
+			</div>
+			<a class="vipUpgradeBtn" href="javascript:Jit.AM.toPage('UpGrade');">会员卡升级</a>
+			
+
+			<div class="centerItemBox">
+                <div class="itemBox appointment">
+                    <em class="iconBox"></em>
+                    <a href="javascript:Jit.AM.toPage('MyOrder','orderType=appointment');" class="tit">我的预约</a>
+                </div>
+            	<div class="itemBox consumeItem">
+                	<em class="iconBox"></em>
+                    <a href="javascript:Jit.AM.toPage('MyOrder');" class="tit">消费记录</a>
+                </div>
+                <div class="itemBox giftItem">
+                	<em class="iconBox"></em>
+                    <a href="javascript:Jit.AM.toPage('CouponList');" class="tit">我的礼券</a>
+                </div>
+            </div>
+
+            
+            <div class="centerItemBox">
+            	<div class="itemBox myGatheringClient">
+                	<em class="iconBox"></em>
+                    <a href="javascript:Jit.AM.toPage('shareGethringClient');" class="tit">我要集客<span class="myGCcount">3</span></a>
+                </div>
+                <div class="itemBox myDistribution">
+                	<em class="iconBox"></em>
+                    <a href="javascript:Jit.AM.toPage('MyDistributionInit');" class="tit">我要分销</a>
+                </div>
+            </div>
+
+			<div class="centerItemBox" id="boundCardItem">
+                <div class="itemBox boundCardItem">
+                	<em class="iconBox"></em>
+                    <a href="javascript:;" class="tit">绑定实体卡</a>
+                </div>
+            </div>
+			<div class="centerItemBox">
+                <div class="itemBox nearbyStores">
+                	<em class="iconBox"></em>
+                    <a href="javascript:Jit.AM.toPage('StoreList');" class="tit">附近门店</a>
+                </div>
+            </div>
+            <!--
+            Jit.AM.toPage('BargainList'); //我的砍价
+            Jit.AM.toPage('SelectAddress','IsAddr=1'); //地址管理
+            -->
+		</section>
+
+		<a href="javascript:Jit.AM.toPage('GainIntegral');" class="gainTntegralBtn">赚积分</a>
+		<a href="javascript:Jit.AM.toPage('GoodsCart')" class="cartFixedBtn" title="购物车">
+			<span class="hide"></span>
+		</a>
+
+        <!-- 通知列表 -->
+        <div class="noticeList">
+            <div  class="mask" style="display:block;"></div>
+            <div class="NList">
+                <div class="nl_title">通知列表</div>
+                <div class="nl_contents">
+                </div>
+            </div>
+            <div class="envelope">
+                <div class="envelopecontent">
+                    <img src="../../../images/common/vipCard/envelope.png" />
+                    <div class="nexticon"></div>
+                    <div class="env_colse"  onclick="JitPage.checkIsRegister()" >关闭</div>
+               </div>
+            </div>
+        </div>
+        <!-- 通知详情 -->
+        <div class="noticedetails">
+            <div  class="mask" style="display:block;"></div>
+            <img class="LA NDetailsBtn" data-operatingtype="2" src="../../../images/common/vipCard/LArrow.png" />
+            <div class="Ndetails">
+            </div>
+            <img class="RA NDetailsBtn" data-operatingtype="1" src="../../../images/common/vipCard/RArrow.png" />
+        </div>
+        <div class="ui-mask" id="mask" style="display:none;"></div>
+        
+
+        <!-- 请输入支付密码-弹层 -->
+        <div class="commonPopup" id="showSetPass" style="display:none;">
+            <div class="titWrap">
+                <span class="tit">请设置支付密码</span>
+            </div>
+            <div class="contentWrap formBox">
+                <p>
+                    <span style="float: left;font-size: 26px;margin-bottom: 5px;margin-top: -9px;color: red;">为了确保您的充值账户安全，请设置密码</span>
+                </p>
+                <p>
+                    <input type="tel" id="phone" placeholder="手机" data-val="" readonly="readonly" />
+
+                </p>
+                <p class="vCardBox">
+                    <input id="code" type="text" placeholder="验证码"/>
+                    <span id="getCode" class="vCardBtn">获取验证码</span>
+                </p>
+                <p>
+                    <input type="password" id="pass" placeholder="密码"/>
+                </p>
+                <p>
+                    <input type="password" id="passAgain" placeholder="确认密码"/>
+                </p>
+            </div>
+            <div class="btnWrap">
+                <span class="btn" id="sureSet">确认</span>
+                <span class="btn" id="cancel">取消</span>
+            </div>
+        </div>
+
+        <!--通知列表-->
+		<script id="tpl_noticeList" type="text/html">
+			 <% if(InnerGroupNewsList!=null && !!InnerGroupNewsList.length){%>
+                <%for(var i=0;i<InnerGroupNewsList.length;i++){var _data= InnerGroupNewsList[i];%>
+                    <div class="nl_content" data-id="<%=_data.GroupNewsId %>">
+                        <%if(_data.IsRead==0){%> 
+                            <div class="isread"></div>
+                        <%}%>
+                        <div class="infor">
+                            <div class="infor_title">
+                            <%=_data.Title.length>10?(_data.Title.substr(0,10)+'…'):_data.Title; %><span><%=_data.MsgTime.match(/\s\d+:\d+/g)?_data.MsgTime.match(/\s\d+:\d+/g)[0].replace(/\s/g,""):""; %></span>
+                            </div>
+                            <div class="infor_content">
+                                <%=_data.Text.length>10?(_data.Text.substr(0,10)+'…'):_data.Text; %>
+                            </div>
+                        </div>
+                    <div class="infor_view" data-id="<%=_data.GroupNewsId %>" >查看</div>
+                    </div>
+                 <%}%>
+            <%}else{%>
+            	<div class="hintTextBox">亲，暂无通知信息！</div>
+            <%}%>	
+        </script>
+        <!--通知详情-->
+		<script id="tpl_noticedetails" type="text/html">
+             <% if(NewsInfo!=null){%> 
+			    <div class="nd_title"><%=NewsInfo.Title %></div>
+                <div class="nd_contents">
+                    <%=NewsInfo.Text %>
+                </div>
+                <div class="nd_count"><%=PageIndex %>/<%=TotalPageCount %></div>
+                <div class="nd_close">关闭</div>
+             <%}else{%>
+             <div class="nd_title">未找到数据</div>
+                <div class="nd_contents">
+                    
+                </div>
+                <div class="nd_count">0/0</div>
+                <div class="nd_close" >关闭</div>
+            <%}%>
+        </script>
+	</body>
+</html>

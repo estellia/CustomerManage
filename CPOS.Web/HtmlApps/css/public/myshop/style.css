@@ -1,0 +1,243 @@
+
+@charset "utf-8";
+.commonDataHint{padding-top:300px;text-align:center;font:28px/1.5em "Microsoft YaHei";}
+.commonDataHint a{color:#fe7c23;}
+/*启动页*/
+html,body{height:100%;}
+.startPage .bg{width:100%;}
+.startPage .picBox{position:relative;}
+.startPage .btnStart{position:absolute;top:0px;left:36px;right:36px;display:block;height:88px;border-radius:6px;letter-spacing:2px;font:36px/88px "Microsoft YaHei";text-align:center;background:#fe7c23;color:#fff;}
+
+/*我的小店*/
+.myShopArea{padding-bottom:50px;background:#f7f6f6;}
+.myShopArea .bannerPic{margin-bottom:18px;}
+.myShopArea-nav{min-height:275px;margin-bottom:50px;border-top:1px solid #e3e3e3;border-right:1px solid #e3e3e3;background:#fff;}
+.myShopArea .nav-item{float:left;width:33.33%;height:275px;text-align:center;border-left:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;cursor:pointer;}
+.myShopArea .btnPlayShop{display:block;width:193px;height:61px;margin:0 auto;background:url(../../../images/public/my_shop/btn_playShop.png) no-repeat center center;}
+.myShopArea .nav-icon{margin:40px 0 20px 0;}
+.myShopArea .nav-name{font:27px/1.5em "Microsoft YaHei";color:#666;}
+.myShopArea .nav-num{font:21px/2em "Microsoft YaHei";color:#999;}
+.myShopArea .nav-num span{padding-left:3px;font-family:"Arial";color:#ec5f0d;}
+
+/*我的小店主页*/
+.homeHeader{width:100%;height:202px;background:url(../../../images/public/my_shop/storeHomeBanner.jpg) no-repeat center center;}
+.homeHeader-info{padding:74px 0 0 14px;}
+.homeHeader .myStoreCollect{float:right;width:92px;height:62px;margin-top:35px;background:url(../../../images/public/my_shop/icon-collectBtn.png) no-repeat center center;}
+.homeHeader .picBox{float:left;}
+.homeHeader .picBox img{display:block;width:114px;height:114px;border-radius:60px;}
+.homeHeader .textInfo{margin-left:128px;font-size:22px;color:#fff;}
+.homeHeader .storeName{font-size:36px;padding:14px 0 1px 0;}
+.goodsList.myMinShopHome-goodsList{padding:20px 20px 86px;}
+.myMinShopHome-nav{display:-webkit-box;position:fixed;bottom:0px;left:0;right:0;height:92px;line-height:140px;border-top:1px solid #eaeaea;background:rgba(255,255,255,.8);}
+.myMinShopHome-nav a{display:block;text-align:center;font-size:18px;color:#333;-webkit-box-flex:1;}
+.myMinShopHome-nav a.action{color:#fe7c23;}
+.myMinShopHome-nav .nav-home{background:url(../../../images/public/my_shop/icon-home.png) no-repeat center 15px;}
+.myMinShopHome-nav .nav-classify{position:relative;background:url(../../../images/public/my_shop/icon-classify.png) no-repeat center 15px;}
+.myMinShopHome-nav .nav-order{background:url(../../../images/public/my_shop/icon-order.png) no-repeat center 15px ;}
+
+.myMinShopHome-nav .nav-home.action{background:url(../../../images/public/my_shop/icon-home-action.png) no-repeat center 15px;}
+.myMinShopHome-nav .nav-classify.action{background:url(../../../images/public/my_shop/icon-classify-action.png) no-repeat center 15px;}
+.myMinShopHome-nav .nav-order.action{background:url(../../../images/public/my_shop/icon-order-action.png) no-repeat center 15px;}
+
+.myMinShopHome-nav .nav-classify .sortList{display:none;width:160px;position:absolute;top:-273px;left:50%;margin-left:-80px;border:1px solid #d6d6d6;background:rgba(255,255,255,0.9);}
+.myMinShopHome-nav .nav-classify .sortList em{display:block;width:105px;text-indent:0px;height:90px;line-height:90px;margin:0 auto;font-size:26px;border-bottom:1px solid #ccc;color:#666;}
+.myMinShopHome-nav .nav-classify .sortList em:nth-last-of-type(1){border-bottom:none;}
+.myMinShopHome-nav .nav-classify.action .sortList{display:block;height:auto;}
+
+
+
+/*玩转小店*/
+.tipsArea{font:28px/1.5em "Microsoft YaHei";background:#f7f6f6;color:#00b4bf;}
+.tipsArea .bannerPic img{display:block;width:100%;}
+.tipsEssay{padding:30px 23px 50px;}
+.tipsEssay .tit{width:110px;height:45px;margin-bottom:30px;text-align:center;font:28px/45px "Arial";border-radius:25px;background:#00b4bf;color:#fff;}
+.tipsEssay .exp p{position:relative;margin-bottom:35px;padding-left:23px;}
+.tipsEssay .exp em{position:absolute;top:13px;left:0px;display:inline-block;width:10px;height:10px;margin-right:20px;border-radius:6px;background:#00b4bf;}
+
+/*我的小店*/
+.myMinShopArea{height:100%;background:#e7e7e7;}
+.myMinShopArea .toolsBox{position:fixed;top:0;left:0;right:0;width:100%;height:90px;line-height:90px;padding:0 20px 0 25px;font-size:24px;background:#fe7c23;color:#fff;z-index:99;}
+.toolsBox .generalizeBox{float:right;width:105px;height:100%;background:url(../../../images/public/my_shop/icon-spread.png) no-repeat left center;cursor:pointer;}
+
+.toolsBox .editBox{float:left;width:100px;height:100%;margin-left:20px;text-indent:50px;background:url(../../../images/public/my_shop/icon_edit.png) no-repeat left center;cursor:pointer;}
+.toolsBox .sortBox{position:relative;float:left;width:115px;height:100%;text-indent:60px;background:url(../../../images/public/my_shop/icon_sort.png) no-repeat left center;cursor:pointer;}
+.toolsBox .sortList{display:none;width:165px;position:absolute;left:-25px;top:90px;border-right:1px solid #ccc;border-bottom:2px solid #ccc;background:rgba(255,255,255,0.9);}
+.toolsBox .sortList a{display:block;width:110px;text-indent:0px;height:90px;line-height:90px;margin:0 auto;border-bottom:1px solid #ccc;}
+.toolsBox .sortList a:nth-last-of-type(1){border-bottom:none;}
+.toolsBox .sortBox.on .sortList{display:block;height:auto;}
+
+
+/*商品列表*/
+.goodsList{padding:120px 20px 86px;position:relative;-webkit-transition:all 0.1s linear;}
+.goodsList-item{position:relative;height:242px;margin-bottom:30px;padding-top:35px;border-radius:3px;background:#fff;}
+.goodsList-item .picBox{float:left;width:160px;height:160px;margin-left:35px;}
+.goodsList-item .picBox img{display:block;width:100%;height:100%;}
+.goodsList-item .infoBox{margin:0 20px 0 220px;}
+.goodsList-item .tit{height:66px;margin-bottom:57px;font:26px/1.3em "Microsoft YaHei";color:#333;overflow:hidden;}
+.goodsList-item .salesNum{float:right;font-size:22px;color:#999;}
+.goodsList-item .priceNum{float:left;font-size:26px;color:#fe7c23;}
+.goodsList-item .delBox{display:none;position:absolute;left:-70px;top:85px;width:70px;height:70px;background:url(../../../images/public/my_shop/icon_del.png) no-repeat center center;}
+.goodsList.on{left:50px;}
+.goodsList.on .delBox{display:block;}
+.goodsList-item .addedMark{display:none;position:absolute;top:0px;left:0px;width:98px;height:98px;background:url(../../../images/public/my_shop/icon_added.png) no-repeat 0 0;}
+.goodsList-item.added .addedMark{display:block;}
+.goodsList-item .checkMark{display:none;position:absolute;top:0px;left:0px;right:0px;bottom:0px;border-radius:5px;background:rgba(51,51,51,0.45) url(../../../images/public/my_shop/icon_check.png) no-repeat right bottom;}
+.goodsList-item.checked .checkMark{display:block;}
+.addShopBtn{position:fixed;bottom:0px;left:0;right:0px;height:86px;text-align:center;font:30px/86px "Microsoft YaHei";border-top:1px solid #ccc;background:rgba(242,242,242,0.95);color:#fe7c23;cursor:pointer;}
+
+
+/*扫码下单*/
+.orderQrcardPage{padding:20px;background:#ebebeb;}
+.orderQrcardArea{border-radius:5px;background:#fff;}
+.orderQrcardArea .emptyTit{height:70px;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom:2px dashed #dbdbdb;background:#f8f8f8;}
+.orderQrcardArea .tit{margin-top:55px;font-size:32px;text-align:center;color:#333;}
+.orderQrcardArea .qrCardPic{display:block;width:430px;height:430Px;margin:0 auto;background:url(../../../images/public/my_shop/qr.jpg) no-repeat center center;}
+.orderQrcardArea .bgLine{width:386px;height:13px;margin:15px auto 0;background:url(../../../images/public/my_shop/bg-line.png) no-repeat center center;}
+.orderQrcardArea .replaceOrderBtn{display:block;width:205px;height:64px;margin:33px auto;font:26px/64px "Microsoft YaHei";text-align:center;border-radius:30px;background:#fd6138;color:#fff;}
+
+
+/*我的订单, 我的收入*/
+.minMyOrderArea{font-size:26px;}
+.minMyOrderArea .orderCount{height:330px;line-height:45px;padding:28px;color:#fff;background:-webkit-gradient(linear, 0 0, 0 100%, from(#fe8037),color-stop(50%,#f57023), to(#e65400));}
+.minMyOrderArea .orderCount .detailBtn{float:right;padding-right:40px;background:url(../../../images/public/my_shop/arr_icon1.png) no-repeat right center;}
+.minMyOrderArea .orderCount .tit{float:left;padding-left:40px;background:url(../../../images/public/my_shop/date_icon.png) no-repeat left center;}
+.minMyOrderArea .orderCount .num{text-align:center;font:175px/1.45em "Arial";}
+.accumulatorOrder{padding:70px 29px 0;border-bottom:1px solid #ccc;color:#666;}
+.accumulatorOrder .detailBtn{float:right;padding-right:40px;background:url(../../../images/public/my_shop/arr_icon2.png) no-repeat right center;color:#fd6138;}
+.accumulatorOrder .tit{float:left;}
+.accumulatorOrder .defeat{float:right;margin:80px 0 60px 0;}
+.accumulatorOrder .defeat strong{color:#fd6138;font-family:"Arial";}
+.accumulatorOrder .num{float:left;height:80px;margin-top:40px;font:90px/80px "Arial";color:#fd6138;}
+
+.minMyOrderArea .statisBox{height:330px;padding:40px 0;font:30px/1.5em "Arial";background:#eceeef;color:#999;}
+.minMyOrderArea .statisBox .rightBox{float:right;width:50%;}
+.minMyOrderArea .statisBox .leftBox{float:left;width:50%;}
+.minMyOrderArea .statisBox .rightBox a{border-left:1px solid #e5e6e8;}
+.minMyOrderArea .statisBox a{display:block;height:103px;padding-left:35px;color:#999;}
+.minMyOrderArea .statisBox .mb-48{margin-bottom:48px;}
+.minMyOrderArea .statisBox strong{display:block;font:60px/1.2em "Arial";color:#666;}
+.minMyOrderArea .statisBox .withdrawBtn{float:right;width:108px;height:49px;margin:110px 30px 0 0;font:26px/45px "Microsoft YaHei";text-align:center;border:2px solid #fd6138;border-radius:6px;color:#fd6138;}
+
+/*收入明细*/
+.incomeDetailArea{}
+.incomeDetailList{padding-left:29px;}
+.incomeDetailList li{height:122px;padding:25px 20px 0 10px;border-bottom:1px solid #ccc;}
+.incomeDetailList .incomeCount{float:right;line-height:1.3em;font-family:"Arial";font-size:32px;color:#fe7c23;}
+.incomeDetailList .infoBox{font-size:22px;}
+.incomeDetailList .title{line-height:1.3em;font-size:30px;color:#333;}
+.incomeDetailList .time{margin-right:20px;color:#999;}
+.incomeDetailList .orderNum{color:#00b4bf;}
+
+
+/*邀请小伙伴*/
+.inviteFriendsPage{height:auto;padding:47px 0;background:#ffc278;}
+.inviteFriendsArea{border-radius:6px;background:#f5edde;}
+.inviteFriendsArea .infoBox{height:275px;border-top-left-radius:6px;border-top-right-radius:6px;background:#fef8f1;}
+.inviteFriendsArea .headBox{position:relative;top:-30px;}
+.inviteFriendsArea .headPic{width:126px;height:129px;margin:0 auto 5px;padding:6px 0 0 6px;border-radius:70px;background:url(../../../images/public/my_shop/bg-headPic.png) no-repeat 0 0;;}
+.inviteFriendsArea .headPic img{display:block;width:114px;height:114px;border-radius:70px;}
+.inviteFriendsArea .nickname{font-size:22px;text-align:center;color:#999;}
+.inviteFriendsArea .infoText{position:relative;top:-10px;font-size:24px;font-family:"Microsoft YaHei";text-align:center;background:url(../../../images/public/my_shop/line-invite.png) no-repeat center center;color:#fe7c23;}
+.inviteFriendsArea .infoText>div{float:left;width:50%;}
+.inviteFriendsArea .integralCount,.inviteFriendsArea .inviteCount{font:50px/1.2em "Arial";}
+.inviteFriendsArea .tit{margin:35px 0 15px 0;text-align:center;font:24px/1.5em "Microsoft YaHei";color:#333;}
+.inviteFriendsArea .qrCardPic{display:block;width:430px;height:430px;margin:0 auto 32px;background:url(../../../images/public/my_shop/qr.jpg) no-repeat center center;}
+.inviteFriendsArea .btnWrap{padding:0 50px 30px;}
+.inviteFriendsArea .btnWrap a{float:left;width:230px;height:74px;font:26px/74px "Microsoft YaHei";text-indent:80px;border-radius:5px;color:#fff;}
+.inviteFriendsArea .btnWrap .friendBtn{margin-right:16px;background:#fe7c23 url(../../../images/public/my_shop/icon-friend.png) no-repeat 33px center;}
+.inviteFriendsArea .btnWrap .circleBtn{text-indent:60px;background:#fe7c23 url(../../../images/public/my_shop/icon-circle.png) no-repeat 16px center;}
+
+
+/*订单月汇总*/
+.orderMonthCollectArea{}
+.orderMonthCollectList{padding-left:29px;}
+.orderMonthCollectList li{height:168px;border-bottom:1px solid #ccc;}
+.orderMonthCollectList .monthBox{float:left;width:116px;height:116px;margin:26px 0 0 22px;font:26px/105px "Microsoft YaHei";text-align:center;border:4px solid #ffdec8;border-radius:60px;background:#fe7c23;color:#fff;}
+.orderMonthCollectList .monthBox span{margin-right:5px;font-size:60px;}
+.orderMonthCollectList .infoBox{height:167px;margin-left:180px;padding:28px 0 0 26px;font:26px/1.4em "Microsoft YaHei";background:url(../../../images/public/my_shop/line-month.png) no-repeat left center;color:#858585;}
+.orderMonthCollectList .infoBox .tit{display:inline-block;width:130px;margin-right:28px;text-align:right;}
+.orderMonthCollectList .fontC{font-size:36px;color:#fe7c23;}
+
+
+/*提现*/
+.withdrawDepositArea{background:#f6f6f6;}
+.withdrawBox{height:208px;margin-bottom:33px;padding:30px;background:#fe7c23;color:#fff;}
+.withdrawBox .tit{padding-left:5px;font-size:26px;font-family:"Microsoft YaHei";}
+.withdrawBox .totalAmount{font-size:92px;font-family:Arial;}
+.bankCardBox{height:120px;padding:25px 28px;border-top:1px solid #e1dfdf;border-bottom:1px solid #e1dfdf;background:#fff;}
+.bankCardBox .iconBank{float:left;width:86px;height:56px;margin-top:7px;background:url(../../../images/public/my_shop/icon_bankCard2.png) no-repeat 0 0;}
+.bankCardBox .infoBox{margin-left:136px;font:24px/1.7em "Microsoft YaHei";background:url(../../../images/public/my_shop/icon_pointer.png) no-repeat right center;color:#999;}
+.bankCardBox .infoBox p{font-size:32px;color:#333;}
+.bankCardBox .modifyBankInto,.bankCardBox.isCard .addBankBtn{display:none;}
+.bankCardBox.isCard .modifyBankInto{display:block;}
+.withdrawDepositArea .hintBox{margin-bottom:45px;padding:12px 0 0 48px;font:24px/1.5em "Microsoft YaHei";color:#999;}
+.withdrawDepositArea .hintBox img{margin-right:10px;}
+.inputAmountBox{height:88px;padding:18px 30px;font:32px/1.5em "Microsoft YaHei";border-top:1px solid #e1dfdf;border-bottom:1px solid #e1dfdf;background:#fff;}
+.inputAmountBox em{float:left;width:70px;}
+.inputAmountBox p{margin-left:140px;}
+.inputAmountBox p input{display:block;width:100%;height:48px;font-size:32px;font-family:Arial;border:none;background:none;color:#fd6138;}
+.withdrawMonth{float:left;padding:15px 0 35px 32px;font:24px "Microsoft YaHei";color:#999;}
+.withdrawMonth span{color:#4aa7f5;}
+.withdrawNum{padding:15px 0 35px 32px;font:24px "Microsoft YaHei";color:#999;}
+.withdrawNum span{color:#4aa7f5;}
+.withdrawNotice{padding:15px 0 35px 32px;font:24px "Microsoft YaHei";color:#999;}
+.withdrawNotice span{color:#4aa7f5;}
+.withdrawBtn,#addBankcardLayer .confirmBtn,.modifyBankBtn,.confirmModifyBtn{display:block;height:76px;font:30px/70px "Microsoft YaHei";border:3px solid #4aa7f5;border-radius:50px;margin:0 30px;text-align:center;background:none;color:#4aa7f5;}
+.withdrawBtn.disab{border:3px solid #ddd;color:#ddd;}
+.seeWithdraw{margin-top:10px;padding:0 30px;text-align:right;}
+.seeWithdraw a{border-bottom:1px solid #4aa7f5;font:24px/2em "Microsoft YaHei";color:#4aa7f5;}
+/*添加银行卡*/
+#addBankcardLayer{display:none;padding:30px 0;}
+.bankInputBox select,.bankInputBox input{display:block;width:100%;height:100px;font-size:30px;font-family:"Microsoft YaHei";text-indent:10px;border:none;background:none;color:#a6a6a6;}
+.bankInputBox select{background:url(../../../images/public/my_shop/icon_pointer2.png) no-repeat 95% center;}
+.bankInputBox{padding-left:28px;border-top:1px solid #e1dfdf;border-bottom:1px solid #e1dfdf;background:#fff;}
+.bankInputBox p{border-bottom:1px solid #ccc;}
+.bankInputBox p:nth-last-of-type(1){border-bottom:none;}
+.noticeBox{padding:32px 40px 40px;font:24px/1.5em "Microsoft YaHei";}
+.noticeBox h2{font-size:24px;height:24px;line-height:24px;color:#4a4a4a;}
+.noticeBox img{float:left;margin-right:10px;}
+.noticeBox p{padding:25px 30px 0;color:#999;}
+/*修改银行卡*/
+#modifyBankcardLayer{padding:21px 0 40px 0;}
+#modifyBankcardLayer .bankShow{height:150px;margin-bottom:20px;padding:19px 25px;border-top:1px solid #e1dfdf;border-bottom:1px solid #e1dfdf;background:#fff;}
+#modifyBankcardLayer .bankHead{float:left;width:124px;height:112px;}
+#modifyBankcardLayer .bankHead img{display:block;width:100%;height:100%;}
+#modifyBankcardLayer .bankInfo{margin-left:160px;font:30px/1.5em "Microsoft YaHei";color:#333;}
+#modifyBankcardLayer .bankName{margin:10px 0;}
+#modifyBankcardLayer .bankInfo span{font-family:Arial;color:#959595;}
+.modifyBankBtn{margin-top:60px;}
+
+.seeWithdrawRecordList{padding-left:29px;}
+.seeWithdrawRecordList li{height:122px;padding:22px 18px 0 8px;border-bottom:1px solid #e7e7e7;font:22px/1.8em "Microsoft YaHei";color:#999;}
+.seeWithdrawRecordList .oddNo{float:left;font-size:26px;color:#333;}
+.seeWithdrawRecordList .money{float:right;font-family:Arial;font-size:32px;color:#fe7c23;}
+.seeWithdrawRecordList .bankName{float:left;}
+.seeWithdrawRecordList .bankName strong{margin-left:18px;font-weight:normal;color:#fe7c23;}
+.seeWithdrawRecordList .status{float:right;}
+
+
+
+/*提示框*/
+.ui-dialogs{position:fixed;top:50%;left:50%;z-index:9999;}
+.ui-dialogs-prompt{width:426px;height:330px;margin:-165px 0 0 -213px;padding:24px;font:36px/1.2em "Microsoft YaHei";border-radius:5px;background:rgba(255,255,255,0.9);color:#333;}
+.dialogs-title{height:56px;margin-top:30px;text-indent:70px;text-align:center;font:40px/55px "Microsoft YaHei";background:url(../../../images/public/my_shop/icon_succeed.png) no-repeat 22% center;color:#fe7c23;}
+.dialogs-text{height:150px;margin-top:45px;text-align:center;overflow:hidden;}
+/*.dialogs-text span{display:block;text-indent:22px;font-size:22px;color:#999;}*/
+.dialogs-btn{display:inline-block;width:48%;height:80px;font:33px/80px "Microsoft YaHei";text-align:center;border-radius:6px;background:#fe7c23;color:#fff;}
+.dialogs-btn:focus{color:#fff}
+
+/*分享下拉动画*/
+#share-mask{position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.7);z-index:9999;}
+#share-mask-img{position:fixed;top:0;right:50px;width:320px;height:260px;z-index:10000;}
+@-webkit-keyframes pullDown {
+0% { top:-260px;}
+40%{ top:260px;}
+100% { top:0;}
+}
+.pullDownState{-webkit-animation:pullDown 0.5s ease-in-out 1;}/*infinite*/
+
+@-webkit-keyframes pullUp {  
+0% {top:300px;}
+100% {top:-260px;}
+}
+.pullUpState{-webkit-animation:pullUp 0.5s ease-in-out 1;}/*infinite*/

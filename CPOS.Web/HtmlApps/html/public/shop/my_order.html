@@ -1,0 +1,224 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<title name="MyOrder">消费记录</title>
+		<link href="../../../css/base/global.css?v1.0" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+	</head>
+
+	<body style="background: #f4f4f5;">
+		<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+        <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+    </div>
+		<section class="">
+        	<!--
+			<nav id="topNav">
+				<ul>
+					<li>
+						<a href="javascript:Jit.AM.pageBack();"></a>
+					</li>
+					<li>
+						<a href="javascript:Jit.AM.toPage('MyOrder');"></a>
+					</li>
+					<li>
+						<a href="javascript:Jit.AM.toPage('GoodsCart');"><span id="menuCartCount"></span> </a>
+					</li>
+					<li>
+						<a href="javascript:Jit.AM.toPage('IndexShop');"></a>
+					</li>
+				</ul>
+			</nav>
+            -->
+            
+            <div class="order_mod nav_myorder">
+                <ul id="jsOrderStateList">
+                    <li class="cur" data-code="1">
+                        <a href="javascript:;"><span id="waitCount1">0</span>待付款</a>
+                    </li>
+                    <li data-code="10">
+                        <a href="javascript:;"><span id="waitCount2">0</span>待受理</a>
+                    </li>
+                    <li data-code="13">
+                        <a href="javascript:;"><span id="waitCount5">0</span>待确认</a>
+                    </li>
+                    <li data-code="3">
+                        <a href="javascript:;"><span id="waitCount3">0</span>已完成</a>
+                    </li>
+                    <li data-code="4">
+                        <a href="javascript:;"><span id="waitCount4">0</span>退换货</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="acceptanceOrder" style="display: none;">
+				<ul>
+					<li class="changeColor" data-code = "10">待服务<span id="waitCount6">0</span></li>
+					<li data-code = "11">待提货<span id="waitCount7">0</span></li>
+					<li data-code = "12">待发货<span id="waitCount8">0</span></li>
+				</ul>
+			</div>
+			<div class="completeOrder" style="display: none;">
+				<ul>
+					<li class="changerColor" data-code = "13" >已服务<span id="waitCount9">0</span></li>
+					<li data-code = "14">已提货<span id="waitCount10">0</span></li>
+					<li data-code = "2">已发货<span id="waitCount11">0</span></li>
+				</ul>
+			</div>
+			<div id="scrollContainer" class="myorder" style="position:absolute;left:0;right:0;top:0;bottom:0;">				
+				<div style="padding-top:50px;" id="orderPanel">
+					
+					<div id="pullDown">
+						<span class="pullDownIcon"></span><span class="pullDownLabel"></span>
+					</div>
+					<div id="orderList">
+						
+					</div>
+					<div id="pullUp" style="text-align: center;">
+						<span class="pullUpIcon"></span><span class="pullUpLabel"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script id="tplListItem" type="text/html">
+			<%if(isRefund=="false"){%>
+			<%for(var i=0;i<itemlists.length;i++){var idata= itemlists[i],orderList = idata.OrderDetails;%>
+				
+				<div class="my_order_list" data-orderid="<%=idata.OrderID%>">
+					<a href="javascript:Jit.AM.toPage('OrderDetail','orderId=<%=idata.OrderID%>');">
+						<p class="orderMarkInfo">
+							<span class="num">订单号：<%=idata.OrderNO%></span>
+							<span class="state"><%=idata.OrderStatusDesc%></span>
+						</p>
+						<div class="my_og_item">
+							<ul>
+								<%for(var e=0;e<orderList.length;e++){var edata= orderList[e];%>
+								<li class="clearfix">
+									<div class="shopMoney">
+										<p>￥<%=edata.SalesPrice%></p>
+										<span>X<%=edata.Qty%></span>
+									</div>
+									<div class="imgBox">
+										<img src="<%=edata.ImageUrl%>" max-height="100">
+									</div>
+									<div class="infoBox">
+										<p class="tit"><%=edata.ItemName%></p>
+										<div class="gray"><%=edata.SpecificationDesc%></div>
+										<!--<b>￥<%=edata.SalesPrice%></b>-->
+									</div>
+								</li>
+								<%}%>
+							</ul>
+						</div>
+					</a>
+					<div class="statisticsBox">共<%=idata.TotalQty%>件商品&nbsp;&nbsp;&nbsp;&nbsp;<span>实付：</span>￥<%=idata.TotalAmount%></div>
+					
+					<%if(GroupingTypeId==1){%>
+					<div class="ogl_handle">
+						<p class="orderTime">下单时间：<%=idata.OrderDate%></p>
+						<%if(idata.OrderStatus==100 || idata.OrderStatus==500 || idata.OrderStatus==510 || idata.OrderStatus==410){%>
+							<a class="two" style="display:none;" href="javascript:JitPage.ProcessOrder('<%=idata.OrderID%>',800);">取消</a><a class="two" href="javascript:Jit.AM.toPage('OrderPay','orderId=<%=idata.OrderID%>');">付款</a>
+						<%}else{%>
+							<a class="" href="javascript:Jit.AM.toPage('OrderPay','orderId=<%=idata.OrderID%>');">付款</a>
+						<%}%>
+					</div>
+					<%}else if(GroupingTypeId==2 || GroupingTypeId==3){/*以前订单处理逻辑不动*/%>
+						<%if(idata.OrderStatus==100){%>
+							<div class="ogl_handle" style="display:none;">
+								<a class="" href="javascript:JitPage.ProcessOrder('<%=idata.OrderID%>',800);">取消</a>
+							</div>
+						<%}else if(idata.OrderStatus==600){%>
+							<div class="ogl_handle">
+								<p class="orderTime">下单时间：<%=idata.OrderDate%></p>
+								<a class="" href="javascript:JitPage.ProcessOrder('<%=idata.OrderID%>',700);">确认收货</a>
+							</div>
+						<%}else if(idata.OrderStatus==500){%>
+							<div class="ogl_handle" style="display:none;">
+								<a class="" href="javascript:JitPage.ProcessOrder('<%=idata.OrderID%>',800);">取消</a>
+								
+							</div>
+						<%}else if(idata.OrderStatus==510){%>
+							<div class="ogl_handle" style="display:none;">
+								<a class="" href="javascript:JitPage.ProcessOrder('<%=idata.OrderID%>',800);">取消</a>
+
+							</div>
+						<%}else if(idata.OrderStatus==610){%>
+							<div class="ogl_handle">
+								<p class="orderTime">下单时间：<%=idata.OrderDate%></p>
+								<a class="" href="javascript:JitPage.ProcessOrder('<%=idata.OrderID%>',700);">确认提货</a>
+							</div>
+						<%}else if(idata.OrderStatus==700){%>
+							<div class="ogl_handle">
+								<%if(idata.IsEvaluation){%>
+									<a href='javascript:;' class='goEvaluateBtn' style="border:1px solid #a1a5ad;color:#a1a5ad;">已评价</a>
+								<%}else{%>
+									<a href='javascript:;' class='goEvaluateBtn'>去评价</a>
+								<%}%>
+							</div>
+							
+						<%}%>
+					<%}%>
+					<%if(GroupingTypeId==13||GroupingTypeId==2||GroupingTypeId==14){%>
+						<%if(!(idata.OrderStatus==600&&GroupingTypeId==2)){%>
+						<div class="ogl_handle">
+							<p class="orderTime">下单时间：<%=idata.OrderDate%></p>
+							<a href='javascript:;' class='goEvaluateBtn' data-type="verify">确认</a>
+						</div>
+					    <%}%>
+					<%}%>
+				</div>
+			<%}%>
+			<%}else{%>
+			<div class="refundOrderList">
+			<ul>
+			<li data-refundid="<%=SalesReturnID%>">
+				<div class="refundMark">
+					<span><%=Status%></span>
+					<p>退货单号:<strong><%=SalesReturnNo%></strong></p>
+				</div>
+				<div class="refundItem">
+					<a href="javascript:;" class="cancelRefundBtn <%=Status!='待审核'?'on':''%>">取消申请</a>
+					<div class="imgBox">
+						<img src="<%=ImageUrl%>">
+					</div>
+					<div class="infoBox">
+						<div class="topInfo">
+							<p class="countBox">
+								<b>￥<%=SalesPrice%></b>
+								<span>X<%=Qty%></span>
+							</p>
+							<p class="nameBox"><%=ItemName%></p>
+						</div>
+						<div class="traitBox"><%=SkuDetail%></div>
+					</div>
+				</div>
+			</li>
+			</ul>
+			</div>
+			<%}%>
+		</script>
+		<script id="tplListItemAppointment" type="text/html">
+
+			<%for(var i=0;i<itemlists.length;i++){var idata= itemlists[i],orderList = idata.OrderDetails;%>
+
+			<div class="my_order_list" data-orderid="<%=idata.OrderID%>">
+				<a href="javascript:Jit.AM.toPage('OrderDetail','orderId=<%=idata.OrderID%>');">
+					<p class="orderMarkInfo" style="border: none">
+						<span class="num">订单编号：<%=idata.OrderNO%></span>
+						<span class="state"><%=idata.OrderStatusDesc%></span>
+					</p>
+					<p class="orderMarkInfo"  style="border: none">
+						<span class="num">预约时间：<%=idata.OrderDate%></span>
+						<span class="state"><img src="../../../images/public/my_shop/arr_icon3.png"></span>
+					</p>
+					<p class="orderMarkInfo"  style="border: none">
+						<span class="num">预约门店：<%=idata.Unit%></span>
+					</p>
+				</a>
+			</div>
+			<%}%>
+
+
+		</script>
+	</body>
+</html>

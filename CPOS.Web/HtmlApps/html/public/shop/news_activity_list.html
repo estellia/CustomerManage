@@ -1,0 +1,155 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+    <title name="NewsActivityList"></title>
+    <link href="../../../css/base/global.css?v1.0" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+    <style>
+        /*common*/
+        html,body,body>section{height:100%;min-height:100%;}
+        body>section{max-width:640px;margin:0 auto;}
+        body{font:15px/1.5em "Microsoft YaHei";background:#fff;color:#4d463e;}
+        /*抢购中*/
+        .commonSnappedBar{height:31px;padding:0px 15px 0 10px;font:12px/30px "黑体";border-top:1px solid #ccc;border-bottom:1px solid #ccc;background:#ebebeb;color:#fe7c23;}
+        .commonSnappedBar .tit{float:left;font-size:13px;font-weight:bold;}
+        .commonSnappedBar .countDownBox{float:right;}
+        .commonSnappedBar .text{float:left;font-size:12px;font-weight:bold;}
+        .commonSnappedBar .timeBox{float:left;margin:8px 0 0 4px;}
+        .commonSnappedBar .timeBox>*{float:left;height:14px;margin-left:1px;text-align:center;font:12px/14px "Arial";color:#fff;}
+        .commonSnappedBar .timeBox em{width:10px;border-radius:2px;background:#4f4242;}
+        .commonSnappedBar .timeBox span{width:7px;color:#4f4242;}
+
+        .snappedList-item{position:relative;height:141px;padding:0 15px 0 12px;border-bottom:1px solid #ccc;color:#999;display:-webkit-box;}
+        .snappedList-item .picWrap{width:108px;height:108px;margin-top:16px;border:1px solid #e0e0e0;background:#f7f7f7 url(../../../images/common/lazyImg.png) no-repeat center center;background-size: 70px 70px;}
+        .snappedList-item .picWrap,.snappedList-item .picWrap img{display:block;width:107px;height:107px;}
+        .snappedList-item .infoBox{position:relative;-webkit-box-flex:1;margin:16px 0 0 12px;}
+        .snappedList-item .title{height:34px;font:15px/17px "黑体";overflow:hidden;color:#333;}
+        .snappedList-item .priceBox{margin-top:4px;}
+        .snappedList-item .priceBox>*{float:left;}
+        .snappedList-item .discount{width:25px;margin-top:4px;height:15px;font:12px/15px "Arial";text-align:center;background:#ff3200;color:#fff;}
+        /*-webkit-transform:scale(0.5);position:relative;left:-10px;*/
+        .snappedList-item .curPrice{line-height:24px;margin:0 8px 0 1px;font-size:15px;font-family:Arial;color:#ff3200;}
+        .snappedList-item .curPrice span{font-size:22px;font-family:"Arial";}
+        .snappedList-item .oriPrice{margin-top:3px;font-size:12px;font-weight:bold;font-family:"黑体";}
+        .snappedList-item .oriPrice span{font-family:"Arial";}
+        .snappedList-item .buyCount{display:none;margin:4px 0 8px 0;font:13px/1.2em "Arial";color:#666;}
+        .percent{position:relative;width:84px;height:17px;font:12px/17px "黑体";text-align:center;border:1px solid #fe7c23;color:#fe7c23;}
+        .snappedList-item .percent{display:none;}
+        .snappedList-item .percent span{position:absolute;top:0;left:0;height:100%;background:#fe7c23;opacity:0.45;}
+        .snappedList-item .robTip{display:none;position:absolute;top:0px;left:0px;width:58px;height:58px;background:url(/HtmlApps/images/public/shop_default/robTip.png) no-repeat 0 0;background-size:100%;}
+        .snappedList-item .more{position:absolute;top:88px;left:0px;width:115px;font:15px/1.5em "黑体";background:url(/HtmlApps/images/public/shop_default/arr.png) no-repeat 100px center;background-size:8px 15px;color:#fe7c23;}
+        /*即将推出*/
+        .snappedList.on .buyCount{display:block;}
+        .snappedList.on .percent{display:block;}
+        .snappedList.on .more{display:none;}
+        /*抢光了*/
+        .snappedList .snappedList-item.on .robTip{display:block;}
+        .snappedList-item.on .title{color:#999;}
+        .snappedList-item.on .discount{background:#999;}
+        .snappedList-item.on .percent{display:none;}
+        .snappedList-item.on .curPrice{color:#fe7c23;}
+        .kvPicBox{width:100%;height:372px;}
+        .kvPicBox img{width:100%;height: 100%;}
+        .countdownTit p{width:190px;}
+    </style>
+</head>
+
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+
+<section class="activityPage">
+    <div class="kvPicBox">
+        <img src="" alt="">
+    </div>
+
+    <div class="activityNav">
+        <!-- <a class="on" href="javascript:;">
+            <span class="dateText">3月29日</span>
+            <span class="statusText">抢购中</span>
+        </a> -->
+        
+    </div>
+
+    <div class="countdownBox">
+        <div class="countdownTit">
+            <em class="line"></em>
+            <p>距离抢购<span></span>还剩</p>
+        </div>
+        <div class="timeoutBox" time-date=''>
+            <em class="time-h-max">0</em>
+            <em class="time-h-min">0</em>
+            <span>时</span>
+            <em class="time-m-max">0</em>
+            <em class="time-m-min">0</em>
+            <span>分</span>
+            <em class="time-s-max">0</em>
+            <em class="time-s-min">0</em>
+            <span>秒</span>
+        </div>
+    </div>
+
+    <div class="activityListBox">
+        <!-- <div class="itemBox">
+            <p class="picBox"><img src="../../../images/public/shop_default/shopPic1.png" alt=""></p>
+            <div class="goodsInfo">
+                <p class="title">麦斯威尔低脂三合一原味咖啡全新包装  待你品味</p>
+                <div class="buyInfo">
+                    <p class="buyCount">已有<span>65人</span>参加</p>
+                    <p class="originalPrice">原价 <em>￥95</em></p>
+                </div>
+                <div class="snappedBox">
+                    <p class="snappedPrice">￥ <span>38</span></p>
+                    <span class="snappedTit">抢购价</span>
+                </div>
+                <div class="btnWrap">
+                    <a class="snappedBtn" href="javascript:;">立即抢购</a>
+                </div>
+                
+            </div>
+        </div> -->
+    </div>
+    <div id="share-mask"></div>
+</section>
+
+
+
+<script id="activityTimeList" type="text/html">
+    <% for(var i=0,idata;i<list.length;i++){idata = list[i]; %>
+        <a class="" href="javascript:;" data-id="<%=idata.EventId%>">
+            <span class="dateText"><%=idata.BeginTimeName%></span>
+            <span class="statusText"><%=idata.EventStatus%></span>
+        </a>
+    <%}%>
+</script>
+
+
+<script id="activityGoodsList" type="text/html">
+    <% for(var i=0,idata;i<list.length;i++){idata = list[i]; %>
+        <div class="itemBox" data-id="<%=idata.ItemID%>" data-id="<%=idata.ItemID%>">
+            <p class="picBox"><img placeholder class="lazy" data-original="<%=idata.ImageUrl%>"></p>
+            <div class="goodsInfo">
+                <p class="title"><%=idata.ItemName%></p>
+                <div class="buyInfo">
+                    <p class="buyCount">已有<span><%=idata.SalesPersonCount%>人</span>参加</p>
+                    <p class="originalPrice">原价 <em>￥<%=idata.Price%></em></p>
+                </div>
+                <div class="snappedBox">
+                    <p class="snappedPrice">￥ <span><%=idata.SalesPrice%></span></p>
+                    <span class="snappedTit">抢购价</span>
+                </div>
+                <div class="btnWrap">
+                    <a class="snappedBtn" href="javascript:;">立即抢购</a>
+                </div>
+                
+            </div>
+        </div>
+    <%}%>
+</script>
+
+
+</body>
+</html>

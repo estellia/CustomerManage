@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title name="RefundStatus"></title>
+<link href="../../../css/base/global.css?v1.0" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+
+<section class="refundStatusPage">
+	<div class="refundInfoArea">
+        <div class="refundMark">
+            <span></span>
+            <p>退货单号：<strong></strong></p>
+        </div>
+        <div class="refundDes">
+        	<p>送回商品：<span class="deliveryWay"></span></p>
+            <p class="refundCause">退货原因：<span class="reasonText"></span></p>
+            <div class="storeInfo">
+            	<p>门店名称：<span class="name"></span></p>
+                <p>门店地址：<span class="addr"></span></p>
+                <p>门店电话：<span class="tel"></span></p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="serviceRecord">
+    	<p class="tit">服务记录</p>
+        <div class="statusTagArea">
+			<!--
+            <div class="tagBox">
+            	<em></em>
+            	<p class="expText">您的服务订单财务已退款，请注意查收</p>
+                <p class="dateTime">2014-07-08  12:34:25</p>
+            </div>
+            
+            <div class="tagBox">
+            	<em></em>
+            	<p class="expText">您的服务订单财务已退款，请注意查收</p>
+                <p class="dateTime">2014-07-08  12:34:25</p>
+            </div>
+            
+            <div class="tagBox">
+            	<em></em>
+            	<p class="expText">您的服务订单财务已退款，请注意查收</p>
+                <p class="dateTime">2014-07-08  12:34:25</p>
+            </div>
+            -->
+        </div>
+    </div>
+</section>
+<script id="tplRecordList" type="text/html">
+<%for(var i=0;i<HistoryList.length;i++){var result=HistoryList[i];%>
+<div class="tagBox <%=(i==0)?'on':'';%>">
+	<em></em>
+	<p class="expText"><%=result.HisRemark%></p>
+	<p class="dateTime"><%=result.CreateTime%></p>
+</div>
+<%}%>
+</script>       
+</body>
+</html>

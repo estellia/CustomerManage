@@ -1,0 +1,30 @@
+﻿@charset "utf-8";
+body {}
+#share-mask{display:none;position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,.7);z-index:9999}
+#share-mask-img{display:none;position:fixed;top:0;right:10px;width:160px;height:130px;z-index:10000}
+.my_bargain_list{margin-bottom:12px;padding:0 12px;font-size:13px;border-top:1px solid #d8dce2;border-bottom:1px solid #d8dce2;background:#fff;color:#3d4245}
+.my_bargain_list .orderMarkInfo{height:43px;padding-top:16px;border-bottom:1px solid #d8dce2}
+.my_bargain_list .orderMarkInfo .num{float:left;font-family:Arial}
+.my_bargain_list .orderMarkInfo .state{float:right;color:#fd6138}
+.my_og_item li .imgBox{float:left;width:70px;height:70px}
+.my_og_item li .imgBox img{display:block;width:100%;height:100%}
+.my_og_item li .baseMoney{margin-left:80px;color:#3d4245;  height: 22px;padding-left:13px;}
+.my_og_item li .shopMoney{margin-left:80px;color:#999999;  height: 22px;}
+.my_og_item li .SalesPrice{margin-left:80px;line-height:26px;text-align:right;color:#a1a5ad}
+.my_og_item li .SalesPrice .color1{color:#fd6138}
+.my_og_item li{height:130px;padding:8px 0}
+.my_og_item li .retailPrice{color:#999;text-decoration:line-through}
+.my_og_item li .shopMoney .stock{float:right;color:#3d4245}
+.my_og_item li .shopMoney .stock span{color:#3d4245}
+.my_bargain_list .infoBox{margin-left:80px;height:52px}
+.my_bargain_list li .infoBox .tit{height:100%;line-height:18px;font-size:13px;width:160px;float:left;overflow:hidden}
+.my_bargain_list li .infoBox .status{float:right;color:#fd6138}
+.my_bargain_list .last span{float:left}
+.my_bargain_list .last b{float:right}
+.my_bargain_list .statisticsBox{height:45px;line-height:45px;text-align:right;font-family:Arial;font-size:13px;color:#383b3f}
+.my_bargain_list .statisticsBox span{color:#a1a5ad}
+.my_bargain_list .ogl_handle{height:43px;border-top:1px solid #d8dce2}
+.my_bargain_list .ogl_handle a{float:right;width:72px;height:28px;line-height:26px;margin-top:8px;border:1px solid #fe7c23;border-radius:3px;text-align:center;color:#fe7c23;margin-right:10px}
+.my_bargain_list .ogl_handle .redborder{border:1px solid red;color:red}
+.my_bargain_list .ogl_handle .noselect{border:1px solid #ccc;color:#ccc}
+

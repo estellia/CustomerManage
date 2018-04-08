@@ -1,0 +1,14 @@
+
+2017/9/1 星期五 0:09:21 :  长链接转短链接接口
+
+2017/9/1 星期五 0:09:21 :  获取凭证接口： 
+
+2017/9/1 星期五 0:09:21 :  appID： wx677d57057f5bc14f
+
+2017/9/1 星期五 0:09:21 :  appSecret： 9c7f64e593c422834110e330d4b8e11c
+
+2017/9/1 星期五 0:09:21 :  调用获取凭证接口返回值： {"access_token":"MY4TBRO--Fi1gO1gYq8QbyqrIEn1dyX1pBMyVYfTjGUuqQTbFMzNph0LKx2Pu4U24SJjt-mej2kwlgyoUI--eTGOoJW-K7JeOp_Ta04GjFARPCeABAVTG","expires_in":7200}
+
+2017/9/1 星期五 0:09:22 :  长链接转短链接返回值：{"errcode":0,"errmsg":"ok","short_url":"https:\/\/w.url.cn\/s\/Ae5iIiU"}
+
+2017/9/1 星期五 0:09:22 :  shorturl：https://w.url.cn/s/Ae5iIiU

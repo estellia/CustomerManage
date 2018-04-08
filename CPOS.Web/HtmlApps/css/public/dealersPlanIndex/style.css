@@ -1,0 +1,50 @@
+﻿@charset "utf-8";
+body {font-size: 12px;background-color:#f4f4f4;}
+.dealers {}
+.dealershead {  height: 166px;
+    background-color: #ff9816;
+    padding: 15px;}
+.itemindex {width: 140px;
+    height: 140px;    padding-top: 20px;
+    margin: 0px auto;background-image:url("/HtmlApps/images/public/dealersPlanPact/round.png");background-size:140px 140px;color:#fff;  }
+.itemindex .tit {    text-align: center;  }
+.itemindex .cont {     text-align: center;   font-size: 23px;}
+.detailed {    position: absolute;top: 10px;right: 10px;color: #fff;font-size: 13px;}
+.item {    width: 50%;
+    float: left;
+    height: 70px;    padding: 6px;}
+.item .tit {}
+.item .cont {    font-size: 18px;
+    color: #fd7653;line-height: 32px;}
+.dealerscontent {}
+.verticalline {}
+.itemcount {    height: 140px;
+    margin: 10px 0px;
+    background-color: #fff;}
+.itemWithdrawals {    height: 80px;
+    background-color: #fff;text-align: center;    padding: 10px 0px;}
+.Withdrawals {    width: 50px;
+    height: 25px;
+    margin: 10px auto;
+    border: 1px solid #fd6138;color: #fd6138;   border-radius: 4px;line-height:25px;}
+.itembox {    text-align: center;}
+.dealersfoot {width: 100%;  text-align: center;    bottom: 17px;    position: absolute;}
+
+
+.commonBtn{padding: 10px 7px;border-radius: 24px;display: inline-block;width:120px;color:#fff;text-align: center;margin:0px 3px;background-color:#ff9600;}
+.commonBtn img{width: 16px;
+    margin-right: 9px;}
+
+.QRcode { display:none;   z-index: 1000;width: 100%; height: 100%;position: fixed;background: #000;top: 0;background:url("/HtmlApps/images/public/dealersPlanPact/QRcodebg.png");background-size:100%;}
+.QRhead {text-align:center;margin-top: 50px;}
+.QRhead img {width: 62px;display: block;margin: 0px auto;    border-radius: 50%;}
+.QRhead span {line-height:30px;}
+.QRcodeImg {text-align:center;  margin-top: 40px;}
+.QRcodeImg img {width: 50%;  margin: 0px auto;display: block;    border-radius: 5px;}
+.QRcodeImg span{line-height:30px;}
+.colsebtn {width: 27px;}
+.QRcode .foot {    text-align: center;    margin-top: 50px;}
+
+
+.mask { position:fixed; width:100%; height:100%; background:rgba(0,0,0,.6); top:0; left:0; z-index:999;}
+.tips-share { width:65%; position:fixed; top:10px; right:20px; z-index:1000;}

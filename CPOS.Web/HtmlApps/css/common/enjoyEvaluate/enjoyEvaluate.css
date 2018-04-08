@@ -1,0 +1,44 @@
+﻿/*评价*/
+html,body{height:100%;background:#fff;}
+#ClCache{display:none;}
+.enjoyEvaluatePage{min-height:100%;}
+.enjoyEvaluatePage h2{text-align:center;}
+
+.staffInfoBox{padding:18px 25px;font-size:25px;color:#262626;}
+.staffInfoBox .headPic{float:left;width:85px;height:85px;}
+.staffInfoBox .headPic img{display:block;width:100%;height:100%;border-radius:45px;}
+.staffInfoBox .infoBox{margin-left:102px;}
+.staffInfoBox .textBox{height:30px;}
+.staffInfoBox .already{float:right;padding-right:25px;font-size:20px;color:#f93e3f;}
+.staffInfoBox .tag{line-height:38px;font-size:20px;color:#929292;}
+.staffInfoBox .starBox{height:16px;}
+.staffInfoBox .starBox em{float:left;width:17px;height:16px;margin-right:1px;background:url(../../../images/common/enjoyEvaluate/min-unstar.png) no-repeat 0 0;}
+.staffInfoBox .starBox em.on{background:url(../../../images/common/enjoyEvaluate/min-star.png) no-repeat 0 0;}
+
+#enjoyPage{margin-top:16px;}
+#evaluatePage{margin-top:85px;}
+.enjoyEvaluatePage .heartBox{display:inline-block;width:100%;margin-top:65px;text-align:center;}
+.enjoyEvaluatePage .heartBox a{display:inline-block;width:54px;height:52px;margin:0 7px;background:url(../../../images/common/enjoyEvaluate/unstar.png?v1.0) no-repeat center center;}
+.enjoyEvaluatePage .heartBox a.on{background:url(../../../images/common/enjoyEvaluate/star.png?v1.0) no-repeat center center;}
+
+.enjoyEvaluatePage .moneyList{margin:66px 32px 0;}
+.enjoyEvaluatePage .moneyList a{float:left;width:144px;height:85px;line-height:81px;margin:0 24px 40px 24px;text-align:center;font-size:49px;font-style:italic;border-radius:6px;border:2px solid #bfbfbf;color:#f93e3f;}
+.enjoyEvaluatePage .moneyList span{position:relative;top:-4px;display:inline;font-size:32px;font-family:arial;font-style:normal;}
+.enjoyEvaluatePage .moneyList .indent45{}
+.enjoyEvaluatePage .moneyList .indent68{}
+.enjoyEvaluatePage .otherMoney{padding-top:20px;text-align:center;font-size:24px;color:#262626;}
+
+
+/*提示框*/
+.newPromptBox{position:absolute;top:50%;left:62px;right:62px;min-height:280px;margin-top:-180px;font-size:25px;border-radius:8px;background:#fbfbfd;color:#131313;z-index:1000;}
+.newPromptBox .tit{height:73px;line-height:71px;text-align:center;;font-size:25px;border-bottom:1px solid #efeeef;}
+.newPromptBox .contentBox{padding:25px;}
+.newPromptBox .botBtnBox{padding:0 25px 25px;}
+.newPromptBox .contentBox .textBox{padding:24px 0;text-align:center;}
+.newPromptBox .botBtnBox a{display:block;height:63px;line-height:61px;text-align:center;letter-spacing:5px;border-radius:8px;border:1px solid #fbd5d7;background:#f93e3f;color:#fff;}
+
+.newPromptBox input{display:block;width:100%;height:30px;line-height:30px;text-indent:4px;border:none;font-size:25px;}
+.newPromptBox .inputBox{height:62px;margin:6px 0;padding:15px;border:1px solid #e8e6e7;border-radius:8px;background:#fff;}
+.newPromptBox .inputBox em{float:left;width:118px;line-height:30px;}
+.newPromptBox .inputBox label{display:block;height:30px;margin-left:118px;}
+.newPromptBox .hintBox{display:none;font-size:20px;text-align:left;color:#f00;}

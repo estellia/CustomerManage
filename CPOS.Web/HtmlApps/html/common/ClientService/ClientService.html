@@ -1,0 +1,164 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<title name="ClientService">客服</title>
+<style>
+body { -webkit-user-select: inherit;}
+#hd{position:relative; max-width:640px; margin:0 auto; overflow:hidden; height:100%;}
+.bd{max-width:640px;max-height:100%; margin:0 auto; overflow:hidden;background:#f5f5f5;}
+
+.top{ width:100%; height:110px; padding-top:20px; background:#fff;position:relative; border-bottom:1px solid #c8c7cc; display:block; }
+.top dt{ width:90px; margin:0px 20px 0 30px;position:relative; float:left;}
+.top dd{font-size:1.5em; color:#666; line-height:32px; margin-top:10px; float:left;}
+.top dd span{font-size:0.9em;color:#fff; line-height:20px; padding:0 10px; background:#ffb84d;border-radius:5px; margin-left:10px;}
+.top dd font{ margin-left:10px;}
+.top dd p{ font-size:0.9em; color:#999;}
+.top dd img{ margin:0 3px;}
+.imgbg{position:absolute; left:0px; top:0px;}
+
+.center{ width:100%; background:#f5f5f5; margin-top:2%;padding-bottom:110%; }
+.sjian{ font-size:1em;color:#fff; line-height:30px; padding:0 1%; background:#e0e0e0;border-radius:5px; text-align:center;margin:0 40%; min-width: 110px; margin-top:2%;float:left;}
+
+.liaotl{ width:100%; float:left; margin-top:20px;}
+.liaotl dt{ width:90px; margin:0px 20px 0 20px;position:relative; float:left;}
+.liaotl dd{ width:58%; position:relative; float:left;}
+.liaotl dd span{font-size:2em;min-height: 50px; color:#333; line-height:32px; margin-top:10px; background:#fff;border:1px solid #dcdcdc; padding:15px;border-radius:5px; float:left;}
+.liaotl dd font{ margin-left:-14px; margin-top:30px;position:absolute; z-index:4;background: url(../../../images/common/ClientService/jiantou.png); width: 15px;height: 23px; }
+
+
+.liaot2{ width:100%;  margin-top:40px;display: -webkit-box;}
+.liaot2 dt{ width:90px; margin:0px 20px 0 30px;position:relative; float:right;}
+.liaot2 dd{ position:relative; -webkit-box-flex: 1; display: block;}
+.liaot2 dd span{font-size:2em;min-height: 50px; color:#333; line-height:32px; margin-top:10px;margin-left: 15px; background:#a0e75a;border:1px solid #7cd153; padding:15px;border-radius:5px; float:right;}
+.jiantou{ right:-15px; margin-top:30px;position:absolute;background: url(../../../images/common/ClientService/jiantou01.png); width: 15px;height: 23px; }
+
+.pro1{  float:left;}
+.pro1 img{ width:120px; height:120px; border:1px solid #fff; float:left;}
+.biaoti{ width:66%; font-size:1em; color:#404040;line-height:32px; margin-left:3%;float:left;}
+.biaoti p{font-size:1.4em; color:#ff5d13; margin-top:8%;}
+.biaoti s{font-size:0.6em; color:#999;}
+
+
+
+.pro{ width:93%; margin:0 auto;}
+.pro dl{width:100%; border:1px solid #dcdcdc; background:#fff;border-radius:5px; margin-top:22%; float:left;}
+.pro dt{  padding:2%; float:left;}
+.pro dt img{ width:120px; height:120px; border:1px solid #ddd; float:left;}
+.pro dt span{ width:74%; font-size:1.5em; color:#404040;line-height:32px; margin-left:3%;float:left;}
+.pro dt span p{font-size:1.6em; color:#ff5d13; margin-top:6%;}
+.pro dt span s{font-size:0.6em; color:#999;}
+.pro dd a{font-size:1.5em;color:#fd6138;  border:1px solid #fd6138; border-radius:5px; margin:2% 30%; padding:1% 5%;float:left;}
+.pro dd a:hover{color:#f00; background:#f5f5f5; text-decoration:none;}
+
+
+.bottom{display:-webkit-box; width:100%; height:99px; background:#f5f5f7; position: fixed;bottom: 0px;border-top: 1px solid #c8c7cc;z-index: 20;}
+.bottom img{display:block;width:60px;height:60px;cursor:pointer; margin:21px 20px 0 10px;}
+.bottom textarea{display:block;-webkit-box-flex:1;height:68px;font-size:1.5em; color:#333; line-height:30px; background:#fff; padding:10px;overflow-y:hidden; border:1px solid #83868c;border-radius:5px; margin-top:14px;}
+.bottom a{display:block;height:53px; line-height:53px; color:#83868c; padding:0 20px; background:#fff; border:1px solid #83868c;border-radius:5px; margin:22px 0 0 20px; }
+.bottom a:hover{ background:#ccc;}
+
+
+
+.kf{ color:#666; font-size:.875em;}
+
+.pingjia{ width:540px;  border-radius:5px; background:url(../images/tupian03.png) no-repeat top #fff; margin:0 2.5%; padding-top:305px; padding-bottom:30px; float:left;position: absolute;top: 140px; z-index: 111; }
+.close{ margin-top:-320px; position:absolute; z-index:12; right:-25px;cursor:pointer;float:right;}
+.xing{ width:90%; margin-left:9%; float:left;}
+.xing li{font-size:1.5em; color:#747474; line-height:30px; text-align:center; margin-right:7%; float:left;}
+.xing img{ width:54px; height:52px;}
+.pj a{font-size:1.5em;color:#fd6138; line-height:50px;border:1px solid #fd6138; border-radius:5px; margin:16% 0 5% 30%; padding:1% 10%;float:left;}
+.pj a:hover{color:#fff; background:#fd6138; text-decoration:none;}
+
+.qqFace{margin-top:-240px;background:#fff;padding:2px;border:1px #dfe6f6 solid;}
+.qqFace table td{padding:0px;}
+.qqFace table td img{cursor:pointer;border:1px #fff solid;}
+.qqFace table td img:hover{border:1px #0066cc solid;}
+
+
+/*--------------------reset--------------------*/
+html{-webkit-font-smoothing:subpixel-antialiased; -webkit-tap-highlight-color:transparent;}
+body{font-family:Arial,Microsoft YaHei,SimHei,STHeiti,SimSun,STSong,sans-serif; font-size:1em; color:#000; line-height:1.4;}
+body,form,input,ul,ol,dl,dd,p,h1,h2,h3,h4,h5,h6,textarea,pre,fieldset{margin:0;}
+ul,ol,input,fieldset,legend{padding:0;}
+ul{list-style-type:none; list-style-position:outside;}
+input,button{outline:none;}
+button,input[type=text],input[type=submit],input[type=button]{-webkit-appearance:none;}
+button,input[type=submit],input[type=button]{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,input,button,textarea,select{font-family:inherit; font-size:inherit; font-weight:normal; line-height:inherit; text-align:inherit;}
+input,button,select,textarea,label{display:inline-block; vertical-align:middle;}
+table{border-collapse:collapse; border-spacing:0;}
+a{color:#333; text-decoration:none;}
+a:hover{color:#333;}
+a img{border:none;}
+img,video{max-width:100%;}
+textarea{overflow:auto; resize:none;}
+input[type="text"]::-webkit-input-placeholder{color:#999;}
+input[type="text"]:-moz-placeholder{color:#999; opacity:1;}
+/*--------------------功能(.f-)--------------------*/
+.f-cb:before,.f-cb:after{content:''; display:table;}.f-cb:after{clear:both;}
+.f-tal{text-align:left;}.f-tac{text-align:center;}.f-tar{text-align:right;}
+.f-fl{float:left;}.f-fr{float:right;}
+.f-b{font-weight:bold;}.f-i{font-style:italic;}.f-s{text-decoration:line-through;}
+.f-db{display:block;}.f-dib{display:inline-block; vertical-align:middle;}
+.f-oh{overflow:hidden;}.f-ohi{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.f-box{box-sizing:border-box;}
+.f-wbk{word-wrap:break-word; word-break:break-all;}
+    .liaot {
+            display: inline-block;
+            padding-bottom:100px;
+            width: 100%;
+
+    }
+    #scrollContainer {
+        position:absolute;left:0;right:0;top:0;bottom:0;
+    }
+
+  .bottom  .SendMessageBtn {
+    
+        margin-right: 10px;
+    }
+
+  .bottom  .loadExpression {
+    
+        display:none;
+    }
+    #Messagetext {
+    
+    margin-left: 10px;
+    }
+
+</style>
+</head>
+
+<body style="background-color:#f5f5f5">
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+    <div id="scrollContainer" class="myorder" >
+				<div style="padding-top:50px;">
+					<div id="pullDown">
+						<span class="pullDownIcon"></span><span class="pullDownLabel"></span>
+					</div>
+					 <div class="liaot">
+            
+      	                </div>
+                    
+					<div id="pullUp" style="text-align: center;">
+						<span class="pullUpIcon"></span><span class="pullUpLabel"></span>
+					</div>
+				</div>
+			</div>
+    <footer class="bottom"><img class="loadExpression" src="../../../images/common/ClientService/jia.png" ><textarea id="Messagetext" name="" cols="" rows="" maxlength="200"></textarea><a href="javascript:;" class="SendMessageBtn">发送</a></footer>
+
+    
+<div class="ui-mask" id="hintNoAccess">
+	<div class="hintBox"><em class="closeBtn"></em></div>
+</div>
+
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+
+</body>
+</html>

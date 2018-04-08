@@ -1,0 +1,52 @@
+
+/*公共标题*/
+.commonTitleWrap{height:52px;padding:0 15px;border-bottom:1px solid #cecedc;border-radius:4px 4px 0 0;background:#f2f2f9;}
+.commonTitleWrap h2{float:left;margin-top:15px;font-size:16px;color:#666;}
+.commonTitleWrap span{float:right;width:100px;height:30px;line-height:30px;margin:12px 0 0 16px;border-radius:3px;text-align:center;color:#fff;cursor:pointer;}
+.commonTitleWrap .cancelBtn{background:#949ca7;}
+
+/*top部的显示信息*/
+.pageEditArea{padding:30px;}
+.scratchCardSetArea{width:95%;text-align:center;border:1px solid #cecedc;border-radius:4px;}
+.scratchCardSetArea .areaWrap{display:inline-block;width:640px;padding:20px 0;}
+.infoShowArea .item{float:left;width:50%;height:50px;line-height:50px;}
+.infoShowArea .width100{width:100%;height:auto;}
+.infoShowArea .item em{float:left;width:90px;font-style:normal;text-align:right;font-size:16px;color:#404853;}
+.infoShowArea .item span{float:left;font-size:15px;color:#999;word-break:break-all;}
+
+
+.commonItem{margin-bottom:30px;}
+.commonItem .tit{float:left;min-width:90px;width:auto;_width:140px;height:36px;line-height:36px;text-align:right;font-size:16px;color:#404853;}
+.commonItem .handleWrap{float:left;}
+.commonItem .inputBox{width:455px;height:32px;text-indent:5px;border:1px solid #cecedc;}
+
+.commonItem .uploadWrap{padding:10px 0 20px;}
+.commonItem .viewPic{float:left;width:179px;height:100px;line-height:100px;margin-right:30px;text-align:center;font-size:16px;background:#d0d0d0;color:#fff;}
+.commonItem .viewPic img{display:block;width:179px;height:100px;}
+.commonItem .info{float:left;width:200px;}
+.commonItem .exp{line-height:26px;font-size:15px;color:#828282;}
+.commonItem .uploadBtn{ background: url("/module/WeiXin/css/images/uploadBtn.jpg") no-repeat scroll center center #B2C7AB;display:block;width:96px;height:30px;line-height:30px;margin-top:15px;text-align:center;border-radius:7px;background:#b2c7ab;color:#fff;cursor:pointer;}
+
+.tempEditArea{border:1px dashed #dadada;background:#f9f9f9;}
+.tempEditArea .areaWrap{width:640px;margin:0 auto;padding:50px 0;}
+.commonItem .selectBox{width:455px;height:32px;padding-left:5px;border:1px solid #cecedc;}
+.commonItem .weirdBox{width:210px;height:34px;border:none;border-radius:4px;background:#d0d4d7;}
+
+.tempEditArea .w-495{width:495px;padding-top:10px;}
+.tempEditArea .moudle{float:left;margin:0 40px 20px 0;cursor:pointer;}
+.tempEditArea .moudle p{position:relative;width:125px;height:80px;background:#d0d0d0;}
+.tempEditArea .moudle img{weidth:100%;height:100%;display:block;}
+.tempEditArea .moudle .mask{display:none;position:absolute;width:100%;height:100%;background:url(../images/moudleOn2.png) no-repeat center center;}
+.tempEditArea .moudle.on .mask{display:block;}
+
+
+/*刮刮卡设置-弹层*/
+.scratchCardPopup{width:582px;position:fixed;top:20%;left:50%;margin-left:-291px;padding-bottom:10px;border-radius:4px;background:#fff;z-index:9999;}
+.scratchCardPopup .commonTitleWrap{height:57px;padding-top:2px;}
+.scratchCardPopup .setList{height:60px;padding:0px 25px;border-bottom:1px solid #cecedc;cursor:pointer;}
+.scratchCardPopup .checkBox{float:left;width:30px;height:30px;margin:12px 10px 0 0;background:url(../images/check01.png) no-repeat center center;}
+.scratchCardPopup .setList.on .checkBox{background:url(../images/check02.png) no-repeat center center;}
+.scratchCardPopup .text{float:left;height:57px;line-height:57px;font-size:16px;color:#66666d;}
+
+
+

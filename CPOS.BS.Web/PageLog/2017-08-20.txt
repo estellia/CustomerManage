@@ -1,0 +1,2 @@
+2017/8/20 星期日 23:15:25	SSO登录失败，AuthWebService.asmx返回空数据
+2017/8/20 星期日 23:18:50	SSO登录失败，AuthWebService.asmx返回空数据

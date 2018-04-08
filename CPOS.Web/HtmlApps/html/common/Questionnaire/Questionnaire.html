@@ -1,0 +1,329 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<title class="QuestionnaireTitle" name="Questionnaire">问卷</title>
+</head>
+
+<body >
+
+    <section id="shareMask" class="hide" style="position:absolute;top:0;left:0;z-index: 11;">
+			<div class="mask" onclick="JitPage.hideSharePanel();"></div>
+    		<div class="tips-share"><img src="/HtmlApps/images/common/Questionnaire/tips-share.png" alt="请点击此处将本页面转发给好友或转发到朋友圈。"></div>
+		</section>
+<div class="wx_loading" id="masklayer" style="background-color:#f04a4f;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+
+            <div class="QuestionnaireStart">
+                    <div class="startimg">
+                        <img class="_BGImageSrc" src="" />
+              
+                        <span class="startbtn">开始</span>
+                        <span class="regular">活动规则></span>
+                       
+                    </div>
+                </div>
+    <div class="ruleArea"></div>
+
+     <div style="display:none;">
+            <input  class="Questiondata ActivityID"   data-idname="ActivityID" value=""   type="text" />
+         <input  class="Questiondata ActivityName"   data-idname="ActivityName" value=""   type="text" />
+         <input  class="Questiondata QuestionnaireID"   data-idname="QuestionnaireID" value=""   type="text" />
+         <input  class="Questiondata QuestionnaireName"   data-idname="QuestionnaireName" value=""   type="text" />
+         <input  class="Questiondata VipID"   data-idname="VipID" value=""   type="text" />
+    </div>
+
+    <div class="questionnaire">
+
+        
+         </div>
+
+    <div class="QuestionnaireEnd">
+                    <div class="endimg">
+                        <img class="end_BGImageSrc" src="" />
+                        <img class="bgend" src="../../../images/common/Questionnaire/bgend.png" />
+                        <img class="defaultend" src="" />
+                        <span class="endtext">答题已完成是否要分享</span>
+                        <span class="Endbtn">分享</span>
+                       
+                    </div>
+                </div>
+
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+
+   
+<script id="Tpl_itemmodel1" type="text/html">
+    <div class="question  question<%=index %>"  <%=index!=1?"style=display:none;":""  %>  >
+          <div style="display:none;">
+            <input  class="optiondata QuestionID"   data-idname="QuestionID" value="<%=Questionid %>"   type="text" />
+            <input  class="optiondata QuestionName"   data-idname="QuestionName" value="<%=Name %>"   type="text" />
+            <input  class="optiondata sumscore"   data-idname="sumscore" value="0"   type="text" />
+                
+           </div>
+
+        <div class="questitle"> 
+            <% if (IsRequired ==1) { %>
+             <span class="red">*</span>
+             <% }%>
+            <%=index %>.<%=Name %>
+            <% if (Src != "") { %>
+		            <div><img src="<%=Src %>" /></div>
+		    <% }%>
+            </div>
+
+        <div class="quescontent"  style="margin-bottom: 15%;" >
+            <div class="quescontentitem" data-maxscore="<%=MaxScore %>" data-type="<%=QuestionidType %>" data-id="<%=Questionid %>" data-scorestyle="<%=ScoreStyle %>"  data-isrequired="<%=IsRequired %>"  data-isvalidateminchar="<%=IsValidateMinChar %>" data-minchar="<%=MinChar %>" data-maxchar="<%=MaxChar %>" data-isvalidatemaxchar="<%=IsValidateMaxChar %>" data-norepeat="<%=NoRepeat%>" data-isvalidatestartdate="<%=IsValidateStartDate %>" data-startdate="<%=StartDate %>"  data-isvalidateenddate="<%=IsValidateEndDate %>" data-enddate="<%=EndDate%>">
+                 
+                <!-- 单行文字 -->
+                    <% if (QuestionidType == 1) { %>
+
+                    <div  class="itemtext " >
+                        <input class="optiondata " type="text" value="<%=DefaultValue==null?"":DefaultValue %>" data-idname="AnswerText"    <% if (IsValidateMinChar ==1&&IsValidateMaxChar==1) { %>  maxlength="<%=MaxChar %>"  <%}%> />
+                        </div>
+                    <%}%>
+
+                 <!-- 多行文字 -->
+                    <% if (QuestionidType == 2) { %>
+
+                    <div  class="itemtext " >
+                       <textarea class="optiondata"  rows="2" cols="2"  data-idname="AnswerText"     <% if (IsValidateMinChar ==1&&IsValidateMaxChar==1) { %>  maxlength="<%=MaxChar %>"  <%}%> ><%=DefaultValue %></textarea>
+                        </div>
+                    <%}%>
+
+                 
+                <!-- 下拉框 -->
+                    <% if (QuestionidType == 5) { %>
+
+                    <div  class="itemtext dropdown" >
+                         <div style="display:none;">
+                            <input  class="optiondata dropdownvalue"   data-idname="AnswerText" value=""   type="text" />
+                            
+                           </div>
+                        
+                            <select class="selectoption "    >
+                                <option value="">请选择</option>
+                                <% for(var i=0;i<Optionlist.length;i++) {%>
+
+                                    <option value="<%=Optionlist[i].OptionContent %>"><%=Optionlist[i].OptionContent %></option>
+                                    <%}%>
+                            </select>
+                        </div>
+                    <%}%>
+
+                <!-- 手机号 -->
+                    <% if (QuestionidType == 6) { %>
+
+                    <div  class="itemtext " >
+                       <input class="optiondata"  type="tel" value="<%=DefaultValue==null?"":DefaultValue %>"  data-idname="AnswerText"    />
+                        </div>
+                    <%}%>
+
+                 <!-- 地址 -->
+                    <% if (QuestionidType == 7) { %>
+
+                    <div  class="itemtext address" >
+                         <% if (IsShowProvince == "1") { %>
+                         <select  class="optiondata addr province" data-idname="AnswerProvince" onchange="JitPage.fnGetCityByProvince(this.value,this)" ><option value=''>省</option></select>
+                        
+                        <select class="optiondata addr city"  data-idname="AnswerCity" onchange="JitPage.fnGetDistrictByCity(this.value,this)" ><option value=''>市</option></select>
+                       
+                        <select  class="optiondata addr district"   data-idname="AnswerCounty"><option value=''>区</option></select>
+                         <%}%>
+                        
+                       <textarea   class="optiondata _address"  rows="2" cols="2"   data-idname="AnswerAddress"  placeholder="详细地址" ><%=DefaultValue==null?"":DefaultValue %></textarea> 
+                         
+                        </div>
+                    <%}%>
+
+
+                 <!-- 日期 -->
+                    <% if (QuestionidType == 8) { %>
+
+                    <div  class="itemtext " >
+                       <input class="optiondata date"  type="date"   data-idname="AnswerDate"  value="<%=DefaultValue==null?"":DefaultValue %>" />
+                        </div>
+                    <%}%>
+
+                <% for(var i=0;i<Optionlist.length;i++) {%>
+
+                        <!-- 单选 -->
+                    <% if (QuestionidType == 3) {  %>
+
+                    <div  class="item radioitem  option"  data-optionname="<%=Optionlist[i].OptionContent %>" data-yespptionscore="<%=Optionlist[i].YesOptionScore %>" data-name="<%=Optionlist[i].OptionContent %>"  data-optionid="<%=Optionlist[i].OptionID %>"><span><%=Optionlist[i].number%></span><div class="itemcontent"><%=Optionlist[i].OptionContent %></div>
+                    </div>
+                    <%}%>
+
+                        <!-- 多选 -->
+                    <% if (QuestionidType == 4) { %>
+
+                    <div  class="item checkitem  option"  data-optionname="<%=Optionlist[i].OptionContent %>" data-isrightvalue="<%=Optionlist[i].IsRightValue %>"   data-yespptionscore="<%=Optionlist[i].YesOptionScore %>"   data-name="<%=Optionlist[i].OptionContent %>"   data-optionid="<%=Optionlist[i].OptionID %>"><span><%=Optionlist[i].number%></span><div class="itemcontent"><%=Optionlist[i].OptionContent %></div>
+                    </div>
+                    <%}%>
+
+                    
+
+                        <!-- 单选图片 -->
+                    <% if (QuestionidType == 9) { %>
+                    <div class='item_img'>
+                        <div class="itemimg radioitem   option"  data-optionname="<%=Optionlist[i].OptionContent %>"  data-yespptionscore="<%=Optionlist[i].YesOptionScore %>"   data-name="<%=Optionlist[i].OptionContent %>"    data-optionid="<%=Optionlist[i].OptionID %>"><span><%=Optionlist[i].number%></span>
+                            <div class='itemcontent'><img src="<%=Optionlist[i].OptionPicSrc %>" /></div></div><div class='itemimgtext'><%=Optionlist[i].OptionContent %></div></div>
+                    
+                        <%} %>
+
+                    <!-- 多选图片 -->
+                    <% if (QuestionidType == 10) { %>
+                        <div class='item_img'>
+                        <div class="itemimg checkitem  option"  data-optionname="<%=Optionlist[i].OptionContent %>" data-isrightvalue="<%=Optionlist[i].IsRightValue %>"   data-yespptionscore="<%=Optionlist[i].YesOptionScore %>"   data-name="<%=Optionlist[i].OptionContent %>"   data-optionid="<%=Optionlist[i].OptionID %>"><span><%=Optionlist[i].number%></span>
+                            <div class='itemcontent'><img src="<%=Optionlist[i].OptionPicSrc %>" /></div></div><div class='itemimgtext'><%=Optionlist[i].OptionContent %></div></div>
+                        <%} %>
+                <%} %>
+            </div>
+        </div>
+        <div class="quesfoot">
+            <div class="<% if (index == 1) { %>firstquestion<%}else{ %> prequestion <%}%>  step" data-show="question<%=index-1 %>"><span>上一题</span></div>
+            <div class="showstatue"><span><%=index %>/<%=length %></span></div>
+            <div class=" <% if (index == length) { %>overquestion<%}else{ %> nextquestion <%}%> step" data-show="question<%=index+1 %>"><span> <% if (index == length) { %>提交<%}else{ %> 下一题 <%}%> </span></div>
+        </div>
+    </div>
+</script>
+
+   <script id="Tpl_itemmodel2" type="text/html">
+
+       <div class="question qmodel2  question<%=index %>"  data-index="<%=index %>"  <% if (index == length) { %> style="margin-bottom: 65px;"  <%} %>>
+          <div style="display:none;">
+            <input  class="optiondata QuestionID"   data-idname="QuestionID" value="<%=Questionid %>"   type="text" />
+            <input  class="optiondata QuestionName"   data-idname="QuestionName" value="<%=Name %>"   type="text" />
+            <input  class="optiondata sumscore"   data-idname="sumscore" value="0"   type="text" />
+                
+           </div>
+
+        <div class="questitle"> 
+            <% if (IsRequired ==1) { %>
+             <span class="red">*</span>
+             <% }%>
+            <%=index %>.<%=Name %>
+            <% if (Src != "") { %>
+		            <div><img src="<%=Src %>" /></div>
+		    <% }%>
+            </div>
+
+        <div class="quescontent">
+            <div class="quescontentitem" data-maxscore="<%=MaxScore %>" data-type="<%=QuestionidType %>" data-id="<%=Questionid %>" data-scorestyle="<%=ScoreStyle %>"  data-isrequired="<%=IsRequired %>"  data-isvalidateminchar="<%=IsValidateMinChar %>" data-minchar="<%=MinChar %>"  data-maxchar="<%=MaxChar %>"   data-isvalidatemaxchar="<%=IsValidateMaxChar %>" data-norepeat="<%=NoRepeat%>" data-isvalidatestartdate="<%=IsValidateStartDate %>" data-startdate="<%=StartDate %>"  data-isvalidateenddate="<%=IsValidateEndDate %>" data-enddate="<%=EndDate%>">
+                 
+                <!-- 单行文字 -->
+                    <% if (QuestionidType == 1) { %>
+
+                    <div  class="itemtext " >
+                        <input class="optiondata " type="text" value="<%=DefaultValue==null?"":DefaultValue %>" data-idname="AnswerText"    <% if (IsValidateMinChar ==1&&IsValidateMaxChar==1) { %>  maxlength="<%=MaxChar %>"  <%}%> />
+                        </div>
+                    <%}%>
+
+                 <!-- 多行文字 -->
+                    <% if (QuestionidType == 2) { %>
+
+                    <div  class="itemtext " >
+                       <textarea class="optiondata"  rows="2" cols="2"  data-idname="AnswerText"     <% if (IsValidateMinChar ==1&&IsValidateMaxChar==1) { %>  maxlength="<%=MaxChar %>"  <%}%> ><%=DefaultValue %></textarea>
+                        </div>
+                    <%}%>
+
+                 
+                <!-- 下拉框 -->
+                    <% if (QuestionidType == 5) { %>
+
+                   <div  class="itemtext dropdown" >
+                         <div style="display:none;">
+                            <input  class="optiondata dropdownvalue"   data-idname="AnswerText" value=""   type="text" />
+                            
+                           </div>
+                            <select class="selectoption "    >
+                                <option value="">请选择</option>
+                                <% for(var i=0;i<Optionlist.length;i++) {%>
+
+                                    <option value="<%=Optionlist[i].OptionContent %>"><%=Optionlist[i].OptionContent %></option>
+                                    <%}%>
+                            </select>
+                        </div>
+                    <%}%>
+
+                <!-- 手机号 -->
+                    <% if (QuestionidType == 6) { %>
+
+                    <div  class="itemtext " >
+                       <input class="optiondata"  type="tel" value="<%=DefaultValue==null?"":DefaultValue %>"  data-idname="AnswerText"    />
+                        </div>
+                    <%}%>
+
+                 <!-- 地址 -->
+                    <% if (QuestionidType == 7) { %>
+
+                    <div  class="itemtext address" >
+                         <% if (IsShowProvince == "1") { %>
+                         <select  class="optiondata addr province" data-idname="AnswerProvince" onchange="JitPage.fnGetCityByProvince(this.value,this)" ><option value=''>省</option></select>
+                       
+                        <select  class="optiondata addr city"  data-idname="AnswerCity" onchange="JitPage.fnGetDistrictByCity(this.value,this)" ><option value=''>市</option></select>
+                        
+                        <select  class="optiondata addr district"   data-idname="AnswerCounty"><option value=''>区</option></select>
+                         <%}%>
+                        
+                       <textarea   class="optiondata _address"  rows="2" cols="2"   data-idname="AnswerAddress"  placeholder="详细地址" ><%=DefaultValue==null?"":DefaultValue %></textarea> 
+                         
+                        </div>
+                    <%}%>
+
+
+                 <!-- 日期 -->
+                    <% if (QuestionidType == 8) { %>
+
+                    <div  class="itemtext " >
+                       <input class="optiondata date"  type="date"   data-idname="AnswerDate"  value="<%=DefaultValue==null?"":DefaultValue %>" />
+                        </div>
+                    <%}%>
+
+                <% for(var i=0;i<Optionlist.length;i++) {%>
+
+                        <!-- 单选 -->
+                    <% if (QuestionidType == 3) {  %>
+
+                    <div  class="item radioitem  option"  data-optionname="<%=Optionlist[i].OptionContent %>" data-yespptionscore="<%=Optionlist[i].YesOptionScore %>" data-name="<%=Optionlist[i].OptionContent %>"  data-optionid="<%=Optionlist[i].OptionID %>"><span><%=Optionlist[i].number%></span><div class="itemcontent"><%=Optionlist[i].OptionContent %></div>
+                    </div>
+                    <%}%>
+
+                        <!-- 多选 -->
+                    <% if (QuestionidType == 4) { %>
+
+                    <div  class="item checkitem  option"  data-optionname="<%=Optionlist[i].OptionContent %>" data-isrightvalue="<%=Optionlist[i].IsRightValue %>"   data-yespptionscore="<%=Optionlist[i].YesOptionScore %>"   data-name="<%=Optionlist[i].OptionContent %>"   data-optionid="<%=Optionlist[i].OptionID %>"><span><%=Optionlist[i].number%></span><div class="itemcontent"><%=Optionlist[i].OptionContent %></div>
+                    </div>
+                    <%}%>
+
+                    
+
+                        <!-- 单选图片 -->
+                    <% if (QuestionidType == 9) { %>
+                    <div class='item_img'>
+                        <div class="itemimg radioitem   option"  data-optionname="<%=Optionlist[i].OptionContent %>"  data-yespptionscore="<%=Optionlist[i].YesOptionScore %>"   data-name="<%=Optionlist[i].OptionContent %>"    data-optionid="<%=Optionlist[i].OptionID %>"><span><%=Optionlist[i].number%></span>
+                            <div class='itemcontent'><img src="<%=Optionlist[i].OptionPicSrc %>" /></div></div><div class='itemimgtext'><%=Optionlist[i].OptionContent %></div></div>
+                    
+                        <%} %>
+
+                    <!-- 多选图片 -->
+                    <% if (QuestionidType == 10) { %>
+                        <div class='item_img'>
+                        <div class="itemimg checkitem  option"  data-optionname="<%=Optionlist[i].OptionContent %>" data-isrightvalue="<%=Optionlist[i].IsRightValue %>"   data-yespptionscore="<%=Optionlist[i].YesOptionScore %>"   data-name="<%=Optionlist[i].OptionContent %>"   data-optionid="<%=Optionlist[i].OptionID %>"><span><%=Optionlist[i].number%></span>
+                            <div class='itemcontent'><img src="<%=Optionlist[i].OptionPicSrc %>" /></div></div><div class='itemimgtext'><%=Optionlist[i].OptionContent %></div></div>
+                        <%} %>
+                <%} %>
+            </div>
+        </div>
+           <% if (index == length) { %>
+       <div class="quesfoot quesfootshow">
+            <div class=" overquestion step model2"><span>提交</span></div>
+        </div><%} %>
+    </div>
+       </script>
+
+    
+</body>
+</html>

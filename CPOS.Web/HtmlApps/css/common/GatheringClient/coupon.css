@@ -1,0 +1,17 @@
+﻿@charset "utf-8";
+html,body {height:100%;background:#0cc;}
+.couponDraw-area img{display:block;}
+.bottomPicBox{position:relative;}
+.describeBox{position:absolute;top:0;left:0;line-height:30px;padding-left:30px;font-family:"黑体";font-size:15px;color:#fff;}
+.attentionBtn{position:absolute;bottom: 86px;left:50%;margin-left: -145px;display:block;width: 290px;height: 40px;background:url(../../../images/public/user_default/attentionBtn.png) no-repeat 0 0;background-size: 290px 40px;}
+.qrAttentionBtn{position:fixed;bottom:15px;left:0;right:0;}
+.qrAttentionBtn img{display:block;width:157px;height:157px;margin:0 auto;border-radius:4px;border:3px solid #00b1b1;}
+.qrAttentionBtn .tipText{padding-top:7px;text-align:center;font-size:15px;font-family:"黑体";color:#fff;}
+
+.couponInfo{position:relative;height:140px;padding:30px;background:url(../../../images/public/user_default/bg.png) no-repeat center center;background-size:cover;}
+.couponLogo{display:block;width:58px;height:58px;margin:0 auto;border-radius:30px;}
+.couponName{padding-top:8px;text-align:center;font-size:20px;color:#fff;}
+.couponValidity{color: #fff;text-align: center;}
+.QRcode{position:fixed;bottom:15px;left:0;right:0;}
+.QRcode img{display:block;width:157px;height:157px;margin:0 auto;border-radius:4px;border:3px solid #00b1b1;}
+	

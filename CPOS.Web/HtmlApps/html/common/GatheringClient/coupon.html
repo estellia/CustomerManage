@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title name="GCCoupon"></title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+   
+    
+</head>
+<body>
+	<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+        <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+    </div>
+    
+    <section class="couponDraw-area">
+        <div><img src="../../../images/public/user_default/couponDrawBg1.jpg" alt=""></div>
+        <div class="couponInfo" style="display:none;">
+            <p id="txtCouponName" class="couponName"></p>
+           <!-- <p class="couponValidity">有效期：<span id="txtBeginDate"></span>至<span id="txtEndDate"></span></p>-->
+            <div class="QRcode">
+                <img src="" />
+            </div>
+        </div>
+        <div class="bottomPicBox" style="display:none;">
+
+        	<div class="describeBox">
+            	<p class="couponName"></p>
+                <p class="couponValidity">有效期：<span id="txtBeginDate"></span>至<span id="txtEndDate"></span></p>
+            </div>
+        	<img src="../../../images/public/user_default/couponDrawBg2.jpg" alt="">
+            <a href="javascript:void(0);" class="attentionBtn regInfo" style="display:none"></a>
+            <p style="text-align: center;font-size: 15px;color: #fff;display:none; padding-bottom: 35px" class="regInfo">马上注册会员，享受本券优惠！</p>
+            <div class="qrAttentionBtn">
+                <img src="../../../images/public/user_default/qrAttention.jpg">
+                <p class="tipText">请长按此二维码关注并注册后使用</p>
+            </div>
+        </div>
+    </section>
+    
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+    
+</body>
+
+</html>

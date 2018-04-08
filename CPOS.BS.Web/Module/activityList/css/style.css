@@ -1,0 +1,13 @@
+﻿@charset "utf-8";
+.commonSelectWrap .tit{width:102px;}
+.dataMessage{ text-align: center;  font-size: 14px; line-height: 35px; display: none}
+#tableWrap2 .datagrid-row,#tableWrap2 .datagrid-header-row{height:62px;line-height:61px;}
+#tableWrap2 .datagrid-btable{width:100%;}
+/*活动参与，弹出*/
+
+
+.exportTable{height:75px;background:#f4f8fa;}
+.exportTable .exportBtn{display:none;width:110px;height:32px;line-height:32px;margin:22px 0 0 30px;text-align:center;font-size:14px;border-radius:3px;background:#0cc;color:#f4f8fa;}
+/*弹层，分页*/
+.joinprize,.winprize{  text-decoration: underline;color:#0099ff;float:none;margin: 0 auto;white-space: nowrap;}
+.jui-dialog-table{width:1026px;height:576px;position:fixed;top:30px;margin-left:-513px;}

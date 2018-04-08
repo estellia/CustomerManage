@@ -1,0 +1,164 @@
+
+2017/8/31 星期四 18:23:14 :  获取凭证接口： 
+
+2017/8/31 星期四 18:23:15 :  appID： wx677d57057f5bc14f
+
+2017/8/31 星期四 18:23:17 :  appSecret： 9c7f64e593c422834110e330d4b8e11c
+
+2017/8/31 星期四 19:11:19 :  调用获取凭证接口返回值： {"access_token":"yezEaqZRse196GcIme5uEB-ixKy49nBOfjhTxBwupPQmXkAJSySl3Fr3jX4cZsWlSE9WBD6HIbXEgG64cmRJw2LbTDdopdVaUyHBbaXiz8e7vudqIYqzfS605n0G7QgdLKSfAEAQPX","expires_in":7200}
+
+2017/8/31 星期四 19:37:29 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 19:37:56 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 21:50:21 :  获取二维码图片地址
+
+2017/8/31 星期四 21:50:21 :  获取凭证接口： 
+
+2017/8/31 星期四 21:50:21 :  appID： wx677d57057f5bc14f
+
+2017/8/31 星期四 21:50:21 :  appSecret： 9c7f64e593c422834110e330d4b8e11c
+
+2017/8/31 星期四 21:50:21 :  调用获取凭证接口返回值： {"access_token":"Ce5J-KKpnkdRVVIJoyPyikRcaINBK6cMZpM-l5ueP8h5YKiQPB-xiObirep3jWbP953TuNJiylrl80mTs4Z-9Sc6Mk9d1aSbLwUAZxRczbT8G3s7v411LQRjrfNVqRBEDLIjAIAMUR","expires_in":7200}
+
+2017/8/31 星期四 21:50:22 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 21:50:22 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 21:58:23 :  获取二维码图片地址
+
+2017/8/31 星期四 21:58:23 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 21:58:23 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 22:01:29 :  获取二维码图片地址
+
+2017/8/31 星期四 22:01:29 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 22:01:29 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 22:02:12 :  获取二维码图片地址
+
+2017/8/31 星期四 22:02:12 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 22:02:12 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 22:03:35 :  获取二维码图片地址
+
+2017/8/31 星期四 22:03:35 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 22:03:35 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 22:03:51 :  获取二维码图片地址
+
+2017/8/31 星期四 22:03:51 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 22:03:51 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 22:22:38 :  获取二维码图片地址
+
+2017/8/31 星期四 22:22:38 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 22:22:38 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 22:29:42 :  获取二维码图片地址
+
+2017/8/31 星期四 22:29:42 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 22:29:42 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 22:35:06 :  获取二维码图片地址
+
+2017/8/31 星期四 22:35:07 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 22:35:07 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 22:37:56 :  获取二维码图片地址
+
+2017/8/31 星期四 22:37:57 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 22:37:57 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 22:39:10 :  获取二维码图片地址
+
+2017/8/31 星期四 22:39:10 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 22:39:10 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 23:25:02 :  获取二维码图片地址
+
+2017/8/31 星期四 23:25:03 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 23:25:03 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 23:25:23 :  获取二维码图片地址
+
+2017/8/31 星期四 23:25:23 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 23:25:23 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 23:26:03 :  获取二维码图片地址
+
+2017/8/31 星期四 23:26:04 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 23:26:04 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 23:42:18 :  获取二维码图片地址
+
+2017/8/31 星期四 23:42:19 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 23:42:19 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 23:44:59 :  获取二维码图片地址
+
+2017/8/31 星期四 23:45:00 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 23:45:00 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 23:46:24 :  获取二维码图片地址
+
+2017/8/31 星期四 23:46:24 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 23:46:24 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 23:46:30 :  获取二维码图片地址
+
+2017/8/31 星期四 23:46:30 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 23:46:30 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 23:47:25 :  获取二维码图片地址
+
+2017/8/31 星期四 23:47:26 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 23:47:26 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 23:48:15 :  获取二维码图片地址
+
+2017/8/31 星期四 23:48:15 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 23:48:15 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 23:48:22 :  获取二维码图片地址
+
+2017/8/31 星期四 23:48:23 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 23:48:23 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 23:48:39 :  获取二维码图片地址
+
+2017/8/31 星期四 23:48:39 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 23:48:39 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 23:48:46 :  获取二维码图片地址
+
+2017/8/31 星期四 23:48:46 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 23:48:46 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/31 星期四 23:54:40 :  获取二维码图片地址
+
+2017/8/31 星期四 23:54:40 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/31 星期四 23:54:40 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA

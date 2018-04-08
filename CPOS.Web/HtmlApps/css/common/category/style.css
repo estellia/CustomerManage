@@ -1,0 +1,19 @@
+html,body{height:100%;min-height:100%;}
+body{font:14px/1.2em "Microsoft YaHei";background:#f3f3f3;color:#333;}
+
+.headTitBox{position:relative;height:40px;line-height:40px;text-align:center;border-bottom:1px solid #e1e1e1;}
+.headTitBox a{position:absolute;top:0;right:0;height:100%;padding-right:13px;color:#fd6138;}
+
+.categoryList{}
+.categoryList li{min-height:40px;line-height:39px;border-bottom:1px solid #e1e1e1;}
+.categoryList li>ul>li:nth-last-of-type(1){border-bottom:none;}
+.categoryList li>ul>li:nth-of-type(1){border-top:1px solid #e1e1e1;}
+.categoryList li a{display:block;}
+.categoryList li .item{padding-left:14px;background:#fff;}
+
+.commonSubList li a{display:block;padding-left:30px;color:#666;}
+.commonSubList li.on{background:url(../../../images/public/shop_default/img/icon-check.png) no-repeat 95% center;background-size:24px 24px;}
+@-webkit-keyframes easin{0%{display:none;}100%{display:block;}}
+
+.subCategoryList{background:#fff;}
+.subCategoryList li{min-height:40px;line-height:39px;border-bottom:1px solid #e1e1e1;}

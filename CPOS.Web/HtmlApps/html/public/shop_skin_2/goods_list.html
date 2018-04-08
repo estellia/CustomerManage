@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title name="GoodsListBig"></title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+<section class="goodsListArea">
+<div class="commonFunInto" style="display:none;">
+	<a href="javascript:;" class="goTop"></a>
+</div>
+
+<div>
+    <a href="#" id="goodsTitleUrl" style="display:block;">
+		<img src=""/>
+	</a>
+</div>
+<!--
+ <nav id="topNav">
+    <ul>
+      <li  style="display:none;"  ><a href="javascript:Jit.AM.pageBack();"></a></li>
+      <li><a href="javascript:Jit.AM.toPage('MyOrder');"></a></li>
+      <li><a href="javascript:Jit.AM.toPage('GoodsCart');"><span id="menuCartCount"></span> </a></li>
+      <li><a href="javascript:Jit.AM.toPage('IndexShop');"></a></li>
+    </ul>
+</nav>
+-->
+<div class="headSearchArea">
+	<a class="setTypeBtn maxStyles" href="javascript:;"></a>
+    <div class="searchBox">
+    	<a href="javascript:;" class="searchBtn"></a>
+    	<p class="searchInput"><input type="search" placeholder="搜索店铺内宝贝" ></p>
+    </div>
+</div>
+
+<div class="goodsSortArea">
+	<a class="salesTag on" data-tag="salesQty" href="javascript:;">销量</a>
+    <a class="newsTag" data-tag="create_time" href="javascript:;">新品</a>
+    <a class="priceTag" data-tag="salesPrice" href="javascript:;"><span>价格</span></a>
+</div>
+
+<div class="goods_list_cell">
+    <div tplpanel="goods_list" class="bigGoodsList clearfix">
+    	
+    </div>
+</div>
+  
+</section>
+</body>
+<script id="Tpl_goods_list" type="text/template">
+<div class="bigGoodsBox">
+	<a href="javascript:Jit.AM.toPage('{{GoodsType}}','&goodsId={{itemId}}&eventId={{eventId}}')">
+		<img placeholder class="listPic lazy" data-original="{{imageUrl3}}"/>
+		<div class="infoBox">
+			<p class="tit">{{itemName}}</p>
+			<div class="shopInfo">
+				<span class="discount {{hidePrice}}">{{discount}}</span>
+				<strong>¥{{salesPrice}} </strong>
+				<del>{{oldprice}}</del>
+				<span class="salesVal">销量 {{salesQty}} 笔</span>
+			</div>
+		</div>
+	</a>
+</div>
+</script>
+</html>

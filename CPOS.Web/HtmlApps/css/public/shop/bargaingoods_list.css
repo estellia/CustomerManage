@@ -1,0 +1,6 @@
+﻿@charset "utf-8";
+body {}
+.goods_list_cell{padding:0px;}
+.goods_list_cell li {width:45%;}
+.partake {float: right;}
+.salesVal strong{color: #ff5d13;font-size: 15px;}

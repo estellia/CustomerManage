@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="x-rim-auto-match" content="none">
+        <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+        <title name="GainIntegral">赚积分</title>
+    </head>
+
+    <body style="background:#f4f4f4">
+        <div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+            <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+        </div>
+        <section>
+            <div class="myInfoBack">
+                <div class="btnInfo">
+                    <a href="javascript:Jit.AM.toPage('MyScore');">积分明细</a>
+                    <a href="javascript:Jit.AM.toPage('ScoreInfo');">积分说明</a>
+                </div>
+            </div>
+            <!-- <div class="myInfoArea">
+                <img src="../../../images/common/vipCard/IntegralBack.png">
+            </div> -->
+        </section>
+    <script id="tplList" type="text/html">
+        <%for(var i=0; i<list.length; i++){var item=list[i]; %>
+            <div class="item">
+                <p class="tit"><%=item.AmountSourceName %></p>
+                <p class="date">
+                    <span><%=item.CreateTime %></span>
+                </p>
+                <p class="score"><%=item.Amount %></p>
+            </div>
+        <%}%>
+    </script>
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</html>

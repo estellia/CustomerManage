@@ -1,0 +1,94 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="x-rim-auto-match" content="none">
+		<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+		<title name="UpVipCard">会员中心</title>
+		<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+        <style type="text/css">
+        	.vipClipBanner .banner{border-radius:12px;}
+			.vipClipBanner .infoWrap .card{margin-top:26px;}
+        </style>
+	</head>
+	<body>
+		<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+			<div class="wx_loading_inner">
+				<i class="wx_loading_icon"></i>正在加载...
+			</div>
+		</div>
+		<div id="mask" class="mask" style="display:none;"></div>
+		
+		<!--开始时的领取会员卡入口-->
+		<section>
+			<div id="getVipCardPage" class="vipClipBanner" blockPage="true">
+                <img class="banner"  name="vipCardImg" src="../../../images/common/vipCard/defaultCard.png" onerror="this.src='../../../images/common/vipCard/defaultCard.png'" alt=""/>
+                <div class="infoWrap">
+                	<p class="grade hide" info="vip_level"></p>
+                    <p class="name hide" info="vip_name"></p>
+                    <p class="card">NO:<span info="vip_phone"></span></p>
+                </div>
+                <div class="receiveMask" id="getCard">
+                	<p class="tit">领取会员卡后可尊享会员权益</p>
+                    <span class="receiveBtn">立即领卡</span>
+                </div>
+			</div>
+
+			<!--会员卡领取后的页面  name="vipCardImg"-->
+			<div id="vipCardPage" class="memberCardInfoArea hide" blockPage="true" >
+				<div id="gotoPage" class="showInfo">
+					<div data-href="MyScore">
+						<span class="num" info="vip_integration">0</span>
+                        <span>积分</span>
+					</div>
+                    <div data-href="Balance">
+						<span class="num" info="vip_returnAmount">0</span>
+                        <span>返现</span>
+					</div>
+					<div data-href="CouponList">
+						<span class="num" info="vip_coupon">0</span>
+                        <span>优惠券</span>
+					</div>
+                    <!--
+					<div data-href="Balance">
+						<span>账户余额</span>
+						<span class="num" info="vip_balance">0</span>
+					</div>
+                    -->
+				</div>
+                
+                <div class="moneyBox hide">
+                	<a href="javascript:Jit.AM.toPage('Recharge');" class="rechargeBtn">充值</a>
+                	<em class="iconTit"></em>
+                    <p class="balanceBox">余额 <span class="balanceCount" info="vip_balance">100</span></p>
+                </div>
+			</div>
+
+            <div class="orderStatusBox hide">
+                <a href="javascript:Jit.AM.toPage('MyOrder','groupingType=1');" class="paymentStatus">未付款<span></span></a>
+                <a href="javascript:Jit.AM.toPage('MyOrder','groupingType=2');" class="dispatchStatus">待收货<span></span></a>
+                <a href="javascript:Jit.AM.toPage('RefundList');" class="refundStatus">退换货</a>
+            </div>
+
+            
+            <div class="centerItemBox">
+            	<div class="itemBox allOrder">
+                	<em class="iconBox"></em>
+                    <a href="javascript:Jit.AM.toPage('MyOrder');" class="tit">全部订单</a>
+                </div>
+                <div class="itemBox vipUpgrade">
+                	<em class="iconBox"></em>
+                    <a href="javascript:Jit.AM.toPage('VirtualGoodsList');" class="tit">会员升级</a>
+                </div>
+                <div class="itemBox dealerPlan" style="display:none;">
+                	<em class="iconBox"></em>
+                    <a href="javascript:Jit.AM.toPage('DealersPlanPact');" class="tit">经销商计划</a>
+                </div>
+            </div>
+			
+		</section>
+
+	</body>
+</html>

@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.noOpt{color: #ccc;}
+.imgList{ width:688px;margin:0 auto; padding-top:30px; }
+
+.center{margin: 0 60px;}
+.radioPanel{ width:140px; margin: 0 auto; padding-top:15px; margin-left: 35px; display:block;}
+.radioPanel .radio{ width: 145px;}
+.radioPanel .radio span{  padding-right: 15px;}
+.imgPanel  img{cursor: pointer;}
+
+.imgPanel{ float: left; width: 180px; position: relative;}
+.imgPanel .bg{ width: 180px; height: 369px; position: absolute; top:0; left: 0; background:#707070; opacity:0.7; border-radius: 35px;}
+.imgPanel .imgT{position:absolute; left:22%;top:30%; }
+.imgBody { width: 640px; margin: 0 auto; text-align: center;}
+.imgOpt{ padding-left:6px;  width: 120px;height: 32px; background: #e6e6e6; color: #5e5e5e; margin:0 auto;margin-bottom: 10px;}
+.imgOpt div{float: left;margin-right: 6px; width: 26px; height: 26px; margin-top: 3px; background-position: center center; background-repeat: no-repeat;}
+.imgOpt span{float: left;font-size: 15px;font-weight:bold; border-bottom: 2px solid #5e5e5e; height: 25px; line-height: 32px; }
+.imgOpt div.on{ background-color: #00a0e8;}
+.imgOpt .magnify { background-image: url("../images/magnifyB.png")}
+.imgOpt .shrink { background-image: url("../images/shrinkB.png")}
+.imgOpt .on.magnify { background-image: url("../images/magnifyW.png")}
+.imgOpt .on.shrink { background-image: url("../images/shrinkW.png")}
+
+.line{margin-bottom:20px;}
+/* 复制提示 */
+.copy-tips{position:fixed;z-index:999;bottom:50%;left:50%;margin:0 0 -20px -80px;background-color:rgba(0, 0, 0, 0.2);filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#30000000, endColorstr=#30000000);padding:6px;}
+.copy-tips-wrap{padding:10px 20px;text-align:center;border:1px solid #F4D9A6;background-color:#FFFDEE;font-size:14px;}
+.datagrid-cell{position: relative;}
+.datagrid-htable .datagrid-cell-c1-IsActivate{padding-left: 56px;}

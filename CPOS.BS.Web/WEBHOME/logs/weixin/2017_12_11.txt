@@ -1,0 +1,34 @@
+
+2017/12/11 11:20:57 :  创建自定义菜单
+
+2017/12/11 11:20:57 :  获取凭证接口： 
+
+2017/12/11 11:20:57 :  appID： wx677d57057f5bc14f
+
+2017/12/11 11:20:57 :  appSecret： 9c7f64e593c422834110e330d4b8e11c
+
+2017/12/11 11:20:58 :  调用获取凭证接口返回值： {"access_token":"8jgy94uNQUtybVisT3OGAqRC821QWHG6yb-Lwbija6dLVauseHJwckaYlkGRpzoz7Kbb3o7xpyMw0sv585DUoU3V8sEMIXCFkDERk_Rn0V-NOO2Wf5pLmzoYCs1fsAedMCYiAFAYOK","expires_in":7200}
+
+2017/12/11 11:20:58 :  content：{"button":[{"type": "view","name": "精选优惠","key": "40FB4FE","url": "http://wxapi.xgxshop.com//HtmlApps/html/public/index/index_shop_app.html?customerId=414756570b7c4ec1acf0456ad7f5987f&homeId=c826ecb9-e64f-4e13-abd8-d19971f88bf2","sub_button": []},{"type": "view","name": "会员中心","key": "2708CEF","url": "http://wxapi.xgxshop.com//HtmlApps/html/public/index/index_shop_app.html?customerId=414756570b7c4ec1acf0456ad7f5987f&homeId=c826ecb9-e64f-4e13-abd8-d19971f88bf2","sub_button": []},{"type": "view","name": "新干线","key": "7208586","url": "http://wxapi.xgxshop.com//HtmlApps/html/public/index/index_shop_app.html?customerId=414756570b7c4ec1acf0456ad7f5987f&homeId=c826ecb9-e64f-4e13-abd8-d19971f88bf2","sub_button": []}]}
+
+2017/12/11 11:20:59 :  创建自定义菜单返回值： {"errcode":0,"errmsg":"ok"}
+
+2017/12/11 11:26:13 :  创建自定义菜单
+
+2017/12/11 11:26:13 :  content：{"button":[{"type": "view","name": "精选优惠","key": "40FB4FE","url": "http://wxapi.xgxshop.com//HtmlApps/html/public/index/index_shop_app.html?customerId=414756570b7c4ec1acf0456ad7f5987f&homeId=c826ecb9-e64f-4e13-abd8-d19971f88bf2","sub_button": []},{"type": "view","name": "会员中心","key": "2708CEF","url": "http://wxapi.xgxshop.com//HtmlApps/html/public/index/index_shop_app.html?customerId=414756570b7c4ec1acf0456ad7f5987f&homeId=c826ecb9-e64f-4e13-abd8-d19971f88bf2","sub_button": []},{"type": "view","name": "新干线","key": "7208586","url": "http://wxapi.xgxshop.com//HtmlApps/html/public/index/index_shop_app.html?customerId=414756570b7c4ec1acf0456ad7f5987f&homeId=c826ecb9-e64f-4e13-abd8-d19971f88bf2","sub_button": []}]}
+
+2017/12/11 11:26:14 :  创建自定义菜单返回值： {"errcode":0,"errmsg":"ok"}
+
+2017/12/11 16:08:54 :  创建自定义菜单
+
+2017/12/11 16:08:54 :  获取凭证接口： 
+
+2017/12/11 16:08:54 :  appID： wx677d57057f5bc14f
+
+2017/12/11 16:08:54 :  appSecret： 9c7f64e593c422834110e330d4b8e11c
+
+2017/12/11 16:08:55 :  调用获取凭证接口返回值： {"access_token":"in-bll9wBChQH8JnaWZCwLpTifQI_Wi1wS-DdZD3-t_h2vKMUR7DVwK5pJ73D8gTC8FP-7s48kyBOc4BUzBblOa7AtheFX5Qg_BD7v44E-evUMSoURsjTKj4Q7GbThE4NMWfAJAIHR","expires_in":7200}
+
+2017/12/11 16:08:55 :  content：{"button":[{"type": "view","name": "精选优惠","key": "AB2891E","url": "http://wxapi.xgxshop.com//HtmlApps/html/public/index/index_shop_app.html?customerId=414756570b7c4ec1acf0456ad7f5987f&homeId=c826ecb9-e64f-4e13-abd8-d19971f88bf2","sub_button": []},{"type": "view","name": "会员中心","key": "2708CEF","url": "http://wxapi.xgxshop.com//HtmlApps/html/public/index/index_shop_app.html?customerId=414756570b7c4ec1acf0456ad7f5987f&homeId=c826ecb9-e64f-4e13-abd8-d19971f88bf2","sub_button": []},{"type": "view","name": "新干线","key": "8E9E323","url": "http://wxapi.xgxshop.com//HtmlApps/html/public/index/index_shop_app.html?customerId=414756570b7c4ec1acf0456ad7f5987f&homeId=c826ecb9-e64f-4e13-abd8-d19971f88bf2","sub_button": []}]}
+
+2017/12/11 16:08:56 :  创建自定义菜单返回值： {"errcode":0,"errmsg":"ok"}

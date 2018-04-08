@@ -1,0 +1,32 @@
+ html,body {
+        height: 100%;
+     }
+     .bgimg {
+        width:100%;
+     
+     }
+.content {
+    position: relative;
+}
+.coupon {
+    width:100%;
+    position: absolute;
+        top: 25%;
+}
+
+.FiveRMB {
+        width: 32%;
+        position: absolute;
+        left: 0px;
+}
+.TenRMB{
+    width: 32%;
+    position: absolute;
+    left: 50%;
+    margin-left: -16%;
+}
+.FifteenRMB{
+    width: 32%;
+    position: absolute;
+        right: 0px;
+}

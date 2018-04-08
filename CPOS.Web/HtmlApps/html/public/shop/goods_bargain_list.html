@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title name="GoodsBargainList"></title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+<body>
+    <div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+        <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+    </div>
+    <div class="ActivityLayer">
+       
+        <div id="activityList" class="snappedArea">
+            
+    </div>
+    </div>
+    
+</body>
+<script id="Tpl_goods_list" type="text/template">
+     <% if(IsAllEnd==1) {%>
+    <div class="bargainover" >
+        <img src="../../../images/public/shop_default/over.jpg" />
+    </div>
+     <%}else{%>
+    <% if(EventList!=null){%> 
+        <% for(var i=0;i<EventList.length;i++){ var _data=EventList[i];   %>
+            <div class="commonSnappedBar">
+                    <h2 class="tit"><%=_data.Status==0?'砍价中':'即将开始' %></h2>
+                    <div class="countDownBox">
+                    <h2 class="text"><%=_data.Status==0?'距离本场结束':'距离开始时间' %></h2>
+
+                    <p class="timeBox" time-date="<%=_data.Seconds %>">
+                        <em tn="time-h-max">-</em><em tn="time-h-min">-</em>
+                        <span>:</span>
+                        <em tn="time-m-max">-</em><em tn="time-m-min">-</em>
+                        <span>:</span>
+                        <em tn="time-s-max">-</em><em tn="time-s-min">-</em>
+                    </p>
+                </div>
+            </div>
+           <div class="snappedList on">
+           <% if(_data.EventItemList!=null){%> 
+                <% for(var j=0;j<_data.EventItemList.length;j++){ var EventItem=_data.EventItemList[j];   %>
+         
+                    <div class="snappedList-item" data-itemid="<%=EventItem.ItemId %>" data-status="<%=_data.Status %>" data-eventid="<%=_data.EventId %>" data-qty="<%=EventItem.Qty %>">
+                        <p class="picWrap"><img src="<%=EventItem.ImageUrl%>">
+                        <% if(EventItem.Qty<1){ %>
+                            <img class="SoldOut" src="../../../images/public/shop_default/SoldOut.png">
+                        <%}%>
+                        </p>
+                        <div class="infoBox">
+                            <h3 class="title"><%=EventItem.ItemName%></h3>
+                            <div class="priceBox clearfix">
+                                <p class="floorPrice">底价:<span><%=EventItem.BasePrice %></span></p>
+                            </div>
+                            <p class="stock">库存<span><%=EventItem.Qty%></span></p>
+                            <p class="partake"><span><%=EventItem.PromotePersonCount%></span>人参与</p>
+
+
+                        </div>
+                        <p class="robTip"></p>
+                    </div>
+                    <%}%>
+                <%}%>
+            </div>
+        <%}%>
+    <%}%>
+   <%}%>
+</script>
+   
+</html>

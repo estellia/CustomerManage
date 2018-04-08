@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title name="RefundApply"></title>
+<link href="../../../css/base/global.css?v1.0" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+    <section class="refundApplyPage">
+    	<div class="refundItem">
+        	
+        </div>
+        
+        <div class="refundCount">
+        	<p class="tit">申请数量</p>
+            <div class="counterBox">
+            	<em class="plusBox"></em>
+                <em class="minusBox"></em>
+                <p class="numBox">1</p>
+            </div>
+        </div>
+        
+        <div class="serveTypeArea">
+        	<p class="tit">服务类型</p>
+            <div class="menuTag">
+            	<a class="on" href="javascript:;">退货</a>
+                <a href="javascript:;">换货</a>
+            </div>
+        </div>
+       
+        
+        <div class="remandGoodsArea">
+        	<div class="titBox">
+            	<p class="tit">送回方式:</p>
+                <span class="remandWay"></span>
+            </div>
+            <div class="remandInfo">
+            	<div class="">
+                    <p class="tit">门店名称:</p>
+                    <span class="nameText"></span>
+                </div>
+                <div class="">
+                    <p class="tit">门店地址:</p>
+                    <span class="nameText"></span>
+                </div>
+                <div class="">
+                    <p class="tit">电话:</p>
+                    <span class="nameText"></span>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="remandContactArea">
+        	<div class="titBox">
+            	<p class="tit">申请人:</p>
+                <label><input id="proposer" type="text" placeholder="请填写" maxlength="10"></label>
+            </div>
+            <div class="titBox">
+            	<p class="tit">手机号:</p>
+                <label><input id="mobileNum" type="text" placeholder="请填写"></label>
+            </div>
+        </div>
+        
+        
+        <div class="remandReasonArea">
+        	<p class="tit">退换原因</p>
+            <textarea class="remandExp" placeholder="请填写您想对我们说的话，支持200字" maxlength="200"></textarea>
+        </div>
+        
+        <div class="footer">
+        	<a class="submitBtn" href="javascript:;">提交</a>
+        </div>
+    </section>
+       
+</body>
+
+<script id="TplRefundApply" type="text/template">
+	<div class="imgBox">
+		<img src="<%=ImageInfo[0].ImageUrl%>">
+	</div>
+	<div class="infoBox">
+		<div class="topInfo">
+			<p class="countBox">
+				<b>￥<%=SalesPrice%></b>
+				<span>X<%=Qty%></span>
+			</p>
+			<p class="nameBox"><%=ItemName%></p>
+		</div>
+		<div class="traitBox"><%=dataStr%></div>
+	</div>
+</script>
+
+<script id="TplStoreInfo" type="text/template">
+	<div class="titBox">
+        <p class="tit">送回方式:</p>
+        <span class="remandWay"><%=DeliveryName%></span>
+    </div>
+    <div class="remandInfo">
+        <div class="">
+            <p class="tit">门店名称:</p>
+            <span class="nameText"><%=StoreName%></span>
+        </div>
+        <div class="">
+            <p class="tit">门店地址:</p>
+            <span class="nameText"><%=StoreAddress%></span>
+        </div>
+        <div class="">
+            <p class="tit">电话:</p>
+            <span class="nameText"><%=StoreTel%></span>
+        </div>
+    </div>
+</script>
+
+
+</html>

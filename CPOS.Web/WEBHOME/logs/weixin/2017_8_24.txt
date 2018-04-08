@@ -1,0 +1,36 @@
+
+2017/8/24 星期四 15:41:50 :  获取二维码图片地址
+
+2017/8/24 星期四 15:41:52 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/24 星期四 15:41:52 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/24 星期四 15:43:12 :  获取二维码图片地址
+
+2017/8/24 星期四 15:43:12 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/24 星期四 15:43:12 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/24 星期四 15:44:49 :  获取二维码图片地址
+
+2017/8/24 星期四 15:44:49 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/24 星期四 15:44:49 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/24 星期四 15:49:28 :  获取二维码图片地址
+
+2017/8/24 星期四 15:49:29 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}
+
+2017/8/24 星期四 15:49:29 :  qrcodeUrl：https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA
+
+2017/8/24 星期四 16:54:27 :  获取二维码图片地址
+
+2017/8/24 星期四 16:56:21 :  获取凭证接口： 
+
+2017/8/24 星期四 16:56:28 :  appID： wx677d57057f5bc14f
+
+2017/8/24 星期四 16:56:29 :  appSecret： 9c7f64e593c422834110e330d4b8e11c
+
+2017/8/24 星期四 17:07:39 :  调用获取凭证接口返回值： {"access_token":"jwZqLGR1dyL8pH0GonrvRPOxacEHZu2hjx6JETJ9YuZHYDhUP1hp66fskVm937RygN-O4X2c1GnTjxjCmb9J4wudlWuw6uIuX0JkGVgQQJsmMqV7Ey9bYdG15NRtC8_MXIKaAFAEPR","expires_in":7200}
+
+2017/8/24 星期四 17:12:29 :  获取二维码图片返回值：{"ticket":"gQHb8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRVdCdFFJNzE4eFAxMDAwMGcwM3MAAgRcfZpZAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02EWBtQI718xP10000g03s"}

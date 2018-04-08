@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="x-rim-auto-match" content="none">
+		<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+		<title name="VipLegal">会员权益</title>
+	</head>
+
+	<body style="background:#f4f4f4">
+		<!-- <div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+			<div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+		</div> -->
+        <section>
+            <div class="myInfoArea">
+                <div class="List">
+                    <div class='ListInfo' id="dataList">
+                    </div>
+                </div>
+            </div>
+        </section>
+	<script id="tplList" type="text/html">
+		<div class='title'>
+            <h5>Lv.1等级名</h5>
+        </div>
+		<%for(var i=0; i<list.length; i++){var item=list[i];%>
+				<%if(item.Type==1){%>
+				<div class="legalVip">
+					<div class="legalBasic">
+						<div class="imgData">
+							<img src="<%=item.ImagesUrl%>" style="height:36px;">
+						</div>
+		                <p><%=item.Title%></p>
+		                <p><%=item.CouponTypeName %></p>
+	                </div>
+	            </div>
+	            <%}else{%>
+	            <div class="legalVip">
+	            	<%if(item.CouponNum>1){%>
+	            	<div class="tit">x<%=item.CouponNum %></div>
+	            	<%}%>
+					<div class="legalBasic">
+						<div class="imgData">
+							<img src="../../../images/common/vipCard/cardOpen.png" style="height:36px;">
+						</div>
+		                <p>开卡礼</p>
+		                <p><%=item.CouponTypeName %></p>
+	                </div>
+	            </div>
+	            <%}%>
+		<%}%>
+		
+	</script>
+	<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</html>

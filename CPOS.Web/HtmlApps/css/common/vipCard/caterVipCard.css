@@ -1,0 +1,45 @@
+@charset "utf-8";
+/*首页*/
+html,body,body>section{height:100%;}
+body{background:#f8f8f8;-webkit-tap-highlight-color: rgba(255, 255, 255, 0);}
+
+.headBannerBox{height:262px;position:relative;}
+.headBannerBox img{width:100%;height:100%;}
+.headBannerBox .headInfo{position:absolute;bottom:0px;left:0;height:139px;width:100%;padding:0 18px;font-size:24px;color:#fff;}
+.headBannerBox .headPic{position:relative;bottom:-68px;float:left;width:139px;height:139px;border-radius:70px;border:3px solid #fff;overflow:hidden;}
+.headBannerBox .vipRealName{float:left;font-size:32px;margin:75px 0 0 30px;}
+.headBannerBox .vipLevelName{float:left;margin:82px 0 0 15px;}
+.vipInfoArea{border-bottom:1px solid #e1dfdf;background:#fff;color:#919191;}
+.menuInfoBox{height:102px;padding:0 15px;text-align:center;font-family:"黑体";font-size:22px;}
+.menuInfoBox .menuItem{float:right;width:160px;height:52px;margin-top:24px;border-left:1px solid #d9dce3;}
+.menuInfoBox .menuItem:nth-last-child(1){border-left:none;}
+.menuInfoBox .menuItem span{display:block;line-height:24px;}
+.menuInfoBox .num{margin-top:7px;font-family:"Arial";}
+.menuLine{height:0;margin:0 33px 0 70px;border-top:1px solid #edeef1;border-bottom:1px solid #e7e8ec;}
+.statusInfoBox{height:106px;padding:0 27px;}
+.statusInfoBox .vipPhone{display:block;line-height:106px;font-size:29px;font-family:arial;color:#4ed2ab;}
+.statusInfoBox .seeVipCard{font-size:22px;color:#888;}
+
+.linksListArea{margin-top:20px;padding-right:35px;font-size:27px;color:#333;border-top:2px solid #edecec;border-bottom:2px solid #edecec;background:#fff;}
+.linksListArea li{height:85px;padding-left:30px;border-bottom:1px solid #f3f3f3;}
+.linksListArea li:nth-last-of-type(1){border-bottom:none;}
+.linksListArea li em{float:left;width:70px;height:84px;}
+.linksListArea li span{display:block;line-height:84px;margin-left:70px;}
+.linksListArea .isAuthTag{float:right;line-height:84px;font-weight:normal;color:#4ed2ab;}
+.linksListArea .authItem em{background:url(../../../images/common/caterVipCard/icon-auth.png?v1.1) no-repeat left center;}
+.linksListArea .vipSpecialItem em{background:url(../../../images/common/caterVipCard/icon-vipSpecial.png) no-repeat left center;}
+.linksListArea .allOrderItem em{background:url(../../../images/common/caterVipCard/icon-order.png) no-repeat left center;}
+.linksListArea .nearbyStoresItem em{background:url(../../../images/common/caterVipCard/icon-nearbyStores.png) no-repeat left center;}
+
+/*导航*/
+.commonNavArea{position:fixed;bottom:0;left:0;right:0;height:87px;border-top:2px solid #ececec;background:#fff;z-index:99;}
+.commonNavArea ul{height:100%;}
+.commonNavArea li{float:left;width:33.333%;height:100%;line-height:136px;text-align:center;}
+.commonNavArea li a{display:block;font-size:18px;color:#929292;}
+.commonNavArea li.active a{color:#ff6d26;}
+.commonNavArea .nav-vipCard{background:url(../../../images/common/caterVipCard/nav-vipCard.png) no-repeat center 10px;}
+.commonNavArea .nav-serve{background:url(../../../images/common/caterVipCard/nav-serve.png) no-repeat center 10px;}
+.commonNavArea .nav-map{background:url(../../../images/common/caterVipCard/nav-map.png) no-repeat center 10px;}
+.commonNavArea .nav-vipCard.active{background:url(../../../images/common/caterVipCard/nav-vipCard-on.png) no-repeat center 13px;}
+.commonNavArea .nav-serve.active{background:url(../../../images/common/caterVipCard/nav-serve-on.png) no-repeat center 9px;}
+.commonNavArea .nav-map.active{background:url(../../../images/common/caterVipCard/nav-map-on.png) no-repeat center 7px;}

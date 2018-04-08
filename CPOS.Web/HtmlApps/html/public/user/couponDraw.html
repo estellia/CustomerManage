@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title name="CouponDraw"></title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    	html,body{background:#0cc;}
+		.couponDraw-area img{display:block;}
+		.bottomPicBox{position:relative;}
+		.describeBox{position:absolute;top:0;left:0;line-height:30px;padding-left:30px;font-family:"黑体";font-size:15px;color:#fff;}
+		.attentionBtn{position:absolute;bottom:30px;left:50%;margin-left:-115px;display:block;width:231px;height:51px;background:url(../../../images/public/user_default/attentionBtn.png) no-repeat 0 0;background-size:231px 51px;}
+		.qrAttentionBtn{position:fixed;bottom:15px;left:0;right:0;}
+		.qrAttentionBtn img{display:block;width:157px;height:157px;margin:0 auto;border-radius:4px;border:3px solid #00b1b1;}
+		.qrAttentionBtn .tipText{padding-top:7px;text-align:center;font-size:15px;font-family:"黑体";color:#fff;}
+    </style>
+    
+</head>
+<body>
+	<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+        <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+    </div>
+    
+    <section class="couponDraw-area">
+        <div><img src="../../../images/public/user_default/couponDrawBg1.jpg" alt=""></div>
+        <div class="bottomPicBox">
+        	<div class="describeBox">
+            	<p class="couponText"></p>
+                <p class="tipBox">已经飞入你的<span></span>账户中</p>
+                <p style="display:none">请点击下面按钮关注并注册后使用</p>
+            </div>
+        	<img src="../../../images/public/user_default/couponDrawBg2.jpg" alt="">
+            <a href="javascript:;" class="attentionBtn" style="display:none"></a>
+            <div class="qrAttentionBtn">
+                <img src="../../../images/public/user_default/qrAttention.jpg">
+                <p class="tipText">请长按此二维码关注并注册后使用</p>
+            </div>
+        </div>
+    </section>
+    
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+    
+</body>
+
+</html>

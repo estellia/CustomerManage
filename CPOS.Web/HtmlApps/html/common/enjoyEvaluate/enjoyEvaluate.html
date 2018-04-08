@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+<title name="EnjoyEvaluate"></title>
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+<section class="w_640 enjoyEvaluatePage">
+	<div class="staffInfoBox clearfix">
+    	<p class="headPic"><img src="../../../images/common/enjoyEvaluate/headPic.png"></p>
+        <div class="infoBox">
+        	<p class="textBox">
+            	<span class="already">已有<em>0</em>人打赏过</span>
+            	<span class="staffName">未知</span>
+            </p>
+            <p class="tag">金牌服务员</p>
+            <p class="starBox">
+            	<em class=""></em>
+                <em class=""></em>
+                <em class=""></em>
+                <em class=""></em>
+                <em class=""></em>
+            </p>
+        </div>
+    </div>
+
+	<div id="enjoyPage" class="panlPage hide">
+    	<h2><img src="../../../images/common/enjoyEvaluate/title-ds.png"></h2>
+    	<div class="moneyList clearfix">
+        </div>
+        <p class="otherMoney">其他金额</p>
+    </div>
+
+
+    <div id="evaluatePage" class="panlPage hide">
+    	<h2><img src="../../../images/common/enjoyEvaluate/title-pj.png"></h2>
+    	<div id="describeSame" class="heartBox" data-val=5>
+            <a href="javascript:;" class=""></a>
+            <a href="javascript:;" class=""></a>
+            <a href="javascript:;" class=""></a>
+            <a href="javascript:;" class=""></a>
+            <a href="javascript:;" class=""></a>
+        </div>
+    </div>
+    
+</section>
+
+
+
+<div class="ui-mask" style="background:rgba(0,0,0,0.6);"></div>
+<div class="newPromptBox hide" id="evaluatePrompt">
+	<h2 class="tit">评价成功</h2>
+    <div class="contentBox">
+    	<p class="textBox">客官，恭喜你评价成功！</p>
+    </div>
+    <div class="botBtnBox">
+    	<a class="" href="javascript:JitPage.closeEvaluatePrompt();">确定</a>
+    </div>
+</div>
+
+
+<div class="newPromptBox hide" id="enjoyPrompt">
+	<h2 class="tit">其他金额</h2>
+    <div class="contentBox">
+    	<p class="inputBox">
+        	<em>金额(元)</em>
+            <label><input id="enjoyInputBox" type="number" placeholder="可填写1-300" min="1" max="300"></label>
+        </p>
+        <span class="hintBox">请输入1-300数字</span>
+    </div>
+    <div class="botBtnBox">
+    	<a class="submitEnjoyBtn" href="javascript:;">打赏</a>
+    </div>
+</div>
+
+     
+</body>
+</html>

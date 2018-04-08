@@ -1,0 +1,5 @@
+﻿@charset "utf-8";
+html,body {height:100%;}
+.QRcode {position: absolute;bottom: 10%;width: 150px;left: 50%; margin-left: -75px;}
+.QRcode p{    font-size: 17px;color: #fff; text-align: center; margin-bottom: 10px;}
+.QRcode img{width: 150px;height: 150px;}

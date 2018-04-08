@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html  class="startPage">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+<title name="ShopIndex">我的小店</title>
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/public/myshop/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<input id="channelIdSize" type="hidden" value="6">
+    <div class="w_640 myShopArea">
+    	<div class="bannerPic">
+        	<img src="../../../images/public/my_shop/banner_myShop.jpg" alt="我的小店">
+        </div>
+        <div class="myShopArea-nav clearfix">
+        	<div class="nav-item" onClick="Jit.AM.toPage('MyMinShop');">
+            	<p class="nav-icon"><img src="../../../images/public/my_shop/icon_myShop.png"></p>
+                <p class="nav-name">我的小店</p>
+                <p class="nav-num">商品数:<span id="goodsCount"></span>件</p>
+            </div>
+            <div class="nav-item" onClick="Jit.AM.toPage('AddGoods');">
+            	<p class="nav-icon"><img src="../../../images/public/my_shop/icon_addGood.png"></p>
+                <p class="nav-name">添加商品</p>
+                <p class="nav-num">新品上架:<span id="newGoodsCount"></span>件</p>
+            </div>
+            <div class="nav-item" onClick="Jit.AM.toPage('MinMyOrder');">
+            	<p class="nav-icon"><img src="../../../images/public/my_shop/icon_myOrder.png"></p>
+                <p class="nav-name">小店订单</p>
+                <p class="nav-num">订单数:<span id="orderCount"></span>个</p>
+            </div>
+            <div class="nav-item" onClick="Jit.AM.toPage('MyIncome');">
+            	<p class="nav-icon"><img src="../../../images/public/my_shop/icon_myIncome.png"></p>
+                <p class="nav-name">我的收入</p>
+                <p class="nav-num">本月收入:<span id="monthIncomeCount"></span>笔</p>
+            </div>
+            <div class="nav-item" onClick="Jit.AM.toPage('InviteFriends');">
+            	<p class="nav-icon"><img src="../../../images/public/my_shop/icon_invite.png"></p>
+                <p class="nav-name">邀请小伙伴</p>
+                <p class="nav-num">已经邀请:<span id="inviteCount"></span>人</p>
+            </div>
+            <div class="nav-item" style="display:none">
+            	<p class="nav-icon"><img src="../../../images/public/my_shop/icon_myShop.png"></p>
+                <p class="nav-name">榜单</p>
+                <p class="nav-num">当前排名:第<span id="rankingCount"></span>位</p>
+            </div>
+        </div>
+        <a href="javascript:Jit.AM.toPage('PlayShop');" class="btnPlayShop"></a>
+        <!--<a href="weixin/weixin.html" style="font-size:36px;">接口测试</a>-->
+    </div>
+    
+</body>
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</html>

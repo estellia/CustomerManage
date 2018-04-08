@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+<title name="SeeWithdrawRecord">查看提现记录</title>
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/public/myshop/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<input id="channelIdSize" type="hidden" value="6">
+<div class="w_640 seeWithdrawRecordArea">
+    <div class="seeWithdrawRecordList">
+        <ul>
+            <div class='commonDataHint'>数据正在加载中...</div>
+        </ul>
+     </div>   
+</div>
+
+</body>
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+<script id="tpl_withdrawRecord" type="text/html">
+<li>
+	<p class="clearfix">
+		<span class="oddNo">单号:<%=WithdrawNo%></span>
+		<span class="money"><%=Amount%>.00</span>
+	</p>
+	<p class="clearfix">
+		<span class="bankName"><%=ApplyDate%><strong><%=BankName || '未知'%></strong></span>
+		<span class="status">
+			<%if(Status == 1){%>
+				待审核
+			<%}else if(Status == 2){%>
+				审核通过
+			<%}else if(Status == 3){%>
+				已完成
+			<%}%>
+		</span>
+	</p>
+</li>
+
+</script>
+</html>

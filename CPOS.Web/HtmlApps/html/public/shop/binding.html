@@ -1,0 +1,77 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title  name="Binding">绑定阿拉丁账号</title>
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+    <style>
+	/*common*/
+	html,body,body>section{height:100%;min-height:100%;}
+	body>section{max-width:640px;margin:0 auto;}
+	body{font:15px/1.2em "Microsoft YaHei";background:#fff;color:#4d463e;}
+	select,input{border:none;}
+	input{text-indent:5px;}
+    </style>
+</head>
+<body>
+    <!-- 登录页面 -->
+	<section id="loginPage" class="bindingPage">
+       	<div class="titleBar"><em class="goBack" onClick="Jit.AM.pageBack();"></em>绑定阿拉丁账号</div>
+       	<div class="formArea">
+
+			<div class="accountNumBox">
+				<em class="tit">账号</em>
+				<p><input id="loginPhoneNum" type="text" placeholder="手机号"></p>
+			</div>
+			<div class="passwordNumBox">
+				<em class="tit">密码</em>
+				<p><input id="loginPassword" type="password" placeholder="请填写密码"></p>
+			</div>
+
+			<a href="javascript:;" class="loginBtn">立即绑定</a>
+
+       	</div>
+       	<div class="skipRegister">没有阿拉丁账号？立即注册一个</div>
+    </section>
+
+	<!-- 注册页面 -->
+    <section id="registerPage" class="bindingPage">
+       	<div class="titleBar"><em class="goBack"></em>手机快速注册</div>
+       	<div class="formArea">
+        	<div id="authCodeLogin">
+                <div class="getVerifyBox clearfix" style="display:none;">
+                    <span class="changeBtn">换一下</span>
+                    <p class="verifyPic"><img src=""></p>
+                    <p class="verifyInput"><input type="text" placeholder="请输入验证码"></p>
+                </div>
+                <div class="passwordBox">
+                    <a href="javascript:;" class="getPasswordBtn">获取验证码</a>
+                    <p class="passwordInput"><input id="phoneNum" type="text" placeholder="请输入手机码"></p>
+                </div>
+                <div class="importBox">
+                    <input type="text" id="phoneNote" placeholder="输入您收到的短信验证码">
+                </div>
+                <a href="javascript:;" class="registerBtn">下一步</a>
+            </div>
+            
+            
+            <div id="changeMemberPWD" style="display:none;">
+                <div class="importBox">
+                    <input type="password" id="fillPassword" placeholder="请输入密码">
+                </div>
+                <div class="importBox">
+                    <input type="password" id="confirmPassword" placeholder="请输入确定密码">
+                </div>
+                <a href="javascript:;" class="finishBtn">完成</a>
+            </div>
+            
+
+			<a href="http://aladinyidong.com/mobile/download/vip_download.html" class="appDownload">
+				<img src="../../../images/public/shop_default/downloadBtn.jpg" alt="阿拉丁app下载">
+			</a>
+       	</div>
+    </section>
+</body>
+
+</html>

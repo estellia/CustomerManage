@@ -1,0 +1,1 @@
+{"AJAX_PARAMS":"openId,customerId,applicationId,userId,locale","APP_JSLIB":"jquery","APP_DEBUG":false,"APP_OPTION_MENU":true,"APP_TOOL_BAR":false,"APP_CACHE":true,"APP_WX_ICO":"","APP_WX_TITLE":"","APP_WX_DES":"","APP_CODE":"JIT_9da4f078cb164456a43b5cb7d5f5f284","APP_VERSION":"2017/3/2110:18:36","APP_NAME":"zmind001","APP_TYPE":""}

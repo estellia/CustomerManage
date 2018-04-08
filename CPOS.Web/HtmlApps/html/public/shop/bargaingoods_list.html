@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title name="bargaingoodslist"></title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+    
+</head>
+
+<body style="background-color:#eaeaea ">
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+        <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+    </div>
+<section class="goodsListArea">
+
+
+<div class="goods_list_cell">
+    <ul tplpanel="goods_list" class="clearfix goods_list">
+        
+    </ul>
+</div>
+</section>
+</body>
+<script id="Tpl_goods_list" type="text/template">
+    <% if(ItemList!=null){%> 
+     <%for(var i=0;i<ItemList.length;i++){var _data= ItemList[i];%>
+    <li> 
+        <a href="javascript:Jit.AM.toPage('GoodsBargainDetail','&goodsId=<%=_data.ItemId %>&eventId=<%=EventId %>')">
+            <div class="imgBox"><img src="<%=_data.ImageUrl %>" alt=""></div>
+            <div class="infoBox">
+                <p class="tit t-overflow"><%=_data.ItemName %></p>
+				<span class="salesVal">底价 <strong><%=_data.BasePrice %></strong></span>
+				<div class="shopInfo">
+					<span class="partake"><%=_data.PromotePersonCount %>人参与</span>
+					库存<%=_data.Qty %>
+					
+				</div>
+            </div>
+        </a>
+    </li>
+     <%}%>
+    <%}%>
+</script>
+</html>

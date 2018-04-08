@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title name="VirtualGoodsList"></title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+  	.goods_list_cell .bigGoodsBox .tit{margin:4px 0 20px 0 !important;}
+	.goods_list_cell .infoBox{position:relative;padding-right:70px !important;}
+	.goods_list_cell .infoBox .buyBtn{position:absolute;top:22px;right:10px;width:56px;height:26px;line-height:24px;text-align:center;font-size:13px;border:1px solid #ff6000;border-radius:3px;color:#ff6000;}
+  </style>
+</head>
+
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+<section class="goodsListArea">
+<div class="commonFunInto" style="display:none;">
+	<a href="javascript:;" class="goTop"></a>
+</div>
+
+<div>
+    <a href="#" id="goodsTitleUrl" style="display:block;">
+		<img src=""/>
+	</a>
+</div>
+
+<div class="goods_list_cell">
+    <div tplpanel="goods_list" class="bigGoodsList clearfix">
+    	
+    </div>
+</div>
+  
+</section>
+</body>
+<script id="Tpl_goods_list" type="text/template">
+<div class="bigGoodsBox">
+	<a href="javascript:Jit.AM.toPage('VirtualDetail','&goodsId={{itemId}}&eventId={{eventId}}&typeId={{ObjecetTypeId}}')">
+		<img class="listPic" src="{{imageUrl3}}" alt=""/>
+		<div class="infoBox">
+			<span class="buyBtn" data-skuid={{skuId}} data-price={{salesPrice}} data-type={{ObjecetTypeId}}>{{btnText}}</span>
+			<p class="tit t-overflow">{{itemName}}</p>
+			<div class="shopInfo">
+				<span class="discount {{hidePrice}} hide">{{discount}}</span>
+				<strong>¥{{salesPrice}} </strong>
+				<span class="salesVal">销量 {{salesQty}} 笔</span>
+			</div>
+		</div>
+	</a>
+</div>
+</script>
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</html>

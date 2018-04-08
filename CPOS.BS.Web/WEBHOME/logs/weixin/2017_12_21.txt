@@ -1,0 +1,32 @@
+
+2017/12/21 15:22:28 :  长链接转短链接接口
+
+2017/12/21 15:22:28 :  获取凭证接口： 
+
+2017/12/21 15:22:28 :  appID： wx677d57057f5bc14f
+
+2017/12/21 15:22:28 :  appSecret： 9c7f64e593c422834110e330d4b8e11c
+
+2017/12/21 15:22:28 :  调用获取凭证接口返回值： {"access_token":"5_EX-qpgklgSHK6HBtkg0Zi8-K3NNFXeugc_zK1EXR_gyzDWuSzuetlrVSubL8ZIiMUPDLhV_JJizrAP6gXX49cgOwKtdyhtJk-5QRL8Zad-J2xS54QmM1N0NXF8NTWiUkIE94W5yftnb_oqyeAKPgABAFPU","expires_in":7200}
+
+2017/12/21 15:22:29 :  长链接转短链接返回值：{"errcode":0,"errmsg":"ok","short_url":"https:\/\/w.url.cn\/s\/AD79k2K"}
+
+2017/12/21 15:22:29 :  shorturl：https://w.url.cn/s/AD79k2K
+
+2017/12/21 15:49:12 :  长链接转短链接接口
+
+2017/12/21 15:49:13 :  长链接转短链接返回值：{"errcode":0,"errmsg":"ok","short_url":"https:\/\/w.url.cn\/s\/AulpdXl"}
+
+2017/12/21 15:49:13 :  shorturl：https://w.url.cn/s/AulpdXl
+
+2017/12/21 15:49:29 :  长链接转短链接接口
+
+2017/12/21 15:49:30 :  长链接转短链接返回值：{"errcode":0,"errmsg":"ok","short_url":"https:\/\/w.url.cn\/s\/AgrfqTN"}
+
+2017/12/21 15:49:30 :  shorturl：https://w.url.cn/s/AgrfqTN
+
+2017/12/21 16:01:19 :  长链接转短链接接口
+
+2017/12/21 16:01:20 :  长链接转短链接返回值：{"errcode":0,"errmsg":"ok","short_url":"https:\/\/w.url.cn\/s\/As8Pny9"}
+
+2017/12/21 16:01:20 :  shorturl：https://w.url.cn/s/As8Pny9

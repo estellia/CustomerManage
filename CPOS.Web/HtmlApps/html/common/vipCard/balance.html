@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="x-rim-auto-match" content="none">
+        <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+        <title name="NewsBalance">余额明细</title>
+    </head>
+
+    <body style="background:#f4f4f4">
+        <div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+            <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+        </div>
+        <section>
+            <div class="myInfoArea">
+                <div class="topShow clearfix">
+                    <!--<a href="javascript:;">兑换</a>-->
+                    <div class="info">
+                        <p class="tit">当前余额(元)</p>
+                        <p class="total"><span id="total">0.00</span><span class="tit"></span></p>
+                    </div>
+                    <!--<div class="info">
+                        <p class="tit">支出(元)</p>
+                        <p class="total"><span id="payOut">0.00</span><span class="tit"></span></p>
+                    </div>-->
+                </div>
+                <div id="dataList" class="infoList">
+
+                </div>
+            </div>
+        </section>
+    <script id="tplList" type="text/html">
+        <%for(var i=0; i<list.length; i++){var item=list[i]; %>
+            <div class="item">
+                <p class="tit"><%=item.AmountSourceName %></p>
+                <p class="date">
+                    <span><%=item.CreateTime %></span>
+                </p>
+                <p class="score"><%=item.Amount %></p>
+            </div>
+        <%}%>
+    </script>
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</html>

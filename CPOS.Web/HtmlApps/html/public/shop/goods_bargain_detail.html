@@ -1,0 +1,360 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title name="GoodsBargainDetail"></title>
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+
+	<body>
+		<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+            <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+        </div>
+		<section class="goodsDetailArea">
+			<div id="goodsDetail">
+
+			</div>
+                
+            <!-- 返回顶部 -->
+            <div class="commonFunInto" style="display:none;">
+                <a href="javascript:;" class="goTop"></a>
+            </div>
+                
+            <!-- 客服入口 -->
+            <a href="javascript:Jit.AM.toPage('ClientService');" class="customerServiceBox"></a>  
+            	
+		</section>
+
+        <section id="shareMask" class="hide" style="position:absolute;top:0;left:0;">
+			<div class="mask" onclick="JitPage.hideSharePanel();"></div>
+    		<div class="tips-share"><img src="/HtmlApps/images/public/shop_default/tips-share.png" alt="请点击此处将本页面转发给好友或转发到朋友圈。" onclick="JitPage.hideSharePanel();"></div>
+		</section>
+         <section id="alert" class="hide" style="position:fixed;top:0;left:0;width: 100%;height: 100%;">
+             <div class="alertmask" onclick="JitPage.hideAlertPanel();"></div>
+			<div class="alertinfo" >
+                <div class="infotext">帮砍了<span>0.00</span>元</div>
+                <div class="alertcolose" onclick="JitPage.hideAlertPanel();">关闭</div>
+			</div>
+		</section>
+        <section id="bargainconfirm" class="hide" style="position:fixed;top:0;left:0;width: 100%;height: 100%;">
+             <div class="confirmtmask" ></div>
+			<div class="alertinfo" >
+                <div class="infotext">该砍价已经失效，您是否需要发起砍价？</div>
+                <div class="confirmyes" onclick="JitPage.newBargain();">是</div>
+                <div class="confirmno" onclick="JitPage.hidebargainconfirmPanel();">否</div>
+			</div>
+		</section>
+        <section id="bargainconfirm1" class="hide" style="position:fixed;top:0;left:0;width: 100%;height: 100%;">
+             <div class="confirmtmask" ></div>
+			<div class="alertinfo" >
+                <div class="infotext">该砍价已经失效!</div>
+                <div class="alertcolose" onclick="Jit.AM.toPage('GoodsBargainList');">关闭</div>
+			</div>
+		</section>
+        <section id="bargainconfirm2" class="hide" style="position:fixed;top:0;left:0;width: 100%;height: 100%;">
+             <div class="confirmtmask" ></div>
+			<div class="alertinfo" >
+                <div class="infotext">该商品此规格已经没有库存了!</div>
+                <div class="alertcolose" onclick="$('#bargainconfirm2').hide();">关闭</div>
+			</div>
+		</section>
+         <section id="bargainconfirm3" class="hide" style="position:fixed;top:0;left:0;width: 100%;height: 100%;">
+             <div class="confirmtmask" ></div>
+			<div class="alertinfo" >
+                <div class="infotext">该商品您已发起过砍价!</div>
+                <div class="alertcolose" onclick="$('#bargainconfirm3').hide();">关闭</div>
+			</div>
+		</section>
+	</body>
+<script id="tpl_cutList" type="text/html">    
+       <ul class="head">
+                            <li  class="tl">名称</li>
+                            <li class="tr">帮砍价格</li>
+                        </ul>
+                        <div class="body ">
+<% if(HelperList!=null){%> 
+    <%for(var i=0;i<HelperList.length;i++){var _data= HelperList[i];%>
+	 <div class="HelpCutdata">
+            <div class="col1">
+                <img src="<%=_data.HeadImgUrl %>" /><div class="name"><%=_data.HelperName %></div>
+                <div class="time"><%=_data.CreateTime %></div>
+            </div>
+            <div class="col2">-￥<%=_data.BargainPrice %></div>
+        </div>
+         <%}%>
+    <%}%>    
+         
+                        </div>
+</script>
+    <script id="tpl_BuyerList" type="text/html">    
+        <ul class="head">
+                            <li  class="tl">购买者</li>
+                            <li class="tr">购买价格</li>
+                        </ul>
+                        <div class="body ">
+    <% if(BuyerList!=null){%>                    
+    <%for(var i=0;i<BuyerList.length;i++){var _data= BuyerList[i];%>
+	 <div class="HelpCutdata">
+            <div class="col1">
+                <img src="<%=_data.HeadImgUrl %>" /><div class="name"><%=_data.BuyerName %></div>
+                <div class="time"><%=_data.CreateTime %></div>
+            </div>
+            <div class="col2">￥<%=_data.SalesPrice %></div>
+        </div>
+         <%}%>
+  <%}%>
+         
+                        </div>
+</script>
+
+    <script id="tpl_PropList" type="text/html">    
+         <% if(prop2List!=null){%>
+        <% for(var i=0;i<prop2List.length;i++){ var _data=prop2List[i];   %>
+                    <a  data-skuid="<%=_data.skuId %>" <% if(_data.prop2DetailId==""){%>style="display:none;"<%}%> data-prop_detail_id="<%=_data.Prop2DetailId %>"><%=_data.prop2DetailName %></a>
+            <%}%>
+            <%}%>
+    </script>
+
+
+    <script id="Tpl_goods_detail" type="text/html">    
+	    <div class="goods_detail">
+            
+				<div class="goods_img ac">
+
+                    <div class="touchsliderthisseason">
+                                <div class="thisseasontouchslider-viewport" style="width:100%;overflow:hidden;position: relative; height: 320px;">
+                                    <div class="InSeasonList" style="width: 100000px; position: absolute; left: 0px; height:320px;">
+                                         <% if(ImageList!=null){%>
+                                            <%for(var i=0;i<ImageList.length;i++){var _data= ImageList[i];%>
+                                                <div class="thisseasontouchslider-item Seasondata"> 
+                                                <img     src="<%=_data.imageURL %>" >
+                                                    </div>
+                                            <%}%>
+                                        <%}%>
+                                    </div>
+                                </div>
+                                
+                                <div class="thisseasontouchslider-nav">
+                                    
+                                </div>
+                    </div>
+				</div>
+				<div class="goods_txt_box">
+					<div class="goods_titles">
+						<h2 jitval="itemName"><%=ItemName %></h2>
+					</div>
+                    
+					<p class="priceBox">
+						<span class="floorprice">底价<span class="itemPrice"><%=MinBasePrice %></span><span class="itemunit">元</span></span>
+						<span class="originalPrice">零售价<span class="MinPrice"><%=MinPrice %></span>元</span>
+					</p>
+				</div>
+                <div class="statusLayer">
+                	<span class="userimg"></span>
+                    <span><span class="PromotePersonCount"><%=PromotePersonCount %></span>人参与</span>
+                    <span class="stockimg"></span>
+                    <span>库存<span class="CurrentQty"><%=CurrentQty %></span></span>
+                    <span class="endtimeimg"></span>
+                    <span>距离<%=isEventEnd==2?"开始":"结束" %> <span id="spareTime" data-seconds='<%=Seconds %>' >00:00:00</span></span>
+                    
+                </div>
+               
+			</div>
+            
+
+                <% if(type==null||type==1){ %>
+                <input class="scalePrice" type="hidden" value="<%=MinPrice %>" />
+                   <div class="goods_detail1">
+                <div class="postageBox">
+                	<span class="tit">运费：</span>
+                    <p><%=DeliveryDesc %></p>
+                </div>
+				<div class="goods_parameter">
+                    <% if(Prop1List!=null&&Prop1List.length>0&&Prop1List[0].Prop1DetailId!="") {%>
+					<dl name="propitem" >
+						<dt name="prop_name"><%=PropName1!=""?(PropName1+"："):"" %></dt>
+                        
+						<dd class="Prop1" name="prop_option" propidx="1">
+                             <% if(Prop1List){
+                             for(var i=0;i<Prop1List.length;i++){ var _data=Prop1List[i];   %>
+                                 <a  data-skuid="<%=_data.skuId %>" data-prop_detail_id="<%=_data.Prop1DetailId %>"><%=_data.Prop1DetailName %></a>
+                                 <!--<a class="selected" skuid="<%=_data.skuId %>" prop_detail_id="<%=_data.Prop1DetailId %>"><%=_data.Prop1DetailName %></a>-->
+                            <%}}%>
+						</dd>
+                         
+					</dl>
+                   
+					<dl name="propitem" >
+						<dt name="prop_name"><%=PropName2!=""?(PropName2+"："):"" %></dt>
+                        <dd class="Prop2"  name="prop_option" propidx="1">
+                             
+						</dd>
+					</dl>
+
+                    <dl style="display:none;" class="goods_num">
+						<dt>
+							数量：
+						</dt>
+						<dd>
+							<input type="button" id="btn_delNum" value="-"><input id="goods_number" type="text" readonly value="1"><input id="btn_addNum" type="button" value="+">
+							<span style="margin-left:10px;color:#ff3344;" id="Span1">每人限购<%=SinglePurchaseQty %>件</span><span id="Span2" style="color:#ff3344"></span>
+						</dd>
+					</dl>
+
+                    <%}%>
+					
+					
+				</div>
+                
+                
+                
+				
+
+				
+			</div>
+                <%} if(type==2){ %>
+                
+         <!-- 砍价进度信息 -->
+            <div class="goods_detail1 ">
+                	
+                <div class="postageBox schedulelayer">
+                <span class="tit"><img src="<%=HeadImageUrl %>" /><span class="r">我正在砍此宝贝，快来帮忙！</span>
+                </span>
+                    <div class="r currentQty">库存<span><%=CurrentQty %></span></div>
+                    <div class="schedule">
+                        
+                        <div class="progressbar "></div>
+                        <div class="progress " style="width:<%=(BargainedRate*100) %>%;">
+                            <span class="BargainedPrice"  ><%=MinPrice-BargainedPrice %></span>
+                        <input class="scalePrice" type="hidden" value="<%=MinPrice-BargainedPrice %>" />
+                            <div class="schedulestatus"   >已砍￥<%=BargainedPrice %><img src="../../../images/public/shop_default/jiantou.png" /></div></div>
+                        
+                    </div>
+                    <div class="schedulePrice">
+                            <div class="originalprice">原价:￥<span><%=MinPrice %></span></div>
+                            <div class="floorprice">底价:￥<span><%=MinBasePrice %></span></div>
+                        <div class="clear"></div> 
+                        </div>
+                </div>
+                <div class="postageBox">
+                        <span class="tit">运费：</span>
+                        <p><%=DeliveryDesc %></p>
+                     </div>
+				<div class="goods_parameter scheduleparameter">
+                    
+					<dl name="propitem" class="l">
+						<dt name="prop_name"><%=PropName1!=""?(PropName1+"："):""  %></dt>
+                        
+						<dd  name="prop_option" propidx="1">
+                               <% if(SkuInfoList!=null&&SkuInfoList.length>0){ %>
+                                 <a   href="javascript:;"> <%= SkuInfoList[0].skuProp1 %></a>
+                                 <%} %>
+						</dd>
+                         
+					</dl>
+                     <dl name="propitem" class="l">
+						        <dt name="prop_name"><%=PropName2!=""?(PropName2+"："):""  %></dt>
+                                <dd  name="prop_option" propidx="1">
+                                    <% if(SkuInfoList!=null&&SkuInfoList.length>0){ %>
+                                 <a   href="javascript:;"> <%= SkuInfoList[0].skuProp2 %></a>
+                                 <%} %>
+                                    </dd>
+					 </dl>
+                  <div class="clear"></div> 
+			</div>
+
+					
+
+				</div>
+
+             <!-- 商家信息 -->
+            <div class="goods_detail1">
+                	
+                   <div class="postageBox">
+                   <span class="tit">商家信息</span>
+                       <a href="javascript:Jit.AM.toPage('GoodsBargainList');"  class="r morebargain">更多砍价 ></a>
+                    </div>
+					<div class="goods_parameter businessdetail">
+                   
+						<div class="businessinfor"><img src="<%=WebLogo %>" /><span><%=CustomerShortName %></span></div>
+						<div class="businessQRcode"><img src="<%=QRCodeURL %>" /><span>长按二维码关注</span></div>
+                        <div class="clear"></div>
+				</div>
+
+					
+
+				</div>
+
+             <!-- 帮砍名单、购买名单 -->
+            <div class="Bargainlist_area">
+                    <div class="tit">
+                    	<div class="titlist seleced" data-type="1">帮砍名单（<span class="Helpercount">0</span>）</div>
+                    	<div class="titlist" data-type="2">购买者（<span class="Buyercount">0</span>）</div>
+                    </div>
+					<div class="Bargainlist_body Cutlist" >
+                        
+
+					</div>
+
+					
+
+				</div>
+
+
+                <%}%>
+
+
+       
+
+            <!-- 图文详情 -->
+            <div class="gde_area">
+                	
+                    <div class="gde_area_tit">
+                    	<p class="line"></p>
+                    	<p class="tit">图文详情</p>
+                    </div>
+					<div class="gde_body gde_des" id="description">
+                        
+					</div>
+
+					
+
+				</div>
+
+        <div class="goods_btn detailFooterBox"  >
+                    
+            <a href="javascript:Jit.AM.toPage('IndexShopApp');" class="g_myShopCart">首页<span></span></a>
+            <p class="btnBox">
+                
+				
+
+                <% if(type==1){ %>
+                    
+                    <%if(ismycart){%>
+                        <a href="javascript:;"  class="btn_cart <%=Disablebtnclass %>">找人帮我砍</a>
+				        <a href="javascript:;"  class="btn_buy <%=Disablebtnclass %>">立即购买</a>
+                    <%}else{%>
+                        <a href="javascript:;"  class="btn_nowcart <%=Disablebtnclass %>">立即砍价</a>
+                     <%}%>
+                <%} if(type==2){ %>
+                    <%if(isself=="1"){%>
+                     <a href="javascript:;" class="btn_cart <%=Disablebtnclass %>">找人帮我砍</a>
+				    <a href="javascript:;" class="btn_buy <%=Disablebtnclass %>">立即购买</a>
+                    <%}else{%>
+
+                        <%if(ismycart||status==3){%>
+                            <a href="javascript:Jit.AM.toPage('GoodsBargainDetail', 'goodsId=<%=ItemId %>&eventId=<%=EventId %>');"  class="btn_mycart <%=Disablebtnclass %>">我也要砍价</a>
+                        <%}else{%>
+                            <a href="javascript:;"  class="btn_helpcart <%=Disablebtnclass %>">帮他砍价</a>
+                        <%}%>
+                    <%}%>
+                <%}%>
+                
+            </p>
+            <a href="javascript:;" class=""></a>
+		</div>  	
+    </script>
+</html>

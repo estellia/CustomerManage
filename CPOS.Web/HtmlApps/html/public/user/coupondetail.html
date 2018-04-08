@@ -1,0 +1,132 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title name="CouponDetail"></title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    	.couponDetail-area{background:#efeff1;}
+		.couponInfo{position:relative;height:140px;padding:14px;background:url(../../../images/public/user_default/bg.png) no-repeat center center;background-size:cover;}
+		.rotateBtn{position:absolute;top:28px;right:20px;display:block;width:66px;height:30px;line-height:28px;border:1px solid #fff;border-radius:15px;text-align:center;font-size:12px;color:#fff;}
+		.couponLogo{display:block;width:58px;height:58px;margin:0 auto;border-radius:30px;}
+		.couponName{padding-top:8px;text-align:center;font-size:20px;color:#fff;}
+		.couponInfoTag{display:none;position:absolute;top:0;left:0;width:100%;height:100%;}
+		.couponInfoTag.expireIcon{display:block;background:rgba(3,3,3,0.35) url(../../../images/public/user_default/icon-expire.png) no-repeat right center;background-size:131px 95px;}
+		.couponInfoTag.usedIcon{display:block;background:rgba(3,3,3,0.35) url(../../../images/public/user_default/iocn-use.png) no-repeat right center;background-size:131px 95px;}
+		
+		.couponQrBox{margin-bottom:10px;padding:12px;text-align:center;border-bottom:1px solid #d8dce2;background:#fff;}
+		.couponQr{display:block;width:210px;height:210px;margin:0 auto;}
+		.couponNo{line-height:15px;padding-top:7px;font-siz:12px;font-family:"Arial";color:#999;}
+		.couponTip{font-size:12px;color:#4c4c4c;}
+		.couponValidity{text-align:center;font-size:12px;font-family:"Arial";color:#cbf5f5;}
+		
+		.onlineDeliveryBox{padding-top:9px;}
+		.orPic{display:block;width:315px;height:7px;margin:0 auto;}
+		.deliveryBtn{display:block;width:90px;height:30px;margin:22px auto 11px;background:url(../../../images/public/user_default/deliveryBtn.png?v1.0) no-repeat center center;background-size:90px 30px;}
+		
+		.itemLinksBox{margin-bottom:10px;padding:0 15px;border-top:1px solid #d8dce2;border-bottom:1px solid #d8dce2;background:#fff;}
+		.itemLinksBox>p{height:44px;line-height:43px;border-bottom:1px solid #d9dce2;}
+		.itemLinksBox>p:nth-last-of-type(1){border-bottom:none;}
+		.itemLinksBox .itemBox .tit{float:left;font-size:13px;color:#383b3f;}
+		.itemLinksBox .itemBox .arr{float:right;width:13px;height:43px;background:url(../../../images/public/user_default/icon-arrow.png) no-repeat right center;background-size:7px 13px;}
+		
+		#txtCouponDesc{display:none;padding:15px 0;}
+		.itemLinksBox.on #txtCouponDesc{display:block;}
+		.itemLinksBox.on em{-webkit-transform:rotate(90deg);}
+    </style>
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+<body>
+	<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+        <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+    </div>
+    
+    <section class="couponDetail-area">
+        <div class="couponInfo">
+        	<span class="rotateBtn g_share">转赠</span>
+        	<img class="couponLogo" src="">
+            <p id="txtCouponName" class="couponName"></p>
+            <p class="couponValidity">有效期：<span id="txtBeginDate"></span>-<span id="txtEndDate"></span></p>
+            <div class="couponInfoTag"></div>
+        </div>
+        <div class="couponQrBox">
+        	<img  class="couponQr" id="imgCouponCode" src="">
+            <p class="couponNo" id="txtCouponCode"></p>
+            <p class="couponTip" style="display:none">到店出示二维码提货</p>
+            <div class="onlineDeliveryBox">
+            	<img class="orPic" src="../../../images/public/user_default/or-bg.png">
+                <a href="javascript:;" class="deliveryBtn"></a>
+            </div>
+        </div>
+        
+        
+        <div class="itemLinksBox on" id="useRuleBox">
+        	<p class="itemBox">
+            	<span class="tit">使用规则</span>
+                <em class="arr"></em>
+            </p>
+            <div id="txtCouponDesc"></div>
+        </div>
+        
+        <div class="itemLinksBox" style="display:none">
+        	<p class="itemBox">
+            	<a href="javascript:;">
+                    <span class="tit">关注公众号</span>
+                    <em class="arr"></em>
+                </a>
+            </p>
+            <p class="itemBox">
+            	<a href="javascript:Jit.AM.toPage('StoreList');">
+                    <span class="tit">适用门店</span>
+                    <em class="arr"></em>
+                </a>
+            </p>
+        </div>
+        
+    </section>
+ 
+<!--    
+<section class="padding-10">
+    <div class="couponDetailArea">
+        <div class="available" id="txtStatus">
+               <span  id="txtCouponName" class="left" ></span>
+            <span>可用</span>
+            <em></em>
+        </div>
+        <div class="infoContent">
+            <p class="clearfix">
+                <em class="ico exp"></em>
+                <span class="text" id="txtCouponDesc"></span>
+            </p>
+            <p class="clearfix">
+                <em class="ico user"></em>
+                <span class="text">持券人：<label id="txtVipName"></label>     </span>
+            </p>
+            <p class="clearfix">
+                <em class="ico time"></em>
+                <span class="text" id="txtDate" >有效期：<label id="txtBeginDate"></label>—<label id="txtEndDate"></label></span>
+            </p>
+            
+            <p class="countDown">(还有<span id="txtResidueDay">0</span>天过期 )</p>
+            <p class="countDown"></p>
+            <p class="countDown" style="color:#7f7f7f;">券编号：<label id="txtCouponCode"></label></p>
+            <p class="qrCode">
+                <img src="#" id="imgCouponCode" />
+            </p>
+            
+            <p class="hint">使用时请向店员出示!</p>
+
+        </div>
+    </div>
+</section>
+-->
+
+
+
+    <div id="share-mask"></div>
+	<img id="share-mask-img" src="../../../images/common/share.png">
+    
+</body>
+
+</html>

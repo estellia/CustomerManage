@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+<title name="OrderMonthCollect">订单月汇总</title>
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/public/myshop/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<input id="channelIdSize" type="hidden" value="6">
+<div class="w_640 orderMonthCollectArea">
+    <div class="orderMonthCollectList">
+        <ul>
+            
+        </ul>
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+<script id="tpl_orderMonthCollect" type="text/html">
+<li>
+	<div class="monthBox">
+		<span><%=MonthID%></span>月
+	</div>
+	<div class="infoBox">
+		<p><span class="tit">订单数：</span><span><%=OrderCount%></span>笔</p>
+		<p><span class="tit">订单金额：</span><span class="fontC"><%=OrderAmount%></span>元</p>
+		<p><span class="tit">订单收益：</span><span class="fontC"><%=OrderMonthIncome%></span>元</p>
+	</div>
+</li>
+</script>
+</html>

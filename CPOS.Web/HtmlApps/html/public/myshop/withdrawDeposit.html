@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+<!--<meta content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=0" name="viewport">-->
+<title name="WithdrawDeposit">提现</title>
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/public/myshop/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<input id="channelIdSize" type="hidden" value="6">
+<div class="w_640 withdrawDepositArea">
+	<!--提现-->
+	<div id="withdrawLayer">
+        <div class="withdrawBox">
+            <h2 class="tit">当前可提现金额（元）</h2>
+            <p id="totalAmount" class="totalAmount"></p>
+        </div>
+        <div class="bankCardBox">
+            <p class="iconBank"></p>
+            <div id="bankCardInfo" class="infoBox">
+                <div class="modifyBankInto">
+                    <p class="bankName"></p>
+                    <span>尾号<span class="cardNo"></span></span>
+                </div>
+                <p class="addBankBtn" style="line-height:72px;">添加银行卡</p>
+            </div>
+        </div>
+        <p class="hintBox"><img src="../../../images/public/my_shop/icon_hint.png"><span>日累计等于小于1千元,48小时可到账<span></p>
+        <div class="inputAmountBox">
+            <em>金额</em>
+            <p><input id="withdrawAmount" style="font-family: '微软雅黑';" type="tel" value="" placeholder="输入提现金额,仅限整数"></p>
+        </div>
+        <p class="withdrawMonth">每人每月可提现<span>0</span>次,</p>
+        <p class="withdrawNum">本月剩余提现次数<span>0</span>次</p>
+        <div>
+            <a href="javascript:;" class="withdrawBtn">申请提现</a>
+            <p class="withdrawNotice">账户金额累计满2000元可提现</p>
+            <p class="seeWithdraw"><a href="javascript:Jit.AM.toPage('SeeWithdrawRecord');">查看提现记录</a></p>
+        </div>
+    </div>
+    
+    
+    <!--添加银行卡-->
+    <div id="addBankcardLayer">
+    	<div class="bankInputBox">
+        	<p class="addBank">
+                <select>
+                    <option>请选择开户银行</option>
+                    <option>中国工商银行</option>
+                </select>
+            </p>
+            <p>
+                <input class="accountName" type="text" placeholder="输入开户人姓名">
+            </p>
+            <p>
+                <input class="cardNo" type="tel" placeholder="输入储蓄卡卡号">
+            </p>
+            <p>
+                <input class="cardNoNew" type="tel" placeholder="重复输入一遍卡号">
+            </p>
+        </div>
+        <div class="noticeBox">
+        	<h2><img src="../../../images/public/my_shop/icon_hint.png">注意</h2>
+        	<p>1.开户银行、开户人姓名、卡号必须准确无误，否则无法提现。</p>
+            <p>2.银行卡仅支持储蓄卡，请不要填写信用卡。</p>
+        </div>
+        <div>
+            <a href="javascript:;" class="confirmBtn">确认</a>
+        </div>
+    </div>
+    
+    <!--修改银行卡-->
+    <div id="modifyBankcardLayer" style="display:none;">
+    	<div class="bankShow">
+        	<p class="bankHead"><img src="../../../images/public/my_shop/icon_bankCard2.png"></p>
+            <div class="bankInfo">
+            	<p class="bankName">招商银行卡</p>
+                <span>**************<span class="showCardNo">2886</span></span>
+            </div>
+        </div>
+        
+        <div>
+        	<a href="javascript:;" class="modifyBankBtn">修改收款卡号</a>
+        </div>
+        
+        <div class="inputModifyArea" style="display:none">
+            <div class="bankInputBox">
+                <p class="selectBank">
+                    <select>
+                        <option>请选择开户银行</option>
+                        <option>中国工商银行</option>
+                    </select>
+                </p>
+                <p>
+                    <input class="accountName" type="text" placeholder="输入开户人姓名">
+                </p>
+                <p>
+                    <input class="cardNo" type="tel" placeholder="输入储蓄卡卡号">
+                </p>
+                <p>
+                    <input class="cardNoNew" type="tel" placeholder="重复输入一遍卡号">
+                </p>
+            </div>
+            <div class="noticeBox">
+                <h2><img src="../../../images/public/my_shop/icon_hint.png">注意</h2>
+                <p>1.开户银行、开户人姓名、卡号必须准确无误，否则无法提现。</p>
+                <p>2.银行卡仅支持储蓄卡，请不要填写信用卡。</p>
+            </div>
+            <div>
+                <a href="javascript:;" class="confirmModifyBtn">确认修改</a>
+            </div>
+        </div>
+        
+        
+        
+        
+    </div>
+    
+
+    
+</div>
+</body>
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</html>

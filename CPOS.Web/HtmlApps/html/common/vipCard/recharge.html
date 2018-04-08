@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="x-rim-auto-match" content="none">
+<title name="Recharge">充值</title>
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.rechargeArea{min-height:100%;background:#f5f5f5;}
+.rechargeArea .bannerBox{margin-bottom:10px;text-align:center;}
+.rechargeArea .bannerBox img{display:inline-block;}
+.accountBalance{height:45px;line-height:43px;margin-top:10px;padding:0 15px;font-size:13px;border-top:1px solid #d8dce2;border-bottom:1px solid #d8dce2;background:#fff;color:#383b3f;}
+.accountBalance .tit{float:left;}
+.accountBalance .balance{float:left;margin-left:7px;font-family:"Arial";font-size:15px;color:#ff6767;}
+
+.rechargeMoneyBox{margin-top:10px;padding:0 15px 22px;font-size:13px;border-top:1px solid #d8dce2;border-bottom:1px solid #d8dce2;background:#fff;color:#383b3f;}
+.rechargeMoneyBox .tit{padding:10px 0;}
+.rechargeMoneyBox .moneyType{padding-bottom:5px;}
+.rechargeMoneyBox .moneyType a{position:relative;float:left;width:52px;height:31px;line-height:29px;margin:0 6px 7px 0;text-align:center;font-size:12px;border:1px solid #e5e2e2;border-radius:3px;color:#383b3f;}
+.rechargeMoneyBox .moneyType a.on{border:1px solid #ff6767;}
+.rechargeMoneyBox .moneyType .cashTip{position:absolute;top:33px;left:-6px;display:none;width:60px;height:22px;line-height:25px;text-align:center;font-size:12px;background:url(../../../images/common/vipCard/icon-cashTip.png) no-repeat 0 0;background-size:60px 22px;color:#fff;}
+.rechargeMoneyBox .moneyType a.on .cashTip{display:block;}
+.rechargeMoneyBox .otherMoney{display:none;border-top:1px solid #d8dce2;}
+.rechargeMoneyBox .otherMoney input{display:block;height:44px;width:100%;font-size:13px;border:none;}
+.rechargeMoneyBox .otherMoney input::-webkit-input-placeholder{color:#ccc;}
+
+.paymentWayArea{margin-top:10px;padding:0 15px;font-size:13px;border-top:1px solid #d8dce2;border-bottom:1px solid #d8dce2;background:#fff;color:#383b3f;}
+.paymentWayArea .tit{padding:10px 0;border-bottom:1px solid #d8dce2;}
+.paymentWayArea .itemBox{height:44px;line-height:44px;border-bottom:1px solid #d8dce2;}
+.paymentWayArea .itemBox:nth-last-of-type(1){border-bottom:none;}
+.paymentWayArea .itemBox .radioBox{float:left;width:40px;height:100%;background:url(../../../images/common/vipCard/icon_unradio.png) no-repeat left center;background-size:24px 24px;}
+.paymentWayArea .itemBox.on .radioBox{background:url(../../../images/common/vipCard/icon_radio.png) no-repeat left center;background-size:24px 24px;}
+.paymentWayArea .itemBox .iconTag{float:left;width:50px;height:100%;}
+.paymentWayArea .itemBox .iconTag img{display:inline-block;width:auto;height:66%;}
+.paymentWayArea .itemBox .textBox{margin-left:90px;height:100%;}
+
+.rechargeArea .btnBox{padding:40px 0;}
+.rechargeArea .confirmBtn{display:block;width:182px;height:44px;line-height:44px;margin:0 auto;text-align:center;font-size:16px;letter-spacing:2px;border-radius:22px;background:#ff6767;color:#feffff}
+</style>
+</head>
+
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+<section class="rechargeArea">
+	<div class="bannerBox"><img src="../../../images/common/vipCard/ad_banner.jpg" alt=""></div>	
+    
+    <div class="accountBalance">
+    	<em class="tit">账户余额</em>
+        <p id="balanceSum" class="balance">￥55.00</p>
+    </div>
+    
+    <div class="rechargeMoneyBox">
+    	<p class="tit">充值金额</p>
+        <div class="moneyType clearfix">
+        	<a href="javascript:;">10元</a>
+            <a href="javascript:;">30元</a>
+            <a href="javascript:;">50元</a>
+            <a href="javascript:;" class="">100元</a>
+            <a href="javascript:;">500元</a>
+            <a href="javascript:;">1000元</a>
+            <a href="javascript:;">5000元</a>
+        </div>
+        <p class="otherMoney"><input type="tel" placeholder="请输入其他金额"></p>
+    </div>
+    
+    <div class="paymentWayArea">
+    	<p class="tit">支付方式</p>
+        <div class="paymentList">
+        	<div class="itemBox">
+            	<em class="radioBox"></em>
+                <p class="iconTag"></p>
+                <p class="textBox">微信</p>
+            </div>
+        </div>
+    </div>
+    
+    <p class="btnBox"><a href="javascript:;" id="paymentConfirmBtn" class="confirmBtn">确定</a></p>
+    
+    
+</section>
+
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+<script id="tpl_payWayList" type="text/html">
+<div class="itemBox <%=paymentTypeCode=='WXJS'?'on':''%>" data-payid=<%=paymentTypeId%> data-typecode=<%=paymentTypeCode%>>
+	<em class="radioBox"></em>
+	<p class="iconTag" style="background:url(<%=logoUrl%>) no-repeat left center;background-size:50px auto;"></p>
+	<p class="textBox"><%=paymentTypeName%></p>
+</div>
+</script>
+</body>
+</html>

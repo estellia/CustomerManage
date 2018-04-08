@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<title name="BigDial">大转盘</title>
+<style>
+body{background:#f04a4f;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.bigDialBanner{position:relative;}
+.bigDialBanner img{width:100%;}
+.bigDialBanner .ruleBtn{position:absolute;bottom:13%;left:26%;width:74px;height:26px;background:url(../../../images/common/bigDial/bigDialRule.png) no-repeat center center;background-size:74px 26px;}
+.bigDialArea{position:relative;width:247px;height:247px;margin:30px auto 0;border-radius:30px;box-shadow:0px 1px  5px rgba(102,102,102,0.7);background:#fbc702;}
+.bigDialArea ul{width:100%;height:100%;}
+.bigDialArea li{position:absolute;width:55px;height:55px;text-indent:-999em;}
+.bigDialArea li.current em{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:28px;background:rgba(0,204,255,0.5);}
+#beginBtn{position:absolute;width:106px;height:106px;left:70px;top:70px;background:url(../../../images/common/bigDial/00.png) no-repeat center center;background-size:106px 106px;text-indent:-999em;}
+
+.bigDialArea li:nth-of-type(1){left:6px;top:6px;}
+.bigDialArea li:nth-of-type(2){left:66px;top:6px;}
+.bigDialArea li:nth-of-type(3){left:126px;top:6px;}
+.bigDialArea li:nth-of-type(4){left:186px;top:6px;}
+.bigDialArea li:nth-of-type(5){left:186px;top:66px;}
+.bigDialArea li:nth-of-type(6){left:186px;top:126px;}
+.bigDialArea li:nth-of-type(7){left:186px;top:186px;}
+.bigDialArea li:nth-of-type(8){left:126px;top:186px;}
+.bigDialArea li:nth-of-type(9){left:66px;top:186px;}
+.bigDialArea li:nth-of-type(10){left:6px;top:186px;}
+.bigDialArea li:nth-of-type(11){left:6px;top:126px;}
+.bigDialArea li:nth-of-type(12){left:6px;top:66px;}
+
+.bigDialArea li:nth-of-type(1),
+.bigDialArea li:nth-of-type(5),
+.bigDialArea li:nth-of-type(9)
+{background:url(../../../images/common/bigDial/01.png) no-repeat center center;background-size:55px 55px;}
+.bigDialArea li:nth-of-type(2),
+.bigDialArea li:nth-of-type(6)
+{background:url(../../../images/common/bigDial/02.png) no-repeat center center;background-size:55px 55px;}
+.bigDialArea li:nth-of-type(3),
+.bigDialArea li:nth-of-type(8),
+.bigDialArea li:nth-of-type(11)
+{background:url(../../../images/common/bigDial/03.png) no-repeat center center;background-size:55px 55px;}
+.bigDialArea li:nth-of-type(4),
+.bigDialArea li:nth-of-type(7),
+.bigDialArea li:nth-of-type(10)
+{background:url(../../../images/common/bigDial/04.png?v1.0) no-repeat center center;background-size:55px 55px;}
+.bigDialArea li:nth-of-type(12)
+{background:url(../../../images/common/bigDial/05.png) no-repeat center center;background-size:55px 55px;}
+
+.ruleArea{display:none;position:fixed;top:0;right:0;bottom:0;left:0;overflow:auto;}
+</style>
+</head>
+
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+
+<section>
+    <div class="bigDialBanner">
+        <img src="../../../images/common/bigDial/bigDialBanner.jpg" title="大转盘">
+        <a class="ruleBtn" href="javascript:;"></a>
+    </div>
+    <div class="bigDialArea">
+        <ul id="bigDialContent">
+            <li style="left:6px;top:6px;">0<em></em></li>
+            <li style="left:66px;top:6px;">1<em></em></li>
+            <li style="left:126px;top:6px;">2<em></em></li>
+            <li style="left:186px;top:6px;">3<em></em></li>
+            <li style="left:186px;top:66px;">4<em></em></li>
+            <li style="left:186px;top:126px;">5<em></em></li>
+            <li style="left:186px;top:186px;">6<em></em></li>
+            <li style="left:126px;top:186px;">7<em></em></li>
+            <li style="left:66px;top:186px;">8<em></em></li>
+            <li style="left:6px;top:186px;">9<em></em></li>
+            <li style="left:6px;top:126px;">10<em></em></li>
+            <li style="left:6px;top:66px;">11<em></em></li>
+        </ul>
+        <a href="javascript:;" id="beginBtn">抽奖</a>
+     </div>
+</section>
+
+<div class="ruleArea"><img src="../../../images/common/bigDial/ruleBg.jpg?v1.0" title="规则"></div>
+
+
+
+<section id="shareMask" class="hide" style="position:absolute;top:0;left:0">
+    <div class="mask" onclick="JitPage.hideSharePanel();"></div>
+    <div class="tips-share"><img src="/HtmlApps/images/common/lotteryAll/tips-share.png"></div>
+</section>
+
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+
+<script id="tpl_bigDialList" type="text/html">
+	<li data-prizesid="<%=PrizesID%>" data-tit="<%=PrizesName%>" data-couponid="<%=CouponTypeID%>">
+		<img src="<%=ImageUrl%>">
+		<em></em>
+	</li>
+</script>
+</body>
+</html>

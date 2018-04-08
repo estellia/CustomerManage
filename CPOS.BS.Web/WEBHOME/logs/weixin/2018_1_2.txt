@@ -1,0 +1,14 @@
+
+2018/1/2 22:31:45 :  创建自定义菜单
+
+2018/1/2 22:31:46 :  获取凭证接口： 
+
+2018/1/2 22:31:46 :  appID： wx677d57057f5bc14f
+
+2018/1/2 22:31:46 :  appSecret： 9c7f64e593c422834110e330d4b8e11c
+
+2018/1/2 22:31:46 :  调用获取凭证接口返回值： {"access_token":"5_4oI_dYAmfiGJVYJyFSG-hp3a0dh5Ko1L1xdGC1tl-lrMJvccT6NWB_5D7FcDim9lDeP3GEWeHpjr4uodpGivoNy55M9fMfR5j7RQT7U5KAun6fPwFVQ-R3uWT0uSevhkq2ZV3PqqbrxN7ibiDIKjAJAINP","expires_in":7200}
+
+2018/1/2 22:31:46 :  content：{"button":[{"type": "click","name": "精选优惠","key": "9D7383B","url": "http://wxapi.xgxshop.com//HtmlApps/html/public/index/index_shop_app.html?customerId=414756570b7c4ec1acf0456ad7f5987f&homeId=c826ecb9-e64f-4e13-abd8-d19971f88bf2","sub_button": [{"type": "view","name": "商城","key": "2F4C964","url": "http://www.xgxshop.com"},{"type": "view","name": "车主粉享会","key": "5D50E46","url": "http://www.hdb.com/party/eoepb"}]},{"type": "click","name": "会员中心","key": "99B37C7","url": "http://wxapi.xgxshop.com/HtmlApps/html/public/index/index_shop_app.html?customerId=414756570b7c4ec1acf0456ad7f5987f&homeId=c826ecb9-e64f-4e13-abd8-d19971f88bf2","sub_button": [{"type": "view","name": "我的账户","key": "553803A","url": "http://wxapi.xgxshop.com//HtmlApps/html/public/index/index_shop_app.html?customerId=414756570b7c4ec1acf0456ad7f5987f&homeId=c826ecb9-e64f-4e13-abd8-d19971f88bf2"}]},{"type": "click","name": "新干线","key": "DE1E963","url": "http://wxapi.xgxshop.com//HtmlApps/html/public/index/index_shop_app.html?customerId=414756570b7c4ec1acf0456ad7f5987f&homeId=df88f5d2-78b6-4fcd-8aaa-8578bd2150c1","sub_button": [{"type": "click","name": "在线客服","key": "9195110","url": ""},{"type": "click","name": "加盟我们","key": "BAB09DE","url": ""},{"type": "view","name": "认识我们","key": "3739CA3","url": "http://80e90937ddc1.ih5.cn/idea/xaCKRkU"},{"type": "view","name": "门店地址","key": "8AAA0CA","url": "http://wxapi.xgxshop.com/WXOAuth/AuthUniversal.aspx?customerId=414756570b7c4ec1acf0456ad7f5987f&goUrl=wxapi.xgxshop.com/HtmlApps/html/common/store/storeList.html&applicationId=2F743CC5-FC4C-4207-86BF-E22A7C0475FA&weixinId=gh_dae4ca79cf43"}]}]}
+
+2018/1/2 22:31:47 :  创建自定义菜单返回值： {"errcode":0,"errmsg":"ok"}

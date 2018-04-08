@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+    <title name="BindEntityCard">选择会员卡</title>
+    <link href="../../../css/base/global.css?v1.1" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../lib/require.js" defer async="true" data-main="../../../launch"></script>
+</head>
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+
+<section>
+    <div class="bindEntityCardArea">
+        <p class="title">您有以下实体卡可以绑定</p>
+        <div class="vipCardList">
+            <!-- <div class="cardItem">
+                <div class="titBar">
+                    <p class="radioBox">金卡</p>
+                </div>
+                <div class="cardInfoBox">
+                    <p>会员折扣：7折</p>
+                    <p>余额：123元</p>
+                    <p>积分：123分</p>
+                </div>
+            </div> -->
+        </div>
+
+
+        <a class="maxBtn bindCardBtn" href="javascript:;">确定绑定</a>
+        <a class="maxBtn unBindCardBtn" href="javascript:;">不绑定实体卡</a>
+        <div class="hintBox">实体卡绑定后，余额、优惠等将全部移至线上会员卡，实体卡将失效。</div>
+    </div>
+</section>
+
+</body>
+
+</html>
+<script type="text/html" id="tpVipCardList">
+    <% for (var i = 0; i < datas.length; i++) {
+    var dataInfo=datas[i];%>
+        <div class="cardItem">
+            <div class="titBar">
+                <p class="radioBox" data-id="<%=dataInfo.VipCardTypeID%>" data-vid="<%=dataInfo.BindVipID%>"><%=dataInfo.VipCardTypeName%></p>
+            </div>
+            <div class="cardInfoBox">
+                <p>会员折扣：<%=(dataInfo.CardDiscount==10 || dataInfo.CardDiscount==0)?'无折扣':(dataInfo.CardDiscount+'折')%></p>
+                <p>余额：<%=dataInfo.TotalAmount%>元</p>
+                <p>积分：<%=dataInfo.Integration%>分</p>
+            </div>
+        </div>
+    <% };%>
+</script>
+

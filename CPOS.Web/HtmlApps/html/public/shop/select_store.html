@@ -1,0 +1,80 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <title name="SelectStore"></title>
+    <link href="../../../css/base/global.css?v1.0" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xzReCg5Nr1apPrqAIBHN2B1byb4nzWwW"></script>
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+
+<body>
+  <div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+        <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+    </div>
+<section class="selectAddressArea">
+	<!--
+   <nav id="topNav">
+        <ul>
+          <li onclick="javascript:Jit.AM.pageBack();"><a></a></li>
+          <li onclick="javascript:Jit.AM.toPage('MyOrder');"><a></a></li>
+          <li onclick="javascript:Jit.AM.toPage('GoodsCart');"><a><span id="menuCartCount"></span> </a></li>
+          <li onclick="javascript:Jit.AM.toPage('IndexShop');"> <a ></a></li>
+        </ul>
+    </nav>
+    -->
+  <div class="order_list">
+    <!--<h3>选择您要去的门店</h3>-->
+    <div class="selectStoreHand">
+        <div class="filterStore">
+          <dl class="clearfix">
+            <dt>省份</dt>
+            <dd>
+                <select id="province" onchange="JitPage.fnSelCityByProvince(this.value)"><option value=''>请选择</option></select>
+            </dd>
+          </dl>
+          <dl class="clearfix">
+            <dt>城市</dt>
+            <dd>
+                <select id="city" onchange="JitPage.storeList(this.value)"><option value=''>请选择</option></select>
+                <!--<span class="text">上海市</span>
+                <span class="btn"></span>
+                <div class="comboBox" style="display:none">
+                    <span>北京</span>
+                    <span>天津</span>
+                    <span>重庆</span>
+                </div>-->
+                
+            </dd>
+          </dl>
+        </div>  
+    </div>
+   
+   <div id="address_list" class="addressList">
+   </div>
+    
+    
+    <div class="order_confirm" style="display: none;"> <a href="javascript:JitPage.affirmAddress();">确 定</a></div>
+  </div>
+  
+</section>
+</body>
+
+
+<script id="Tpl_address_item" type="text/template">
+	<div  class="address_store {{isDefault}}" data-storeid="{{StoreID}}" data-address="{{Address}}" data-tel="{{Tel}}">
+		<div class="addAddrInfo" name="address_item" adrId="{{vipAddressID}}">
+			<p class="linkBox">
+				<span class="linkTel">{{Tel}}</span>
+				<span class="linkMan">{{StoreName}}</span>
+			</p>
+			<div class="addrBox clearfix">
+				<span class="dis">{{DistanceDesc}}</span>
+				<p class="addr">{{Address}}</p>
+			</div>
+		</div>
+    </div>
+</script>
+</html>

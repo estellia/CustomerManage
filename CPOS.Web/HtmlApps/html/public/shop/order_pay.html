@@ -1,0 +1,128 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title name="OrderPay"></title>
+  <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+  <style type="text/css">
+      #iframePayment{position:absolute;top:0px;left:0px;right:0px;width:100% !important;height:100%;overflow:auto;z-index: 9999;}
+  </style>
+</head>
+<body style="background:#fff;"  >
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+  <section>
+    <div class="orderPayArea">
+      <div class="actuallyBox">
+          <em class="tit">实付金额</em>
+          <p id="orderTotal"></p>
+      </div>
+      
+      <div class="go_gox_body op_pay_list">
+          <table class="items hide" val="DFD3E26D5C784BBC86B075090617F44B">
+            <tr>
+              <!--<td><i val="DFD3E26D5C784BBC86B075090617F44B"></i></td>-->
+              <td><i  class="weixin"></i></td>
+              <td><span>微信支付</span></td>
+            </tr>
+          </table>
+          
+          <table class="items hide" val="257E95A658624C91AFCC8B6CE3DF8BFB" id="getToPay">
+            <tr>
+              <!--
+                <td><i val="257E95A658624C91AFCC8B6CE3DF8BFB"></i></td>
+              -->
+              <td>
+                <i  class="GetToPay" style="background:url(../../../images/public/shop_default/GetToPay.png) no-repeat center center;background-size:50% 50%;"></i>
+                </td>
+              <td>
+                <p>货到付款：</p>
+                <!--<p>货到后进行现金或POS机支付</p>-->
+              </td>
+            </tr>
+
+          </table>
+          <table class="items hide" val="541DF4A0DFF84015924E1C60C33FBA27">
+            <tr>
+              <!--<td><i val="541DF4A0DFF84015924E1C60C33FBA27"></i>
+                </td>
+              -->
+              <td>
+                <i  class="zhifubao" style="background:url(http://bs.chainclouds.com/images/pay/alipayPay.png) no-repeat center center;background-size:90% 36%;"></i>
+
+                </td>
+              <td>
+                <p>支付宝网页支付：</p>
+                <!--<p>推荐有支付宝账户的用户使用</p>-->
+              </td>
+            </tr>
+
+          </table>
+          <table class="items hide">
+            <tr>
+              <td> <i val="318529D4E4F24AEFBBE5B26191A3B584"></i>
+                &nbsp;
+              </td>
+              <td>
+               <i class="yinlianweb"></i>  </td>
+              <td>
+                <p>银联网页支付：</p>
+                <p>支持银行卡支付，需开通网银</p>
+              </td>
+            </tr>
+
+			</table>
+            <table class="items hide">
+				<tr>
+				  <td> <i val="7730ABEECF3048BE9E207D7E83C944AF"></i>
+					&nbsp;
+				  </td>
+				  <td>
+					<i class="yinlianyuyin"></i></td>
+				  <td>
+					<p>银联语音支付：</p>
+					<p>推荐有网上银行账户的用户使用</p>
+					<div id="phoneArea" style="display:none"  >
+					<p style="color:red;" >手机号码：</p>
+					<p> <input type="text" id="phonenum"  placeholder="请输入手机号码" />    </p>
+					</div>
+				  </td>
+				</tr>
+
+			</table>
+			 <table class="items hide">
+				<tr>
+				  <td> <i val="06047C678EC643DE80A5EA44A4CDADF6"></i>
+					&nbsp;
+				  </td>
+				  <td>
+					<i class="zhifubao"></i></td>
+				  <td>
+					<p>支付宝线下支付：</p>
+					<p>推荐有支付宝账户的用户使用</p>
+					<div id="phoneArea" style="display:none"  >
+					<p style="color:red;" >手机号码：</p>
+					<p> <input type="text" id="phonenum"  placeholder="请输入手机号码" />    </p>
+					</div>
+				  </td>
+				</tr>
+
+			</table>
+        </div>
+        
+      <a class="hide" href="javascript:;"  id="submitPay">确认付款</a>
+
+    </div>
+
+  </section>
+</body>
+<script id="tpl_payWayList" type="text/html">
+<a class="items" val=<%=paymentTypeId%> data-typecode=<%=paymentTypeCode%> style="display:block;">
+    <p class="iconTag"><img src="<%=logoUrl%>"></p>
+    <p class="textBox"><%=paymentTypeName%></p>
+</a>
+</script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title name="MallComment"></title>
+<link href="../../../css/base/global.css?v1.0" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+    <section class="mallCommentPage">
+    	<div class="mallCommentArea">
+            <p class="ordersTime">成交时间2014-06-14 15:53:03</p>
+            <p class="title">评价宝贝</p>
+            
+            
+            <div class="goodsCommentList">
+            	<div class="itemBox">
+                	<div>
+                    	<p class="picBox"><img src="../../../images/public/shop_default/img/bigPic.jpg"></p>
+                        <p class="goodsName">卡通健康管理电子称精确体重管理仪器</p>
+                    </div>
+                    <div class="commentPicBox clearfix">
+                    	<span class="tit">选择评价</span>
+                        <a class="commentBox01 on" href="javascript:;" data-level=3>好评</a>
+                        <a class="commentBox02" href="javascript:;" data-level=2>中评</a>
+                        <a class="commentBox03" href="javascript:;" data-level=1>差评</a>
+                    </div>
+                    <div class="fillComment"><textarea placeholder="写点评价吧！" maxlength='50'></textarea></div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+		<div class="shopCommentArea">
+        	<p class="title">给店铺评分</p>
+            <div class="commentItem">
+                <p class="tit">描述相符</p>
+                <div id="describeSame" class="heartBox" data-val=5>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                </div>
+            </div>
+            
+            <div class="commentItem">
+                <p class="tit">服务态度</p>
+                <div id="serveManner" class="heartBox" data-val=5>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                </div>
+            </div>
+            
+            <div class="commentItem">
+                <p class="tit">发货速度</p>
+                <div id="expressSpeed" class="heartBox" data-val=5>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                </div>
+            </div>
+            
+            
+            <div class="commentItem">
+                <p class="tit">匿名评价</p>
+                <div class="anonymitySwitch">
+                	<span></span>
+                </div>
+                <div style="display:none;" id="serviceAttitude" class="heartBox" data-val=0>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                    <a href="javascript:;" class="on"></a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="footer">
+        	<a id="setEvaluateBtn" href="javascript:;">发布评论</a>
+        </div>
+    </section>
+    
+<script id="tpl_evaluateList" type="text/html">
+<div class="itemBox">
+	<div>
+		<p class="picBox"><img src="<%=ImageInfo[0].ImageUrl%>"></p>
+		<p class="goodsName"><%=ItemName%></p>
+	</div>
+	<div class="commentPicBox clearfix">
+		<span class="tit">选择评价</span>
+		<a class="commentBox01 on" href="javascript:;" data-level=3>好评</a>
+		<a class="commentBox02" href="javascript:;" data-level=2>中评</a>
+		<a class="commentBox03" href="javascript:;" data-level=1>差评</a>
+	</div>
+	<div class="fillComment on"><textarea value="写点评价吧！" maxlength='50'>买到就是赚到 这么好的东西系统帮你给你好评啦！</textarea></div>
+</div>
+</script>    
+</body>
+</html>

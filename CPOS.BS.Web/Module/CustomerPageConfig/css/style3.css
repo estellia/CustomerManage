@@ -1,0 +1,42 @@
+﻿
+/*前端页面客户化配置列表*/
+.commonOutArea{padding:15px;}
+/*公共标题*/
+.commonTitleWrap{height:52px;padding:0 15px;border-bottom:1px solid #cecedc;border-radius:4px 4px 0 0;background:#f2f2f9;}
+.commonTitleWrap h2{float:left;margin-top:15px;font-size:16px;color:#666;}
+.commonTitleWrap span{float:right;width:96px;height:30px;line-height:30px;margin:12px 20px 0 0;border-radius:3px;text-align:center;color:#fff;cursor:pointer;}
+.commonTitleWrap .submitBtn,.commonTitleWrap .cancelBtn{background:#b2c7ab;}
+.commonTitleWrap .verifyBtn,.commonTitleWrap .confirmBtn{background:#949ca7;}
+.commonTitleWrap .appBtn{border:1px solid #b2c7ab;background:#fffefe;color:#b2c7ab}
+
+
+.pageUserConfigArea{padding-top:8px;}
+.queryWrap{margin-bottom: 5px;height: 40px;}
+.queryWrap .tit{float:left;height:30px;width:80px;line-height:30px;font-size:16px;color:#404853;}
+.queryWrap input{float:left;height:30px;line-height:28px;text-indent:5px;border:1px solid #cecedc;}
+.queryWrap .queryBtn,.queryWrap .addBtn{float:left;cursor:pointer;}
+.queryWrap .addBtn{ margin-left:10px;}
+.queryWrap a.addBtn:hover,.queryWrap a.addBtn:visited{ color:#fff!important;}
+.queryWrap .inputKey,.queryWrap .inputName{width:200px;margin-right:30px;}
+
+.queryListWrap table{border-collapse:collapse;border:1px solid #cecedc;}
+.queryListWrap th{text-align:center; height:55px;font-size:16px;border:none;border-bottom:1px solid #cecedc;background:#f6f6f7;color:#404853;line-height: 55px;}
+.queryListWrap td{text-align:center; height:40px;font-size:15px;border:none;border-right:1px solid #cecedc;color:#a6a5a5;}
+.queryListWrap tr{text-align:center;}
+.queryListWrap .editText{padding-bottom:1px;font-size:14px;border-bottom:1px solid #79b440;color:#79b440;}
+.queryListWrap .lineBg{background:#f6f6f7;}
+
+
+/*页面模板上传页面*/
+.moudleUploadPage{width:670px;margin:0 auto;padding-top:30px;}
+.queryWrap .pageKey{width:465px;margin:0 15px;}
+.moudleEditWrap{width:660px;height:440px;overflow:auto;border:1px solid #cecedc;background:#f0f2f4;}
+
+/* pagebar 分页*/
+.pageBarWrap{ width: 320px; margin: 35px auto; overflow: hidden; }
+.pageBarWrap a{ float: left; width:96px;height:28px;line-height:28px; text-align:center;border-radius:4px;background:#b2c7ab;color:#fff;cursor:pointer;}
+.pageBarWrap .desc{ float: left; width: 100px; margin:0 10px; text-align: center; line-height: 28px; color:#a6a5a5;}
+.pageBarWrap .desc .currPage{ color:#79b440;}
+.pageBarWrap .desc .totalPage{ color:#a6a5a5;}
+.pageBarWrap a:hover{ color:#fff!important; background:#B2C76A!important;}
+.pageBarWrap a.disable:hover{ background:#b2c7ab!important;color:#fff!important;}

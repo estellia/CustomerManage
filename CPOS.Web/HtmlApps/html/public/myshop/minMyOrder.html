@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+<title name="MinMyOrder">我的订单</title>
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/public/myshop/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<input id="channelIdSize" type="hidden" value="6">
+    <div class="w_640 minMyOrderArea">
+    	<div class="orderCount">
+        	<div class="clearfix">
+            	<span class="detailBtn" onClick="Jit.AM.toPage('MyOrder','&channelId=6')">明细</span>
+            	<span class="tit">本月订单数</span>
+            </div>
+            <p id="monthOrderCount" class="num">0</p>
+        </div>
+        <div class="accumulatorOrder">
+        	<div class="clearfix">
+            	<span class="detailBtn" onClick="Jit.AM.toPage('OrderMonthCollect')">月汇总</span>
+            	<span class="tit">累计订单数</span>
+            </div>
+            <div class="clearfix">
+            	<span class="defeat">你打败了全国<strong>0%</strong>的店主</span>
+            	<span id="totalOrderCount" class="num">0</span>
+            </div>
+        </div>
+        
+        <div class="statisBox">
+        	<div class="rightBox">
+            	<a href="javascript:Jit.AM.toPage('MyOrder','&channelId=6&groupingType=2');" class="mb-48">
+                	<span>已支付未完成</span>
+                    <strong id="noReceivingCount">0</strong>
+                </a>
+                <!--<a href="javascript:;">
+                	<span>已取消</span>
+                    <strong id="cancelCount">0</strong>
+                </a>-->
+            </div>
+        	<div class="leftBox">
+            	<a href="javascript:Jit.AM.toPage('MyOrder','&channelId=6&groupingType=1');" class="mb-48">
+                	<span>未支付</span>
+                    <strong id="noPayCount">0</strong>
+                </a>
+                <a href="javascript:Jit.AM.toPage('MyOrder','&channelId=6&groupingType=3');">
+                	<span>已完成</span>
+                    <strong id="completeCount">0</strong>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</html>

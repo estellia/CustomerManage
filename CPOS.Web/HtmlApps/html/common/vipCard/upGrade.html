@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="x-rim-auto-match" content="none">
+		<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+		<title name="UpGrade">升级</title>
+        <style type="text/css">
+          #iframePayment{display:none;position:fixed;z-index:333;top:0px;left:0px;width:100%;height:100%;}
+      </style>
+	</head>
+
+	<body style="background:#f4f4f4">
+		<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+			<div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+		</div>
+        <iframe id="iframePayment" src=""></iframe>
+        <section>
+            <div class="myInfoArea">
+                <div class="userGrade clearfix">
+                    <!--<a href="javascript:;">兑换</a>-->
+                    <div class="upGradeImage">
+                        <div class='userImage' id="userImage" ></div>
+                        <div class='userVip' id="userVipName">
+                            <p>黄金会员</p>
+                        </div>
+                    </div>
+                    <div class="scoreInfo">
+                        <p class="tit">我的积分：</p>
+                        <p class="total"><span id="total">3333</span>分</p>
+                    </div>
+                </div>
+                <div id='levelCard'></div>
+            </div>
+        </section>
+	<script id="tplList" type="text/html">
+    <%for(var i=0; i<list.length; i++){var item=list[i];itemCard = item.VipCardType;itemCardRule = item.VipCardRule;itemUp =item.VipCardUpgradeRule;itemRewardList = item.VipCardUpgradeRewardList%>
+    <%if(itemCard.VipCardLevel >=level){%>
+        <div class="ListInfo">
+            <div class="List">
+                <div class='title' data-cardId =<%=itemCard.VipCardTypeID%> data-purch="<%=itemUp.IsPurchaseUpgrade%>" data-rechCharge="<%=itemUp.IsRecharge%>" data-buy="<%=itemUp.IsBuyUpgrade%>" data-price="<%=itemUp.Prices%>" data-score="<%=itemUp.ExchangeIntegral%>" data-extra="<%=itemUp.IsExtraMoney%>" data-skuId="<%=itemCard.SkuID%>" data-RechAmount="<%=itemUp.OnceRechargeAmount%>" data-BuyAmount="<%=itemUp.BuyAmount%>" data-onceBuyAmount="<%=itemUp.OnceBuyAmount%>">
+                    <%if(itemCard.VipCardLevel !=level){%>
+                    <h5>等级名：<%=itemCard.VipCardTypeName%></h5>
+                    <span><img src="../../../images/common/vipCard/lock.png" style="height:12px;"></span>
+                        <%if(itemUp.IsBuyUpgrade==1){%>
+                        <a class='bugCard'>购买</a>
+                        <%}else{%>
+                        <a class='bugUp'>购买</a>
+
+                        <select class='bugCard' autocomplete="off">
+                            <option>请选择</option>
+                        </select>
+                        <%}%>
+                    <%}else{%>
+                    <h5>等级名：<%=itemCard.VipCardTypeName%></h5>
+                    <%}%>
+                </div>
+                <div class='ListInfo' id="dataList">
+                    <%if(itemCardRule.CardDiscount!=0){%>
+                    <div class="legalVip">
+                        <div class="legalBasic">
+                            <div class="imgData">
+                                <img src="../../../images/common/vipCard/cardLegal.png" style="height:36px;">
+                            </div>
+                            <p>会员折扣</p>
+                            <%if(itemCardRule.CardDiscount==10){%>
+                                <p>无折扣</p>
+                            <%}else{%>
+                                <p><%=itemCardRule.CardDiscount%>折</p>
+                            <%}%>
+
+                        </div>
+                    </div>
+                    <%}%>
+                    <%if(itemCardRule.PaidGivePercetPoints!=0||itemCardRule.PaidGivePoints
+                    ){%>
+                    <div class="legalVip">
+                        <div class="legalBasic">
+                            <div class="imgData">
+                                <img src="../../../images/common/vipCard/cardLegal2.png" style="height:36px;">
+                            </div>
+                            <p>消费返积分</p>
+                            <%if(itemCardRule.PaidGivePercetPoints!=0){%>
+                            <p><%=itemCardRule.PaidGivePercetPoints%>%</p>
+                            <%}else{%>
+                            <p>每<%=itemCardRule.PaidGivePoints%>元获1积分</p>
+                            <%}%>
+                        </div>
+                    </div>
+                    <%}%>
+        		<%for(var j=0; j<itemRewardList.length; j++){var items=itemRewardList[j]%>
+                    <div class="legalVip">
+                        <%if(items.CouponNum>1){%>
+                        <div class="tit">x<%=items.CouponNum %></div>
+                        <%}%>
+                        <div class="legalBasic">
+                            <div class="imgData">
+                                <img src="../../../images/common/vipCard/cardOpen.png" style="height:32px;">
+                            </div>
+                            <p>开卡礼</p>
+                            <p><%=items.CouponName%></p>
+                        </div>
+                    </div>
+        		<%}%>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    <%}%>
+	</script>
+    <script id="tpl_payWayList" type="text/template">
+        <%if(paymentTypeName!="货到付款"){%>
+        <option val=<%=paymentTypeId%> data-typecode=<%=paymentTypeCode%> style="display:block;">
+        <%=paymentTypeName%>
+        </option>
+        <%}%>
+    </script>
+	<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</html>

@@ -1,0 +1,57 @@
+body{
+ background-color:#ebebeb;
+}
+
+/*起始页、结束页*/
+.red {color:red;}
+.startbtn{position: absolute;bottom: 15%;width: 80%;float: left;line-height: 2em;border-radius: 5px;text-align: center;left: 10%;font-size: 2em;}
+._BGImageSrc{position: absolute;width: 100%;height: 100%;}
+.regular{position: absolute;bottom: 5%;float: left;right: 10%;font-size: 2em;display:none;}
+.ruleArea{display: block;width: 100%;height: 100%;position: absolute;background-color: #fff;display:none;}
+.Endbtn{position: absolute;bottom: 15%;width: 80%;float: left;line-height: 2em;border-radius: 5px;text-align: center;left: 10%;font-size: 2em;cursor:pointer;}
+.end_BGImageSrc{position: absolute;width: 100%;height: 100%;}
+.QuestionnaireEnd {display:none;}
+.bgend{    position: absolute;top: 20%; width: 90%;left: 5%;}
+/*.defaultend{    position: absolute;top: 25%; width: 80%;left: 10%;}*/
+.defaultend{    position: absolute;top: 0px; width: 100%;left: 0px;height: 100%;}
+.endtext{position: absolute;top: 25%;width: 80%; left: 10%;font-size: 2em;padding: 20px;text-align: center;color: #fff;display:none;}
+.ruleArea{padding:10%;font-size:1em;}
+
+/*题目内容*/
+.questionnaire {display: inline-block;width: 100%;display:none;background-color: #ebebeb;}
+.qmodel2 {margin-bottom: 30px;border: 1px solid #ccc;background-color: #f2f2f2;}
+.qmodel2 .questitle{background-color: #f8f8f6;border-bottom: 1px solid #ccc;}
+.questitle {border-bottom: 1px solid #ccc;font-size: 1.2em;}
+.quescontent {margin: 0px auto;width: 80%;}
+.quescontent .item{margin: 10px 0px; background-color: #fff;border-radius: 30px;    font-size: 1.2em; cursor:pointer;min-height: 55px;display: inline-block;width: 100%;}
+.quescontent .itemtext{padding-top:30px;  padding-bottom: 30px;}
+.quescontent .itemtext input{font-size: 1.2em;width: 100%;  height: 32px;  border: 1px solid #bcbcbc;}
+.quescontent .itemtext textarea{font-size: 1.2em;width: 100%;}
+.quescontent .itemtext select{font-size: 1.2em;width: 100%;margin-bottom: 20px;}
+.quescontent .item .itemcontent{display: inline-block;width: 80%;text-align: left;float: left;    padding: 14px;}
+.quescontent .item span{display: inline-block;background-color: #00cccb;width:20%;border-top-left-radius: 26px;border-bottom-left-radius: 26px;text-align: center;font-size: 1.2em;font-weight: 500; line-height: 55px;    float: left;}
+.quescontent .item_img{margin: 10px 4%; background-color: #fff; font-size: 1.2em; cursor:pointer;position:relative;width: 40%;    display: inline-block;}
+.quescontent .itemimg{float: left;    width: 100%;}
+.quescontent .itemimg .itemcontent{display: inline-block;width: 100%;text-align: center;float: left;height: 110px;}
+.quescontent  .itemimgtext{    font-size: 0.5em;text-align: center;background-color:#ebebeb;}
+.quescontent .itemimg .itemcontent img{display: inline-block;width: 100%;height:100%;float: left;min-width: 100px;}
+.quescontentitem {display:inline-block;width: 100%;}
+.quescontent .itemimg span{display: inline-block;background-color: #00cccb;width:30px;text-align: center;font-size: 1em;font-weight: 500;    position: absolute;border-bottom-right-radius: 100px;}
+.quescontent .select{border:3px solid #00cccb;}
+.quesfoot {display: inline-block;border-top: 1px solid #ccc; width:100%;font-size:1em;padding-top: 15px;    position: fixed;bottom: 0px;height: 12%;background-color:#f2f2f2;}
+.qmodel2 .overquestion {margin: 0px auto;float: none;}
+.prequestion {float: left;width:37%;}
+.firstquestion {float: left;width:37%;}
+.firstquestion span{padding: 5px 15px;border: 1px solid #ccc;margin: 0px 10px;color:#ccc;border-radius: 5px;background-color:#fff;cursor:pointer;width: 90%;display: inline-block;text-align: center;font-size: 1.2em;}
+.prequestion span {padding: 5px 15px;border: 1px solid #0d999a;margin: 0px 10px;color:#0d999a;border-radius: 5px;background-color:#fff;cursor:pointer;width: 90%;display: inline-block;text-align: center;font-size: 1.2em;}
+.showstatue {float: left;width:26%;text-align:center;}
+.showstatue span {padding: 5px 15px;margin: 0px 10px;color:#0d999a;width: 90%;display: inline-block;text-align: center;font-size: 1.2em;width: 100%;}
+.nextquestion {float: right;width:37%;text-align: right;}
+.overquestion {float: right;width:37%;text-align: right;}
+.nextquestion span {padding: 5px 15px;margin: 0px 10px;color:#fff;border-radius: 5px;background-color:#0d999a;cursor:pointer;width: 90%;display: inline-block;text-align: center;font-size: 1.2em;}
+.overquestion span {padding: 5px 15px;margin: 0px 10px;color:#fff;border-radius: 5px;background-color:#0d999a;cursor:pointer;width: 90%;display: inline-block;text-align: center;font-size: 1.2em;}
+select {background-image:url(../../../images/common/Questionnaire/DownArrow.png);    background-repeat: no-repeat;    background-position: right;}
+
+/*分享图层*/
+.mask {position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,.6);top: 0;left: 0;z-index: 999;}
+.tips-share {width: 65%;position: fixed;top: 10px;right: 20px;z-index: 1000;}

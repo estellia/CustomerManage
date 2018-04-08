@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/*common*/
+html,body,body>section{height:100%;min-height:100%;}
+body>section{margin:0 auto;}
+body{font:15px/1.2em "Microsoft YaHei";background:#fff;color:#4d463e;}
+select,input{border:none;}
+input{text-indent:5px;}
+.commonBtn{display:inline-block;height:42px;line-height:42px;text-align:center;font-size:15px;border-radius:5px;box-shadow:0 0 3px rgba(0,0,0,0.03);}
+
+/*账户余额,我的积分*/
+.myInfoArea .topShow{height:88px;padding:20px 10px 20px 10px;background:#fe7c23;color:#fff;display:-webkit-box;width:100%;}
+.myInfoArea .topShow .info{width:1%;margin-left:11px;border-right:1px solid #e1e7ea;-webkit-box-flex:1;}
+.myInfoArea .topShow .info:last-child{border:0;}
+.myInfoArea .topShow .total{font:bold 46px/1.2em 'Arial';text-align: center;line-height: 20px;}
+.myInfoArea .total span{font-size:23px;}
+.myInfoArea .total span.tit{font-size:18px;}
+.myInfoArea .topShow .tit{padding-left:3px;font-size:12px;font-weight:bold;text-align: center;}
+.myInfoArea .topShow a{float:right;width:51px;height:26px;line-height:24px;margin-top:35px;text-align:center;border:1px solid #fff;border-radius:2px;color:#fff;}
+
+.myInfoArea .dataNav,.myInfoArea .dataNav ul{background:#fff;color:#444;display:-webkit-box;width:100%;}
+.myInfoArea .dataNav ul li{-webkit-box-flex:1;text-align: center;line-height: 40px}
+.myInfoArea .dataNavSending{padding:10px 0;background: #fff;width:100%;position: fixed;bottom:0;text-align: center;}
+.myInfoArea .dataNavSending a{width:60%;background:#fe7c23;margin:0 auto;padding:10px 0;display:block;color:#fff;border-radius:5px;}
+.dataNav ul li em{padding-bottom:10px;}
+.dataNav ul li .current{border-bottom:1px solid #fe7c23;}
+
+.infoList{padding-left:14px;}
+.infoList .item{height:56px;padding-right:22px;border-bottom:1px solid #ccc;}
+.infoList .item>span{float:right;font:bold 18px/56px "Arial";color:#fe7c23;}
+.infoList .item.negative>span{color:#39b44a;}
+.infoList .item .tit{float:left;margin-top:9px;font-size:14px;font-weight:bold;color:#383b3f;}
+.infoList .item .date{float:right;margin-top:9px;font-size:14px;font-weight:bold;color:#383b3f;}
+.infoList .item .score{clear:left;display:block;height:16px;line-height:16px;text-align: right;}
+.infoList .item .time{margin-left:3px;}
+.infoList .date span{font-size:12px;color:#a1a5ad;}
+
+/*优惠劵*/
+.couponCodeArea{max-width:none;background:#f6f6f6;}
+.couponNav{height:36px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;display:-webkit-box;display:-moz-box;width:100%;background:#fff;}
+.couponNav a{display:block;text-align:center;font:15px/25px "Microsoft YaHei";-webkit-box-flex:1;-moz-box-flex:1;color:#999;}
+.couponNav a span{display:block;height:30px;line-height:30px;border-right:1px solid #ccc;}
+.couponNav a:nth-last-child(1) span{border-right:none;}
+.couponNav a.on{border-bottom:2px solid #ec5f0d;color:#ec5f0d;}
+
+.couponList{padding-bottom:37px;}
+.couponList .couponBox{padding-bottom:12px;font-size:12px;border-bottom:1px solid #ccc;color:#fff;}
+.couponList .couponText{width:300px;line-height:22px;margin:12px auto 2px;font-size:13px;color:#5f646e;}
+.couponList .count{float:right;margin-right:2px;}
+.couponList .limit{float:left;}
+.couponList .costName{margin:17px 2px 23px 9px;}
+.couponList .costCount{text-align:center;font:36px "Arial";width: 100%;height:40px;position: absolute;top:50%;left:0;margin: -20px 0 0 0;overflow: hidden;}
+.couponList .costCount em{font-size:15px;}
+.couponList .couponWrap{width:300px;height:105px;margin:12px auto 0;background:url(../../../images/common/vipCard/couponsBg.png) no-repeat center center;background-size:cover;}
+.couponList .leftWrap{position:relative;float:left;width:75%;height:100%;padding:10px 7px 0 24px;}
+.couponList .give{float:right;width:25%;height:100%;position: relative;}
+.couponList .leftWrap .name{font-size:15px;font-weight:bold;}
+.couponList .leftWrap .exp{height:45px;line-height:1.3em;margin-top:4px;overflow:hidden;}
+.couponList .deadline{position:absolute;bottom:5px;left:25px;right:5px;text-indent:17px;background:url(../../../images/common/vipCard/clockIcon.png) no-repeat 0 center;background-size:12px 12px;}
+
+.footMenuArea{position:fixed;bottom:0px;left:0px;width:100%;height:38px;line-height:38px;text-align:center;font-size:13px;border-top:1px solid #ccc;background:#f8f8f8;}
+.footMenuArea ul{display:-webkit-box;}
+.footMenuArea li{-webkit-box-flex:1;}
+.footMenuArea li a{display:block;color:#babec6;}
+.footMenuArea li.on a{color:#fe7c23;}
+
+/*二维码*/
+.qrCouponArea{position:fixed;top:12%;left:50%;width:300px;height:300px;margin-left:-150px;background:url(../../../images/common/vipCard/QRcoupons.png) no-repeat 0 0;background-size:100%;z-index:1000;}
+.qrCouponArea .title{height:81px;line-height:81px;font-size:16px;text-align:center;color:#fe7c23;}
+.qrCouponArea .picWrap{height:217px;}
+.qrCouponArea .picWrap img{display:block;width:171px;height:171px;margin:23px auto 0;}
+.qrCouponArea .closeBth{display:block;position:fixed;bottom:23px;left:50%;margin-left:-18px;width:35px;height:35px;background:url(../../../images/common/vipCard/closeIcon02.png) no-repeat 0 0;background-size:100%;z-index:1000;}
+
+/*升级，头像*/
+.myInfoArea .userGrade{height:88px;padding:10px 20px 10px 10px;background:#fca247;color:#fff;display:table;width:100%;}
+.myInfoArea .upGradeImage{background:url(../../../images/common/vipCard/upGradeBack.png) no-repeat;background-size:100%;width:40%;margin:0 auto;min-height:80px;position:relative;}
+.userImage{width:60%;margin:0 auto;min-height:60px;border:2px solid #fff;border-radius:100%;}
+.userVip{background:url(../../../images/common/vipCard/upGradeVip.png) no-repeat;position:absolute;bottom:0;width:70%;min-height:34px;background-size:100%;margin: 0 15%;}
+.userVip p{text-align: center;font-size:10px;}
+.myInfoArea .scoreInfo{text-align: center;margin:10px 0;font-size:14px;}
+.scoreInfo p{display:inline-block;font-size: 14px;}
+.myInfoArea .scoreInfo span{font-size:14px;}
+.myInfoArea .scoreInfo .tit{font-size:14px;}
+.myInfoArea .List{margin-top:10px;background:#fff;width:100%;}
+.myInfoArea .List:after{content:"";clear:both;display: block;height:0;}
+.myInfoArea .List .title{padding:0 20px;border-bottom:1px solid #e1e7ea;height: 50px;}
+.myInfoArea .List .title h5{display: inline-block;line-height: 50px;}
+.myInfoArea .List .title a{float:right;}
+.myInfoArea .List a.bugCard{background:#fff;width:46px;float:right;padding:4px 0;border:1px solid #fd6138;height:36px;text-indent:0;color:#fd6138;line-height:26px;border-radius:5px;margin-top:6px;text-align: center;font-size: 14px;font-weight:100;}
+.myInfoArea .List a.bugUp{background:#fff;width:46px;float:right;padding:4px 0;border:1px solid #fd6138;height:36px;text-indent:0;color:#fd6138;line-height:26px;border-radius:5px;margin-top:6px;text-align: center;font-size: 14px;font-weight:100;}
+.myInfoArea .List select.bugCard{background:#fff;width:46px;float:right;padding:4px 0;border:1px solid #fd6138;font-weight:100;color:#fd6138;border-radius:5px;margin-top:6px;text-align: center;line-height:24px;text-indent:8px;opacity:0;position:absolute;right:20px;}
+
+
+/*会员权益*/
+.myInfoArea .ListInfo{width:100%;}
+
+.myInfoArea .legalVip{width:33.3%;text-align:center;height: 138px;float:left;position:relative;}
+.myInfoArea .legalVip:nth-of-type(3n+3){-webkit-box-flex:1;}
+.myInfoArea .legalVip .imgData{height:36px;}
+/*.myInfoArea .legalBasic:last-child{-webkit-box-flex:1;}*/
+.myInfoArea .legalVip p{line-height: 30px;font-size:16px;font-weight:blod;color:#555;}
+.myInfoArea .legalVip p:last-child{font-weight: 200;font-style: normal;width:98%;overflow:hidden;font-size:12px;color:#999;white-space:nowrap;text-overflow:ellipsis;}
+.legalVip .tit{position: absolute;right:10%;padding:2px 8px;border-radius:8px;background:#fd6138;color:#fff;top:5px;font-size:12px;}
+.legalVip .legalBasic{padding:30px 0 10px;border-right:1px solid #e1e7ea;border-bottom:1px solid #e1e7ea;}
+.legalVip .legalCard{padding:10px 0;border-right:1px solid #e1e7ea;border-bottom:1px solid #e1e7ea;}
+
+
+/*积分说明*/
+.myInfoArea .dataHeader{padding:10px;}
+.myInfoArea .dataHeader h4{font-size:16px;}
+.myInfoArea .dataMessage{background:#fff;}
+.myInfoArea .dataMessage li{line-height: 30px;padding:5px 20px;border-bottom: 1px solid #e1e7ea;color:#999;font-size:14px;}
+
+
+/*赚红利*/
+.myInfoBack{background:url(../../../images/common/vipCard/IntegralBack.jpg) no-repeat;background-size:cover;height:100%;}
+.myInfoBack .btnInfo{padding:20px;}
+.myInfoBack .btnInfo a{padding:6px 15px;border:1px solid #fff;border-radius:15px;color:#fff;float:left;}
+.myInfoBack .btnInfo a:last-child{float:right;}

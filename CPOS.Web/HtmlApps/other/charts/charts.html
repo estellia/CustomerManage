@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+<title>看板</title>
+<script>
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('(a(){a 4(){3 $2=q.r(\'4\');6(!!$2){3 b=s(p.t.5);3 0=b/7;3 d=u("o").n(9.c);3 8=!!9.c.v(/(i[^;]+\\;(C;)? D.+E B A)/);6(d){$2.h(\'k\',\'5=7, e-j=m, f-1 = \'+0+\', g-1 = \'+0+\',l-1 = \'+0+\',w-x=y-2\')}z 6(8){$2.h(\'k\',\'5=7, e-j=m, f-1 = \'+0+\', g-1 = \'+0+\',l-1 = \'+0)}}}4()}());',41,41,'phoneScale|scale|dpi|var|densityDpi|width|if|640|isIos|navigator|function|phoneWidth|userAgent|isAndroid|user|minimum|maximum|setAttribute||scalable|content|initial|no|test|Android|window|document|getElementById|parseInt|screen|RegExp|match|target|densitydpi|device|else|X|OS|U|CPU|Mac'.split('|'),0,{}))
+</script>
+
+<style>
+*{margin:0;padding:0;}
+body{/*padding-bottom:100px;*/background:#f3f3f3;}
+.dataTopArea,.dataBottomArea{font-size:50px;color:#acb5ba;}
+.dataTopArea{height:228px;background:#e8eaea url(images/lineBg.png) no-repeat center center;}
+.dataBottomArea{height:264px;background:#f3f3f3 url(images/lineBg.png) no-repeat center center;}
+.commonTit{font-size:24px;font-family:"Micorsoft Yahei";padding:45px 0 40px 40px;color:#383b3f;}
+.commonData{padding-bottom:12px;text-align:center;font-family:Arial;}
+.successRate{color:#ff5a00;}
+.dataTopArea>div,.dataBottomArea>div{float:left;width:50%;height:100%;}
+.ratioBox{text-align:center;font-size:24px;}
+.percentBox{padding-left:30px;font-family:Arial;background:url(images/icon-litre.png) no-repeat left center;}
+.percentBox.on{background:url(images/icon-drop.png) no-repeat left center;color:#ff5a00;}
+.footNavArea{position:fixed;bottom:0;left:0;width:100%;height:100px;line-height:100px;background:#f8f9f8;}
+.footNavArea a{float:left;width:33.33%;text-align:center;text-decoration:none;font-size:32px;font-family:Arial;color:#0cc;}
+
+.tipLoad{padding:200px;text-align:center;font-size:36px;}
+</style>
+</head>
+<body>
+<!--
+line	折线图，堆积折线图，区域图，堆积区域图。
+bar	柱形图（纵向），堆积柱形图，条形图（横向），堆积条形图。
+scatter	散点图，气泡图。散点图至少需要横纵两个数据，更高维度数据加入时可以映射为颜色或大小，当映射到大小时则为气泡图
+k	K线图，蜡烛图。常用于展现股票交易数据。
+pie	饼图，圆环图。饼图支持两种（半径、面积）南丁格尔玫瑰图模式。
+radar	雷达图，填充雷达图。高维度数据展现的常用图表。
+chord	和弦图。常用于展现关系数据，外层为圆环图，可体现数据占比关系，内层为各个扇形间相互连接的弦，可体现关系数据
+force	力导布局图。常用于展现复杂关系网络聚类布局。
+map	地图。内置世界地图、中国及中国34个省市自治区地图数据、可通过标准GeoJson扩展地图类型。支持svg扩展类地图应用，如室内地图、运动场、物件构造等。
+gauge	仪表盘。用于展现关键指标数据，常见于BI类系统。
+funnel	漏斗图。用于展现数据经过筛选、过滤等流程处理后发生的数据变化，常见于BI类系统。
+evnetRiver	事件河流图。常用于展示具有时间属性的多个事件，以及事件随时间的演化。
+-->
+
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<!--<div class="wx_loading" id="masklayer" style="background-color:#FFF;" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>-->
+
+<div id="allPage">
+    <div id="main" style="width:640px;height:415px;font-size:28px;"><p class="tipLoad">加载中...<p></div>
+        
+    <div class="dataTopArea">
+        <div class="">
+            <p class="commonTit">会员总数(人)</p>
+            <p class="commonData" id="totalCount"></p>
+        </div>
+        <div style="display:none;">
+            <p class="commonTit">活跃率</p>
+            <p class="commonData successRate"></p>
+        </div>
+    </div>  
+    
+    <div class="dataBottomArea">
+        <div>
+            <p class="commonTit">今日新增(人)</p>
+            <p class="commonData" id="addToday"></p>
+            <p class="ratioBox">
+                <span>环比</span>
+                <span id="ratioByDay" class="percentBox"></span>
+            </p>
+        </div>
+        <div>
+            <p class="commonTit">本月新增(人)</p>
+            <p class="commonData" id="addMonth"></p>
+            <p class="ratioBox">
+                <span>环比</span>
+                <span id="ratioByMobth" class="percentBox"></span>
+            </p>
+        </div>
+    </div>
+    
+    <div class="footNavArea" style="display:none">
+        <a href="javascript:;">会员榜</a>
+        <a href="javascript:;">销售榜</a>
+        <a href="javascript:;">客户洞察</a>
+    </div>
+
+</div>  
+    
+<script src="http://bs.chainclouds.com/Module/static/js/lib/jquery-1.8.3.min.js"></script>
+<!-- ECharts单文件引入 -->
+<script src="js/echarts.js"></script>
+<script src="http://bs.chainclouds.com/Module/static/js/lib/tools-lib.js"></script>
+
+<script type="text/javascript">
+(function(){
+	var pageModule = {
+		initPage: function(){
+			var that = this;
+			that.getChart();
+		},
+		initEvent: function(){
+		
+		},
+		getChart: function(){
+			var that = this,
+				hostName = '';
+			/*	
+			if(location.host=='api.chainclouds.com'){
+				hostName = 'api.chainclouds.com';
+			}else{
+				hostName = 'api.dev.chainclouds.com';
+			}
+			*/
+			$.util.ajax({
+				customerId: $.util.getUrlParam('customerId') || '049b0a8f641f4ca7b17b0b7b6291de1f',
+				url:"http://"+location.host+"/ApplicationInterface/Customer/CustomerGateway.ashx",
+				data: {
+					action: 'GetVipTotal'
+				},
+				success: function (data) {
+					if(data.IsSuccess && data.ResultCode==0) {
+						$('#masklayer').hide();
+						var result = data.Data,
+							vipInfo = result.VipInfo,
+							attentionVipList = result.AttentionVipList;
+						
+						$('#totalCount').html(attentionVipList[attentionVipList.length-1].CumulativeNo);//总会员数
+						$('#addMonth').html(vipInfo.MonthVipCount);//本月新增
+						$('#addToday').html(vipInfo.TodayVipCount);// 今日新增
+						$('#ratioByDay').html(vipInfo.AddRatioByDay);//
+						$('#ratioByMobth').html(vipInfo.AddRatioByMonth);//
+						
+						if(vipInfo.AddRatioByDay.substr(0,1)=='-'){
+							$('#ratioByDay').addClass('on');
+						}
+						if(vipInfo.AddRatioByMonth.substr(0,1)=='-'){
+							$('#ratioByMobth').addClass('on');
+						}
+						
+							
+						that.updateInfo(attentionVipList);
+						
+						//that.initHighCharts(data.Data);
+					}
+				},
+				error: function () {
+					alert(data.Message);
+					//self.initHighCharts();
+				}
+			});
+		},
+		updateInfo: function(attentionVipList){
+			var xAxisData =  [],
+				seriesData = [];
+			for(var i=0;i<4;i++){//attentionVipList.length
+				var ind = i*9;
+				if(i==3){ind=29;}
+				xAxisData[i] = attentionVipList[ind].Date.substring(5);
+				seriesData[i] = attentionVipList[ind].CumulativeNo;
+			}
+			// 路径配置
+			require.config({
+				paths: {
+					echarts: 'http://echarts.baidu.com/build/dist'
+				}
+			});
+			
+			// 使用
+			require(
+				[
+					'echarts',
+					'echarts/chart/line', // 使用柱状图就加载bar模块，按需加载
+					'echarts/chart/bar'
+				],
+				function (ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var myChart = ec.init(document.getElementById('main'));
+					
+					var option = {
+						grid : {
+							x: 0,
+							y: 0,
+							x2: 0,
+							y2: 0,
+							width: '640px',
+							height: '340px',
+							backgroundColor: '#f3f3f3',
+							//borderWidth: '3',
+							borderColor: '#00cccb'
+						},
+						title : {
+							text: '会员数增长趋势',
+							x: 40,
+							y: 34,
+							textStyle: {
+								fontSize: 24,
+								color: '#383b3f'
+							}  
+						},
+						calculable : true,//是否显示所有数据点
+						tooltip: {
+							show: true,
+							trigger: 'axis'
+						},
+						legend: {
+							data:[]
+						},
+						xAxis : [
+							{
+								type : 'category',
+								position: 'bottom',
+								boundaryGap : true,
+								data : xAxisData, //["5/20","5/30","6/10","6/20"]//
+								splitLine : {
+									show:false
+								},
+								axisLabel : {
+									show:true,
+									interval: 'auto',    // {number}
+									rotate: 0,
+									margin: 8,
+									textStyle: {
+										position: 'relative',
+										left: 20,
+										color: '828282',
+										fontFamily: 'Arial',
+										fontSize: 24
+									}
+								}
+							}
+						],
+						yAxis : [
+							{
+								type : 'value',
+								splitLine : {
+									show:false
+								}
+							}
+						],
+						series : [
+							{
+								"name":"人数",
+								"type":"line",
+								"smooth":false,
+								"itemStyle": {normal: {areaStyle: {type: 'default',color:'rgba(0,153,204,0.5)'}}},
+								"data":seriesData //[5, 50, 70, 100],
+								/*
+								"markPoint" : {
+									data : [
+										{type : 'max', name: '最大值'},
+										{type : 'min', name: '最小值'}
+									]
+								},
+								"markLine" : {
+									data : [
+										{type : 'average', name: '平均值'}
+									]
+								}
+								*/
+								
+							}
+						],
+						toolbox: {
+							show : false,
+							feature : {
+								//mark : {show: true},
+								//dataView : {show: true, readOnly: false},
+								magicType : {show: true, type: ['line', 'bar']},
+								//restore : {show: true},
+								saveAsImage : {
+									show : true,
+									title : '保存为图片',
+									type : 'png',
+									lang : ['点击保存']
+								}
+							}
+						}
+						
+					};
+					myChart.setOption(option);
+					/*
+					// 为echarts对象加载数据 
+					myChart.setOption(option);
+					var ecConfig = require('echarts/config');
+					function eConsole(param) {
+						var str = param.name + ":" + param.value;
+						alert(str);
+						//window.location.href = 'http://www.baidu.com/';
+					}
+					myChart.on(ecConfig.EVENT.CLICK, eConsole);
+					//myChart.on(ecConfig.EVENT.PIE_SELECTED, eConsole2);
+					myChart.setOption(option,true);
+					*/
+					
+				}
+			);
+			
+		}
+	};
+	pageModule.initPage();
+}());
+
+
+</script>
+</body>

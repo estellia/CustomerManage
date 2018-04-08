@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+<title name="IndexShopApp"></title>
+<link href="../../../css/base/global.css?v1.0" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../../lib/require.js" cache defer async data-main="../../../launch.js?v1.0"></script>
+</head>
+
+
+<body class="indexPage">
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+
+<!-- 客服入口 -->
+<a href="javascript:Jit.AM.toPage('ClientService');" class="customerServiceBox"></a>
+<section class="content">
+    <div id="navigation" class="action" style="display: none;"></div>
+    <div id="shopList" class="action"></div>
+</section>
+<script id="tpl_search_item" type="text/template">
+    <div id="search" class="commonSearchArea action">
+        <a href="javascript:Jit.AM.toPage('Category')" class="allClassify"></a>
+
+        <div class="commonSearchBox">
+            <p class="searchBtn"><input id="searchBtn" type="button"/></p>
+
+            <p class="searchInput"><input id="searchContent" type="search" value=""
+                                          placeholder="搜索店铺内的宝贝..."/></p>
+        </div>
+    </div>
+</script>
+<script id="tpl_classify_item" type="text/template">
+    <a href="{{href}}">
+        <img src="{{ImageUrl}}" alt=""/>
+    </a>
+</script>
+<script id="tpl_scroll_item" type="text/template">
+    <div id="PicScroll">
+        <ul class="picList clearfix">
+
+        </ul>
+        <div class="asideShow asideBottom">
+            <p class="dot">
+                <em class="on"></em>
+                <em></em>
+                <em></em>
+                <em></em>
+            </p>
+        </div>
+    </div>
+
+</script>
+<script id="title_1" type="text/template">
+    <div class="titlePanel">
+        <div class="titleTxt">
+            <div class="span">{{titleName}}</div>
+        </div>
+    </div>
+</script>
+<script id="title_2" type="text/template">
+    <div class="titlePanel">
+        <div class="titleTxt center">
+            <div class="span">{{titleName}}</div>
+        </div>
+    </div>
+</script>
+
+<script  id="activity_title" type="text/template">
+    <div class="tit ">
+        <b>{{title}}</b>
+        <img src="newimages/adList/Timer.png" class="{{areaFlag}}" >
+        <div class="timeList {{areaFlag}}" data-time="{{timeIndex}}" data-start="{{IsStart}}">
+            <em>00</em>:<em>00</em>:<em>00</em>
+        </div>
+    </div>
+
+
+</script>
+
+<script id="Tpl_rush_shop" type="text/template">
+    <div class="noticeArea" onclick="Jit.AM.toPage('ActivityGoodsList','eventTypeId=2')">
+        <div class="box">
+            <h2 class="title clock">
+                限时抢购</h2>
+            <div class="timeList" data-time="{{RemainingSec}}" data-start="{{IsStart}}">
+                <em>00</em>:<em>00</em>:<em>00</em>
+            </div>
+            <img placeholder class="lazy" data-original="{{ImageUrl}}" >
+        </div>
+        <!--box-->
+        <div class="info">
+        </div>
+    </div>
+
+</script>
+<script id="Tpl_group_shop" type="text/template">
+    <div class="noticeArea" onclick="Jit.AM.toPage('ActivityGoodsList','eventTypeId=1')">
+        <div class="box">
+            <h2 class="title clock">
+                疯狂团购</h2>
+            <div class="timeList" data-time="{{RemainingSec}}" data-start="{{IsStart}}">
+                <em>00</em>:<em>00</em>:<em>00</em>
+            </div>
+            <div class="center">
+                <img placeholder class="lazy" data-original="{{ImageUrl}}">
+            </div>
+        </div>
+        <!--box-->
+    </div>
+    <!--noticeArea-->
+
+</script>
+<script id="Tpl_hot_shop" type="text/template">
+
+    <div class="noticeArea" onclick="Jit.AM.toPage('ActivityGoodsList','eventTypeId=3')" >
+        <div class="box">
+            <h2 class="title clock">
+                热销榜单</h2>
+            <div class="end">
+                你值得拥有
+            </div>
+            <img placeholder class="lazy" data-original="{{ImageUrl}}">
+        </div>
+        <!--box-->
+    </div>
+    <!--noticeArea-->
+</script>
+
+<script id="Tpl_item_1" type="text/template">
+    <div class="commonIndexArea">
+        <!--em class="icon"></em-->
+        <div class="allBox">
+            <a href="{{0.href}}">
+                <img placeholder class="lazy" data-original="{{0.ImageUrl}}">
+            </a>
+        </div>
+    </div>
+</script>
+<script id="Tpl_item_2" type="text/template">
+    <div class="commonIndexArea">
+        <!--em class="icon"></em-->
+        <div class="leftBox">
+            <a href="{{0.href}}">
+                <img placeholder class="lazy" data-original="{{0.ImageUrl}}">
+            </a>
+        </div>
+        <div class="rightBox">
+            <a style="height:100%;" href="{{1.href}}">
+                <img placeholder class="lazy" data-original="{{1.ImageUrl}}">
+            </a>
+        </div>
+    </div>
+</script>
+<script id="Tpl_item_3" type="text/template">
+
+    <div class="commonIndexArea">
+        <!--em class="icon"></em-->
+        <div class="leftBox">
+            <a href="{{0.href}}">
+                <img placeholder class="lazy" data-original="{{0.ImageUrl}}">
+            </a>
+        </div>
+        <div class="rightBox">
+            <a href="{{1.href}}">
+                <img placeholder class="lazy" data-original="{{1.ImageUrl}}">
+            </a>
+            <a href="{{2.href}}">
+                <img placeholder class="lazy" data-original="{{2.ImageUrl}}">
+            </a>
+        </div>
+    </div>
+</script>
+
+<script id="Tpl_entrance" type="text/html">
+    <a href="{{href}}">
+        <img placeholder class="lazy" data-original="{{ImageUrl}}" alt="">
+    </a>
+</script>
+<script id="Tpl_follow" type="text/template">
+    <div id="followInfo">
+        <a href="{{Url}}">
+            <div class="follow">
+                <div class="backBg"></div>
+                <p>{{Title}}</p>
+                <div class="followBtn">立即关注</div>
+            </div>
+        </a>
+    </div>
+</script>
+<script id="secondKillItem" type="text/template">
+    <div class="commonSelectArea" >
+        <div class="tit"><b>{{name}}</b> <img src=../../../images/public/index_shop/time.png width="15">
+
+            <div class="timeList"><span>{{_h}}</span>: <span>{{_m}}</span>: <span>{{_s}}</span></div>
+        </div>
+        <ul class="imgList">
+            <li>
+                <a href="javascript:Jit.AM.toPage('ActivityGoodsList','eventTypeId={{0.TypeID}}')"><div>
+                    <img placeholder class="lazy" data-original="{{0.ImageUrl}}">
+                    <p>￥{{0.SalesPrice}}</p> <span>{{0.discount}}折</span></div> </a>
+            </li>
+            <li class="center">
+                <a href="javascript:Jit.AM.toPage('ActivityGoodsList','eventTypeId={{1.TypeID}}')"><div>
+                    <img placeholder class="lazy" data-original="{{1.ImageUrl}}">
+                    <p>￥{{1.SalesPrice}}</p> <span>{{1.discount}}折</span></div> </a>
+            </li>
+            <li>
+                <a href="javascript:Jit.AM.toPage('ActivityGoodsList','eventTypeId={{2.TypeID}}')"><div>
+                    <img placeholder class="lazy" data-original="{{2.ImageUrl}}">
+                    <p>￥{{2.SalesPrice}}</p> <span>{{2.discount}}折</span></div> </a>
+            </li>
+        </ul>
+    </div>
+
+</script>
+
+<script id="navListItem" type="text/template">
+    <div id="navigation">
+        <div class="navlist">
+            <ul>
+                <li><a href="{{0.href}}"><img src="{{0.ImageUrl}}"><p>{{0.navName}}</p></a></li>
+                <li><a href="{{1.href}}"><img src="{{1.ImageUrl}}"><p>{{1.navName}}</p></a></li>
+                <li><a href="{{2.href}}"><img src="{{2.ImageUrl}}"><p>{{2.navName}}</p></a></li>
+                <li><a href="{{3.href}}"><img src="{{3.ImageUrl}}"><p>{{3.navName}}</p></a></li>
+            </ul>
+        </div>  </div>
+
+</script>
+<script id="product_item_1" type="text/template">
+    <div class="item" onclick="Jit.AM.toPage('GoodsDetail','goodsId={{0.ItemID}}')" >
+        <img placeholder class="lazy" data-original="{{0.ImageUrl}}" >
+        <div class="txtPanel">
+            <p class="name">{{0.ItemName}}</p>
+            <p>
+                <b class="Price">￥{{0.SalesPrice}} </b><b class="original">￥{{0.Price}}</b> <b class="discount {{0.hideDiscount}}">{{0.DiscountRate}}</b>
+            </p>
+            <p class="sales">
+                <b>销量:</b> <b>{{0.SalesCount}}</b></p>
+        </div>
+    </div>
+
+</script>
+<script id="product_item_2" type="text/template" >
+    <div class="item">
+        <div class="itemL" onclick="Jit.AM.toPage('GoodsDetail','goodsId={{0.ItemID}}')"  >
+            <img placeholder class="lazy" data-original="{{0.ImageUrl}}" />
+            <div class="txtPanel">
+                <p class="name">{{0.ItemName}}</p>
+                <p>
+                    <b class="Price">￥{{0.SalesPrice}} </b><b class="original">￥{{0.Price}}</b> <b class="discount {{0.hideDiscount}}">{{0.DiscountRate}}</b>
+                </p>
+                <p class="sales">
+                    <b>销量:</b> <b>{{0.SalesCount}}</b></p>
+            </div>
+        </div>
+        <div class="itemR" onclick="Jit.AM.toPage('GoodsDetail','goodsId={{1.ItemID}}')" >
+            <img placeholder class="lazy" data-original="{{1.ImageUrl}}" />
+            <div class="txtPanel">
+                <p class="name">{{1.ItemName}}</p>
+                <p>
+                    <b class="Price">￥{{1.SalesPrice}} </b><b class="original">￥{{1.Price}}</b> <b class="discount {{0.hideDiscount}}">{{1.DiscountRate}}</b>
+                </p>
+                <p class="sales">
+                    <b>销量:</b> <b>{{1.SalesCount}}</b></p>
+            </div>
+        </div>
+
+    </div>
+</script>
+<script id="product_item_2_1" type="text/template" >
+    <div class="item">
+        <div class="itemL" onclick="Jit.AM.toPage('GoodsDetail','goodsId={{0.ItemID}}')"  >
+            <img placeholder class="lazy" data-original="{{0.ImageUrl}}" />
+            <div class="txtPanel">
+                <p class="name">{{0.ItemName}}</p>
+                <p>
+                    <b class="Price">￥{{0.SalesPrice}} </b><b class="original">￥{{0.Price}}</b> <b class="discount {{0.hideDiscount}}">{{0.DiscountRate}}</b>
+                </p>
+                <p class="sales">
+                    <b>销量:</b> <b>{{0.SalesCount}}</b></p>
+            </div>
+        </div>
+
+    </div>
+</script>
+<script id="product_item_3" type="text/template">
+    <div class="item" onclick="Jit.AM.toPage('GoodsDetail','goodsId={{0.ItemID}}')">
+        <img placeholder class="lazy" data-original="{{0.ImageUrl}}">
+        <div class="txtPanel noTopBorder">
+            <p class="name">{{0.ItemName}}</p>
+            <p>
+                <b class="Price">￥{{0.SalesPrice}} </b><b class="original">￥{{0.Price}}</b> <b class="discount {{0.hideDiscount}}">{{0.DiscountRate}}</b>
+            </p>
+            <p class="sales">
+                <b>销量:</b> <b>{{0.SalesCount}}</b></p>
+        </div>
+    </div>
+    <!--item-->
+    <div class="item">
+        <div class="itemL" onclick="Jit.AM.toPage('GoodsDetail','goodsId={{1.ItemID}}')">
+            <img placeholder class="lazy" data-original="{{1.ImageUrl}}" />
+            <div class="txtPanel">
+                <p class="name">{{1.ItemName}}</p>
+                <p>
+                    <b class="Price">￥{{1.SalesPrice}} </b><b class="original">￥{{1.Price}}</b> <b class="discount {{0.hideDiscount}}">{{1.DiscountRate}}</b>
+                </p>
+                <p class="sales">
+                    <b>销量:</b> <b>{{1.SalesCount}}</b></p>
+            </div>
+        </div>
+        <div class="itemR" onclick="Jit.AM.toPage('GoodsDetail','goodsId={{2.ItemID}}')">
+            <img placeholder class="lazy" data-original="{{2.ImageUrl}}" />
+            <div class="txtPanel">
+                <p class="name">{{2.ItemName}}</p>
+                <p>
+                    <b class="Price">￥{{2.SalesPrice}} </b><b class="original">￥{{2.Price}}</b> <b class="discount {{0.hideDiscount}}">{{2.DiscountRate}}</b>
+                </p>
+                <p class="sales">
+                    <b>销量:</b> <b>{{2.SalesCount}}</b></p>
+            </div>
+        </div>
+    </div>
+    <!--item-->
+</script>
+<script id="product_item_3_1" type="text/template">
+    <div class="item" onclick="Jit.AM.toPage('GoodsDetail','goodsId={{0.ItemID}}')">
+        <img placeholder class="lazy" data-original="{{0.ImageUrl}}">
+        <div class="txtPanel noTopBorder">
+            <p class="name">{{0.ItemName}}</p>
+            <p>
+                <b class="Price">￥{{0.SalesPrice}} </b><b class="original">￥{{0.Price}}</b> <b class="discount {{0.hideDiscount}}">{{0.DiscountRate}}</b>
+            </p>
+            <p class="sales">
+                <b>销量:</b> <b>￥{{0.SalesCount}}</b></p>
+        </div>
+    </div>
+    <!--item-->
+    <div class="item">
+        <div class="itemL" onclick="Jit.AM.toPage('GoodsDetail','goodsId={{1.ItemID}}')">
+            <img placeholder class="lazy" data-original="{{1.ImageUrl}}" />
+            <div class="txtPanel">
+                <p class="name">{{1.ItemName}}</p>
+                <p>
+                    <b class="Price">￥{{1.SalesPrice}} </b><b class="original">￥{{1.Price}}</b> <b class="discount {{0.hideDiscount}}">{{1.DiscountRate}}</b>
+                </p>
+                <p class="sales">
+                    <b>销量:</b> <b>{{1.SalesCount}}</b></p>
+            </div>
+        </div>
+    </div>
+    <!--item-->
+</script>
+<script id="product_item_3_2" type="text/template">
+    <div class="item" onclick="Jit.AM.toPage('GoodsDetail','goodsId={{0.ItemID}}')">
+        <img placeholder class="lazy" data-original="{{0.ImageUrl}}">
+        <div class="txtPanel noTopBorder">
+            <p class="name">{{0.ItemName}}</p>
+            <p>
+                <b class="Price">￥{{0.SalesPrice}} </b><b class="original">￥{{0.Price}}</b> <b class="discount {{0.hideDiscount}}">{{0.DiscountRate}}</b>
+            </p>
+            <p class="sales">
+                <b>销量:</b> <b>{{0.SalesCount}}</b></p>
+        </div>
+    </div>
+    <!--item-->
+</script>
+<script id="product_item_4" type="text/template">
+    <div class="item" onclick="Jit.AM.toPage('GoodsDetail','goodsId={{0.ItemID}}')" >
+        <img placeholder class="lazy" data-original="{{0.ImageUrl}}" class="imgL">
+        <div class="">
+            <div class="txtPanel noLeftBorder">
+                <p class="name">{{0.ItemName}}</p>
+                <p>
+                    <b class="Price">￥{{0.SalesPrice}} </b><b class="original">￥{{0.Price}}</b> <b class="discount {{0.hideDiscount}}">{{0.DiscountRate}}</b>
+                </p>
+                <p class="sales">
+                    <b>销量:</b> <b>{{0.SalesCount}}</b></p>
+            </div>
+        </div> <!--rightPanel-->
+    </div><!--item-->
+
+</script>
+</body>
+</html>
+

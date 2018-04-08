@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="x-rim-auto-match" content="none">
+		<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+		<title name="shareGethringClient">我要集客</title>
+		<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+	</head>
+	<body>
+		<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+			<div class="wx_loading_inner">
+				<i class="wx_loading_icon"></i>正在加载...
+			</div>
+		</div>
+		<div id="mask" class="mask" style="display:none;"></div>
+        <div class="gc_layer layer">
+            <div class="gc_list">
+               
+            </div>
+            <div class="PromptInfor">点击分享，快乐集客<br/>集客注册成功奖励:<span class="SetoffRegPrize">0</span><span class="SetoffRegUnit">积分</span>&nbsp;&nbsp;集客销售成功提成:<span class="SetoffOrderPer">0</span>%</div>
+        </div>
+		<div class="FaceToFaceGC_layer layer">
+            <div class="FaceToFaceGC">
+                <div class="prompt">扫一扫做我的集客<br/>一起赚零花钱</div>
+                <div class="QRcode"><img src="" /></div>
+                <div class="togetherGC"><img src="../../../images/common/GatheringClient/togetherGC.png" /></div>
+                <div class="FTFinfor">
+                    <div>集客注册成功奖励:<span class="SetoffRegPrize">0</span><span class="SetoffRegUnit">积分</span></div>
+                    <div>集客销售成功提成:<span class="SetoffOrderPer">0</span>%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="opt">
+                <div class="operation"><a data-showlayer="gc_layer" href="javascript:;"><img data-on="../../../images/common/GatheringClient/Shareicon_on.png" data-original="../../../images/common/GatheringClient/Shareicon.png"  src="../../../images/common/GatheringClient/Shareicon_on.png"  />分享集客</a>
+                    <a data-showlayer="FaceToFaceGC_layer"  href="javascript:;" class="on"><img  data-on="../../../images/common/GatheringClient/FTFicon_on.png" data-original="../../../images/common/GatheringClient/FTFicon.png"  src="../../../images/common/GatheringClient/FTFicon.png"  />面对面集客</a></div>
+        </div>
+
+         <!--分享集客列表数据-->
+		<script id="tpl_gc_content" type="text/html">
+             <% if(SetOffToolsList!=null){%> 
+                <%for(var i=0;i<SetOffToolsList.length;i++){var _data= SetOffToolsList[i];%>
+                <div class="gc_content"  data-tooltype="<%=_data.ToolType %>" data-setofftoolid="<%=_data.SetoffToolID %>" data-url="<%=_data.URL %>" data-id="<%=_data.ObjectId %>" >
+                    
+                    <div class="title" <% if(_data.ToolType=="SetoffPoster"){%> style="line-height: 44px;" <%}%> > <%=_data.SetOffToolName %><% if(_data.IsRead==0){%> <span></span><%}%></div>
+                     <% if(_data.ToolType!="SetoffPoster"){%>
+                              <%if(_data.ServiceLife&&_data.ServiceLife>0){%>
+                                     <div class="date">有效期:<%=_data.ServiceLife %>天</div>
+                              <%}else{%>
+                                    <div class="date">有效期<%=_data.StartTime %>至<%=_data.EndTime %></div>
+                             <%}%>
+                     <%}%>
+                    <div class="view"  > <img src="../../../images/common/GatheringClient/more.png" /></div>
+                    
+                </div>
+                 <%}%>
+            <%}%>
+        </script>
+	</body>
+</html>

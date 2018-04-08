@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+<title name="WithdrawDeposit">提现</title>
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/public/myshop/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<input id="channelIdSize" type="hidden" value="6">
+<div class="w_640 withdrawDepositArea">
+	<!--提现-->
+	<div id="withdrawLayer">
+        <div class="withdrawBox">
+            <h2 class="tit">当前可提现</h2>
+            <p class="totalAmount">8437592.22</p>
+        </div>
+        <div class="bankCardBox">
+            <p class="iconBank"></p>
+            <div class="infoBox">
+                <!--<div class="modifyBankBtn"><p>工商银行卡</p>
+                <span>尾号2562</span></div>-->
+                <p id="addBankBtn" style="line-height:72px;">添加银行卡</p>
+            </div>
+        </div>
+        <p class="hintBox"><img src="../../../images/public/my_shop/icon_hint.png">日累计等于小于1千元,48小时可到账</p>
+        <div class="inputAmountBox">
+            <em>金额</em>
+            <p><input type="tel" value="0"></p>
+        </div>
+        <p class="withdrawNum">今天还可以提现<span>0</span>次</p>
+        <div>
+            <a href="javascript:;" class="withdrawBtn">提现申请</a>
+            <p class="seeWithdraw"><a href="javascript:;">查看提现记录</a></p>
+        </div>
+    </div>
+    
+    
+    <!--添加银行卡-->
+    <div id="addBankcardLayer">
+    	<div class="bankInputBox">
+        	<p>
+                <select>
+                    <option>请选择开户银行</option>
+                    <option>中国工商银行</option>
+                </select>
+            </p>
+            <p>
+                <input type="text" placeholder="输入开户人姓名">
+            </p>
+            <p>
+                <input type="text" placeholder="输入储蓄卡卡号">
+            </p>
+            <p>
+                <input type="text" placeholder="重复输入一遍卡号">
+            </p>
+        </div>
+        <div class="noticeBox">
+        	<h2><img src="../../../images/public/my_shop/icon_hint.png">注意</h2>
+        	<p>1.开户银行、开户人姓名、卡号必须准确无误，否则无法提现。</p>
+            <p>2.银行卡仅支持储蓄卡，请不要填写信用卡。</p>
+        </div>
+        <div>
+            <a href="javascript:;" class="confirmBtn">确认</a>
+        </div>
+    </div>
+    
+    <!--修改银行卡-->
+    <div id="modifyBankcardLayer" style="display:none;">
+    	<div class="bankShow">
+        	<p class="bankHead"><img src="../../../images/public/my_shop/bankHead.png"></p>
+            <div class="bankInfo">
+            	<p class="bankName">招商银行卡</p>
+                <span>**************2886</span>
+            </div>
+        </div>
+        
+        <div>
+        	<a href="javascript:;" class="modifyBankBtn">修改收款卡号</a>
+        </div>
+        
+        <div class="inputModifyArea" style="display:none">
+            <div class="bankInputBox">
+                <p>
+                    <select>
+                        <option>请选择开户银行</option>
+                        <option>中国工商银行</option>
+                    </select>
+                </p>
+                <p>
+                    <input type="text" placeholder="输入开户人姓名">
+                </p>
+                <p>
+                    <input type="text" placeholder="输入储蓄卡卡号">
+                </p>
+                <p>
+                    <input type="text" placeholder="重复输入一遍卡号">
+                </p>
+            </div>
+            <div class="noticeBox">
+                <h2><img src="../../../images/public/my_shop/icon_hint.png">注意</h2>
+                <p>1.开户银行、开户人姓名、卡号必须准确无误，否则无法提现。</p>
+                <p>2.银行卡仅支持储蓄卡，请不要填写信用卡。</p>
+            </div>
+            <div>
+                <a href="javascript:;" class="confirmModifyBtn">确认修改</a>
+            </div>
+        </div>
+        
+        
+        
+        
+    </div>
+    
+
+    
+</div>
+</body>
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</html>

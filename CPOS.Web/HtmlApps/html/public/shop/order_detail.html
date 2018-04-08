@@ -1,0 +1,257 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title name="OrderDetail"></title>
+	
+    <link href="../../../css/base/global.css?v1.0" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+<section class="orderDetailsArea">
+	<!--
+    <nav id="topNav">
+        <ul>
+            <li><a href="javascript:Jit.AM.pageBack();"></a></li>
+            <li><a href="javascript:Jit.AM.toPage('MyOrder');"></a></li>
+            <li><a href="javascript:Jit.AM.toPage('GoodsCart');"><span id="menuCartCount"></span> </a></li>
+            <li><a href="javascript:Jit.AM.toPage('IndexShop');"></a></li>
+        </ul>
+    </nav>
+    -->
+    
+    <div class="orderHeadInfo">
+    	<p id="paystatus" class="paymentStatus">已付款</p>
+        <p class="orderTotalBox">订单金额(含运费)：<span>￥3669.00</span></p>
+        <p class="freightBox">运费：<span>￥0.00</span></p>
+    </div>
+    
+    <div class="consigneeInfo">
+
+    </div>
+    
+    <div class="deliveryInfo">
+    	<p>配送快递：<span class="expressName"></span></p>
+		<p>快递单号：<span class="expressNo"></span></p>
+    </div>
+    
+    <!-- 订单商品信息 -->
+    <div class="orderShopArea">
+        <p class="titBox">
+            <span class="tit">商品信息</span>
+        </p>
+        <ul id="order_list" class="orderShopList">
+		
+        </ul>
+        
+        <div class="infoGatherArea">
+        	<p>
+                <em class="tit">商品金额：</em>
+                <span id="goodsAmount"></span>
+            </p>
+
+            <p class="">
+                <em class="tit">运费：</em>
+                <span id="devilyAmount">￥0.00</span>
+            </p>
+
+            <p>
+                <em class="tit">优惠券抵用：</em>
+                <span id="couponAmount"></span>
+            </p>
+            
+            <p class="hide">
+                <em class="tit">返现抵用：</em>
+                <span id="returnAmount">￥0</span>
+            </p>
+            
+            <p>
+                <em class="tit">余额支付：</em>
+                <span id="vipEndAmount"></span>
+            </p>
+
+            <p>
+                <em class="tit">积分抵用：</em>
+                <span id="orderIntegral"></span>
+            </p>
+            
+            <p>
+                <em class="tit">会员折扣：</em>
+                <span id="vipDiscount"></span>
+            </p>
+
+            <p>
+                <em class="tit">实付款(含运费)：</em>
+                <span id="totalprice"></span>
+            </p>
+           
+        </div>
+        
+        
+        <div class="filloutInfo">
+        	<p>
+                <em class="tit">付款方式：</em>
+                <span id="paymentText">支付宝手机网站支付</span>
+            </p>
+            
+            <p>
+                <em class="tit">发票抬头：</em>
+                <span id="invoiceText">上海正念信息科技有限公司</span>
+            </p>
+            
+            <p>
+                <em class="tit">备注：</em>
+                <span id="remarkText">无</span>
+            </p>
+            
+        </div>
+        
+    </div>
+    <!-- 确认收货 -->
+    <div class="footSubmitArea" id="btnList"></div>
+    
+    
+    <div class="myorder">
+        <!-- 结算信息
+        <div class="go_box od_states ">
+            <div>
+                订单状态：
+                <span id="orderStatus"></span>
+                <span id="createTime">0000-00-00 00:00</span>
+            </div>
+            <div id="getToPay" style="display:none;">
+                支付状态：
+                <span id="paystatus"></span>
+            </div>
+            <div style="display:none;">
+                金额：
+                <span id="orderTotal">￥0.00</span>
+            </div>
+        </div>
+         -->
+        <!--
+        <div class="order_mod order_step" style="display:none">
+            <h2 class="tit">
+                <span class="fr">金额：<b>0</b></span>订单号：0
+            </h2>
+            <ol class="clearfix">
+                <li><i></i>已审核</li>
+                <li><i></i>拣货中</li>
+                <li><i></i>已打包</li>
+                <li><i></i>已发货</li>
+                <li><i></i>已签收</li>
+            </ol>
+            <a href="#" class="btn_cancelOrder br-5">取消订单</a>
+        </div>
+        
+        <div class="od_goods_list" style="margin-top:10px;">
+            <h2 class="tit">
+                <span>商品信息</span>
+                <span id="paystatus" style="float:right;color:red;"></span>
+            </h2>
+            <ul id="order_list">
+
+            </ul>
+            <dl class="order_total clearfix">
+                <dd>合 计：<b id="totalprice"></b></dd>
+                <dd>数 量：<b id="totalqty"></b></dd>
+            </dl>
+        </div>
+        
+        <div id="deliveryContianer" style="margin-top:10px;" class="order_mod info_rece"></div>
+        
+        <div class="order_mod info_rece hide">
+            <h2 class="tit">
+                备注信息
+            </h2>
+            <p>
+                <span id="Remark"></span>
+            </p>
+        </div>
+        -->
+        <!--
+        <div class="order_mod info_rece">
+            <h2 class="tit">
+                订单金额
+                <span style="float:right;" id="ordersAmount">￥0</span>
+            </h2>
+            <p>
+                <em class="tit">商品总金额：</em>
+                <span id="goodsAmount"></span>
+            </p>
+
+            <p class="">
+                <em class="tit">+配送费：</em>
+                <span id="devilyAmount">￥0.00</span>
+            </p>
+
+            <p>
+                <em class="tit">-使用券优惠：</em>
+                <span id="couponAmount"></span>
+            </p>
+
+            <p>
+                <em class="tit">-积分抵扣：</em>
+                <span id="orderIntegral"></span>
+            </p>
+
+            <p>
+                <em class="tit">-使用账户余额：</em>
+                <span id="vipEndAmount"></span>
+            </p>
+            
+        </div>
+        
+        <div class="go_box od_bottom" id="btnList"></div>
+        -->
+    </div>
+
+</section>
+
+
+</body>
+<script id="Tpl_order_info" type="text/template">
+    <li class="clearfix" onClick="Jit.AM.toPage('{{ToPage}}','goodsId={{ItemID}}')">
+		<a class="refundBtn{{SalesReturnFlag}} {{statusHide}} {{IfService}}" href="javascript:;">申请退货</a>
+        <div class="imgBox">
+            <img src="{{ImageInfo.0.ImageUrl}}">
+        </div>
+        <div class="infoBox">
+			<div class="topInfo">
+				<p class="countBox">
+					<b>￥{{SalesPrice}}</b>
+					<span>X{{Qty}}{{Field9}}</span>
+				</p>
+				<p class="nameBox">{{ItemName}}</p>
+			</div>
+            <div class="traitBox">{{dataStr}}</div>
+        </div>
+    </li>
+</script>
+<script id="TplReceipt" type="text/template">
+	<div class="nameBox">
+		<span class="tel">{{Mobile}}</span>
+		<p>收货人：{{ReceiverName}}</p>
+	</div>
+	<p class="addrBox">送货地址：{{DeliveryAddress}}</p>
+</script>
+
+<script id="TplPickup" type="text/template">
+	<div class="nameBox">
+		<span class="tel">{{Mobile}}</span>
+		<p>{{DeliveryName}}：{{ReceiverName}}</p>
+	</div>
+	<div class="addrBox">
+		<p>服务门店：{{DeliveryAddress}} {{CarrierName}}</p>
+	</div>
+	<p class="deliveryTime">{{DeliveryTime}}：{{ReserveTime}}</p>	
+	<a class="visityPhone {{hideStatus}}" href="tel:4006-110-109" >联系客服改期</a>
+	<a class="visityTime {{statusHide}}" >预约改期</a>
+</script>
+
+</html>

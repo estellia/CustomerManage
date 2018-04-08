@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+    <title name="DistributionDown">超级分销下载</title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../../lib/require.js" cache defer async data-main="../../../launch"></script>
+    <style type="text/css">
+      body{-webkit-user-select:auto;-webkit-tap-highlight-color:rgba(51,102,255,1);}
+      .distributionBanner{display:block;}
+      .distributionDownBtn{position:fixed;left:50%;margin-left:-158px;bottom:60px;display:block;width:315px;height:76px;background:url(../../../images/public/distributor/downBtn.png) no-repeat center center;}
+      .hintBox{padding:60px 0 35px 0;text-align:center;font-family: "黑体";}
+      .maxTit{margin-bottom:30px;font-size:36px;color:#666;}
+	  .minTit{margin-bottom:5px;font-size:22px;color:#999;}
+	  .minTit span{color:#4aa7f5;}
+	  .userInfoBox{width:398px;height:158px;padding:10px 0;margin:0 auto;border:2px solid #4aa7f5;border-radius:8px;background:#fff;}
+	  .itemBox{height:27px;margin-bottom:5px;}
+	  .itemBox .tit{display:inline-block;font-size:18px;color:#999;width:195px;text-align: right;}
+	  .itemBox .text{display:inline-block;font-size:18px;color:#4aa7f5;text-align: left;}
+	  .textBtn{padding-top:4px;text-align:center;font-size:20px;color:#999;}
+	  .hintText{padding-top:14px;font-size:20px;text-align:center;color:#af5453;}
+    </style>
+</head>
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;display:block;" >
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+
+
+<section>
+   <img class="distributionBanner" src='../../../images/public/distributor/copyBanner.jpg'>
+
+	<div class="hintBox">
+		<p class="maxTit">恭喜您成为分销商！</p>
+		<p class="minTit">请点击下载<span>超级分销APP</span>，</p>
+		<p class="minTit">并使用以下用户名/密码登录。</p>
+	</div>
+
+
+	<div class="userInfoBox">
+		<p class="itemBox">
+			<span class="tit">商户编号：</span><span id="businessNum" class="text"></span>
+		</p>
+		<p class="itemBox">
+			<span class="tit">您的用户名：</span><span id="nameText" class="text"></span>
+		</p>
+		<p class="itemBox">
+			<span class="tit">您的密码：</span><span id="passwordText" class="text"></span>
+		</p>
+		<p class="textBtn">长按复制内容</p>
+	</div>
+   <a href="http://app.chainclouds.cn/SuperRetailTrader/download.html" class="distributionDownBtn"></a>
+</section>
+
+</body>
+</html>
+

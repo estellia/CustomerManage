@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+<title name="IncomeDetail">收入明细</title>
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/public/myshop/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<input id="channelIdSize" type="hidden" value="6">
+<div class="w_640 incomeDetailArea">
+	<div class="incomeDetailList">
+    	<ul>
+        	<!--<li>
+            	<p class="incomeCount">+20.00</p>
+                <div class="infoBox">
+                	<p class="title t-overflow">冬季必备情侣家居鞋</p>
+                    <p>
+                        <span class="time">昨天11:20</span>
+                        <span class="orderNum">订单号：151233</span>
+                    </p>
+                </div>
+            </li>-->
+        </ul>
+    </div>
+<div>
+</body>
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+<script id="tpl_incomeDetailList" type="text/html">
+<%if(OrderStatusDesc == '已完成'){%>
+<% for(var i=0;i<OrderDetails.length;i++){%>
+<li>
+	<p class="incomeCount">+<%=parseInt(ReturnCash)==ReturnCash?parseInt(ReturnCash)+'.00':ReturnCash%></p>
+	<div class="infoBox">
+		<p class="title t-overflow"><%=OrderDetails[i].ItemName%></p>
+		<p class="t-overflow">
+			<span class="time"><%=OrderDate%></span>
+			<span class="orderNum">订单号：<%=OrderNO%></span>
+		</p>
+	</div>
+</li>
+<%}%>
+<%}%>
+</script>
+</html>

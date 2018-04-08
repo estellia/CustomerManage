@@ -1,0 +1,156 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title name="GoodsDetailDist"></title>
+<link href="../../../css/base/global.css?v1.0" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+
+	<body>
+		<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+            <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+        </div>
+		<section class="goodsDetailArea">
+			<div class="goods_detail">
+				<div class="goods_img ac">
+					<div  id="goodsScroll"  >
+						<div class="goods_img_list"  >
+							<ul id="goodsImgs" >
+							</ul>
+						</div>
+						<ul class="goods_img_bar" id="goodsImgBar">
+						</ul>
+					</div>
+				</div>
+				<div class="goods_txt_box">
+					<div class="goods_titles">
+						<h2 jitval="itemName"></h2>
+					</div>
+					<p class="priceBox">
+						<b jitval="itemPrice"><span class="itemPrice">￥0</span></b>
+						<span class="oldPrice">￥<del jitval="oldPrice"></del> </span>
+                        <span class="discount">3.7折</span>
+                        <span class="inventoryCount">库存 <span></span></span>
+                        <span class="salesCount">销量 <span></span> 笔</span>
+					</p>
+				</div>
+                <div class="postageBox">
+                	<span class="tit">运费：</span>
+                    <p>免邮费</p>
+                </div>
+				<div class="goods_parameter">
+					<dl name="propitem" style="display: none;">
+						<dt name="prop_name"></dt>
+						<dd name="prop_option" propidx="1"></dd>
+					</dl>
+					<dl name="propitem" style="display: none;">
+						<dt name="prop_name"></dt>
+						<dd name="prop_option" propidx="2"></dd>
+					</dl>
+					<dl name="propitem" style="display: none;">
+						<dt name="prop_name"></dt>
+						<dd name="prop_option" propidx="3"></dd>
+					</dl>
+					<dl name="propitem" style="display: none;">
+						<dt name="prop_name"></dt>
+						<dd name="prop_option" propidx="4"></dd>
+					</dl>
+					<dl name="propitem" style="display: none;">
+						<dt name="prop_name"></dt>
+						<dd name="prop_option" propidx="5"></dd>
+					</dl>
+					<dl class="goods_num">
+						<dt>
+							数量：
+						</dt>
+						<dd>
+							<input type="button" id="btn_delNum" value="-"><input id="goods_number" type="text" readonly value="1"><input id="btn_addNum" type="button" value="+">
+							<span style="margin-left:10px;color:#ff3344;display: none;" id="lab_forpoint">可获积分：</span><span id="forpoint" style="color:#ff3344"></span>
+						</dd>
+					</dl>
+					<dl class="goods_address" style="display:none">
+						<dt>
+							配送：
+						</dt>
+						<dd>
+							<select>
+								<option>成都</option>
+							</select>
+							<b>现货</b>
+							<span style="display:none">无货</span>
+						</dd>
+					</dl>
+				</div>
+                
+                
+                
+				<div class="goods_btn detailFooterBox">
+                    <a href="javascript:JitPage.setItemKeep()" class="g_fav" id="btn_keep">收藏</a>
+                    <p class="btnBox">
+                    	<a href="javascript:JitPage.addToGoodsCart()" class="btn_cart">加入购物车</a>
+						<a href="javascript:JitPage.submitOrder()" class="btn_buy">立即购买</a>
+                        <a href="javascript:;" class="createQrBtn" style="display:none;">立即下单</a>
+                        <a href="javascript:;" class="g_share generalizeBtn" style="display:none;">推广</a>
+                    </p>
+                    <a href="javascript:Jit.AM.toPage('GoodsCart');" class="g_myShopCart">购物车<span></span></a>
+                    
+                    <!-- <span class="createQrBtn">立即下单</span> -->
+				</div>
+			</div>
+            
+            <!-- 图文详情 -->
+            <div class="gde_area">
+                <div class="gde_area_tit">
+                	<p class="line"></p>
+                	<p class="tit">产品详情</p>
+                </div>
+				<div class="gde_body gde_des" id="description"></div>
+			</div>
+
+            <!-- 评论列表 -->
+            <div class="goodsReviewList" id="commentArea" style="display:block !important;margin-bottom:12px;">
+                <div class="praiseTitle">
+                	<p class="commentNum">共<span>520</span>条评论</p>
+                    <span class="tit">评价</span>
+                    <p class="goodPraise">好评<span>97%</span></p>            
+                </div>
+                <div class="gde_body">
+                    <div class="gder_list">
+                    </div>
+                </div>
+                <div class="gde_loadbottom">查看更多</div>
+            </div>
+
+            <!-- 返回顶部 -->
+            <div class="commonFunInto" style="display:none;">
+                <a href="javascript:;" class="goTop"></a>
+            </div>
+                
+            <!-- 客服入口 -->
+            <a href="javascript:Jit.AM.toPage('ClientService');" class="customerServiceBox"></a>    		
+		</section>
+		<div id="share-mask"></div>
+		<img id="share-mask-img" src="../../../images/common/share.png">
+        
+        <div class="qr-goods-box">
+        	<p class="qr-box"><img src=""></p>
+			<p class="qr-text">微信扫码可以直接预览商品详情哦！</p>
+        </div>
+	</body>
+<script id="tpl_evaluateList" type="text/html">    
+	<div class="items">
+		<p class="reviewPic"><img src="<%=HeadImgUrl || '../../../images/common/lazyImg.png'%>"></p>
+		<div class="reviewInfo">
+			<p class="remarkInfo">
+				<span class="time"><%=CreateTime%></span>
+				<span><%=(IsAnonymity==2)?'匿名':VipName || '未知'%></span>
+			</p>
+			<p class="remarkText"><%=Content%></p>
+			<p class="specsBox"><%=Remark%></p>
+		</div>
+	</div>
+</script>
+</html>

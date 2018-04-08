@@ -1,0 +1,71 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title name="GoodsList"></title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+
+<body style="background-color:#eaeaea ">
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+        <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+    </div>
+<section class="goodsListArea">
+
+<div>
+    <a href="#" id="goodsTitleUrl">
+		<img src=""/>
+	</a>
+</div>
+<!--
+<nav id="topNav">
+    <ul>
+      <li  style="display:none;"  ><a href="javascript:Jit.AM.pageBack();"></a></li>
+      <li><a href="javascript:Jit.AM.toPage('MyOrder');"></a></li>
+      <li><a href="javascript:Jit.AM.toPage('GoodsCart');"><span id="menuCartCount"></span> </a></li>
+      <li> <a href="javascript:Jit.AM.toPage('IndexShop');"></a></li>
+    </ul>
+</nav>
+-->
+<div class="headSearchArea">
+	<a class="setTypeBtn minStyles" href="javascript:;"></a>
+    <div class="searchBox">
+    	<a href="javascript:;" class="searchBtn"></a>
+    	<p class="searchInput"><input type="search" placeholder="搜索店铺内宝贝" ></p>
+    </div>
+</div>
+
+<div class="goodsSortArea">
+	<a class="salesTag on" data-tag="salesQty" href="javascript:;">销量</a>
+    <a class="newsTag" data-tag="create_time" href="javascript:;">新品</a>
+    <a class="priceTag" data-tag="salesPrice" href="javascript:;"><span>价格</span></a>
+</div>
+    
+<div class="goods_list_cell">
+    <ul tplpanel="goods_list" class="clearfix">
+        
+    </ul>
+</div>
+</section>
+</body>
+<script id="Tpl_goods_list" type="text/template">
+    <li> 
+        <a href="javascript:Jit.AM.toPage('{{GoodsType}}','&goodsId={{itemId}}&eventId={{eventId}}')">
+            <div class="imgBox">
+            <img placeholder class="lazy" data-original="{{imageUrl}}">
+            </div>
+            <div class="infoBox">
+                <p class="tit t-overflow">{{itemName}}</p>
+				<span class="salesVal">销量 {{salesQty}} 笔</span>
+				<div class="shopInfo">
+					<span class="discount {{hidePrice}}">{{discount}}</span>
+					<strong>¥{{salesPrice}}</strong>
+					<del>{{oldprice}}</del>
+				</div>
+            </div>
+        </a>
+    </li>
+</script>
+</html>

@@ -1,0 +1,33 @@
+.activityPage{background: #f0f3f5;}
+.kvPicBox img{display: block;}
+.activityNav{height: 82px;}
+.activityNav a{float: left;width: 25%;height: 100%;border-right: 1px solid #f0f3f5;background:#252525;color:#fff;}
+.activityNav a span{display: block;text-align: center;}
+.activityNav a.on{background:#ff343f;}
+.activityNav .dateText{margin:18px 0 10px 0;height:24px;line-height:24px;font-size: 24px;}
+.activityNav .statusText{font-size: 18px;height:18px;line-height:18px;}
+
+.countdownBox{height:110px;background: #f0f3f5;}
+.countdownTit{height:50px;text-align: center;position: relative;}
+.countdownTit .line{width:275px;height: 1px;background: #e3e3e3;position:absolute;top:25px;left:50%;margin-left:-135px;z-index: 1;}
+.countdownTit p{position:absolute;top:0;left:50%;margin-left:-95px;height:50px;line-height:50px;padding:0 15px;font-size:20px;background: #f0f3f5;color:#989999;z-index: 2;}
+.timeoutBox{width:265px;margin: 0 auto;}
+.timeoutBox>*{float: left;height: 43px;line-height:43px;margin-right:4px;}
+.timeoutBox em{width: 26px;text-align:center;font-size:26px;border-radius:6px;background: #010101;color: #fff;}
+.timeoutBox span{width:23px;font-size:20px;color:#989898;}
+
+.activityListBox{background: #f0f3f5;}
+.activityListBox .itemBox{height:270px;margin-bottom:15px;padding:30px 38px 0 36px;background: #fff;font-family: "Microsoft YaHei";}
+.activityListBox .picBox{float: left;width: 210px;height: 210px;}
+.activityListBox .goodsInfo{margin-left: 260px;font-size: 22px;}
+.activityListBox .goodsInfo .title{max-height: 66px;overflow: hidden;}
+.activityListBox .buyInfo{height: 24px;line-height: 24px;margin-top:8px;font-size: 18px;color:#5d5d5d;}
+.activityListBox .buyCount{float: left;}
+.activityListBox .buyCount span{color:#ff343f;}
+.activityListBox .originalPrice{float:right;}
+.activityListBox .originalPrice em{margin-left: 35px;text-decoration: line-through;font-size:24px;color:#a2a2a2;}
+.activityListBox .snappedBox{height: 30px;line-height: 30px;margin:10px 0 18px 0;}
+.activityListBox .snappedPrice{float: right;width:81px;line-height:31px;margin-left:8px;padding-right:4px;text-align:right;background: url(../../../images/public/shop_default/icon-money.png) no-repeat 0 0;color:#fff;}
+.activityListBox .snappedTit{float: right;font-size:20px;font-weight: bold;color: #ff3838;}
+.activityListBox .btnWrap{height: 54px;}
+.activityListBox .snappedBtn{float:right;width:164px;height: 54px;line-height: 54px;text-align:center;font-size:24px;border-radius: 8px;background: #010101;color: #fff;}

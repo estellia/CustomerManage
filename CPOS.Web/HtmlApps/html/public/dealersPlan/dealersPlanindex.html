@@ -1,0 +1,91 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title name="DealersPlanIndex">分享是金</title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../../lib/require.js" cache defer async data-main="../../../launch"></script>
+</head>
+
+
+<body class="indexPage">
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;display:block;" >
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+<section class="content">
+   <div class="dealers" >
+       <div  class="dealershead" >
+           <div class="itemindex">
+               <div class="tit">当日收入(元)</div>
+               <div class="cont DayIncome"></div>
+               <div  class="tit">当日新增粉丝(人)</div>
+               <div class="cont DayFans"></div>
+           </div>
+           <a class="detailed" href="javascript:void(0)">会员明细 ></a>
+       </div>
+       <div  class="dealerscontent" >
+           <div class="itemcount">
+               <div class="itembox">
+                   <div  class="item">
+                       <div class="cont MounthIncome"></div>
+                       <div class="tit">本月累计收入(元)</div>
+                       <div class="verticalline"></div>
+                   </div>
+                   <div  class="item">
+                       <div class="cont MounthFans"></div>
+                       <div class="tit">本月累计粉丝(人)</div>
+                   </div>
+               </div>
+
+               <div  class="itembox">
+                   <div  class="item">
+                       <div class="cont SumIncome"></div>
+                       <div  class="tit">累计收入(元)</div>
+                       <div class="verticalline"></div>
+                   </div>
+                   <div  class="item">
+                       <div class="cont SumFans"></div>
+                       <div  class="tit">累计粉丝(人)</div>
+                   </div>
+               </div>
+
+           </div>
+           <div class="itemWithdrawals">
+               <div class="item">
+                   <div  class="tit">提现金额(元)</div>
+                   <div class="cont WithdrawSumMoney"></div>
+               </div>
+               <div class="item">
+                   <div  class="Withdrawals">去提现</div>
+               </div>
+           </div>
+       </div>
+       <div  class="dealersfoot" >
+           <div style="margin: 0px auto;">
+            <a href="javascript:JitPage.showSharePanel();" class="commonBtn sharebtn"><img  src="/HtmlApps/images/public/dealersPlanPact/share.png"  />分享</a>
+               <a href="javascript:void(0);" class="commonBtn submit"><img  src="/HtmlApps/images/public/dealersPlanPact/QRcode.png"  />推广二维码</a>
+            </div>
+       </div>
+   </div>
+</section>
+
+    <div class="QRcode">
+        <div class="QRhead"><img src="#" /><span></span></div>
+        
+        <div class="QRcodeImg"><img src="#" /><span>扫码关注橙果财商</span></div>
+        
+        <div class="foot"><img class="colsebtn" src="/HtmlApps/images/public/dealersPlanPact/close.png"></div>
+    </div>
+    
+<section id="shareMask" class="hide" style="position:absolute;top:0;left:0">
+    <div class="mask" onclick="JitPage.hideSharePanel();"></div>
+    <div class="tips-share"><img src="/HtmlApps/images/common/lotteryAll/tips-share.png"></div>
+</section>
+    
+
+
+</body>
+</html>
+

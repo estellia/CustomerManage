@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="densityDpi">
+<title name="MyIncome">我的收入</title>
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/public/myshop/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<input id="channelIdSize" type="hidden" value="6">
+    <div class="w_640 minMyOrderArea">
+    	<div class="orderCount">
+        	<div class="clearfix">
+            	<span class="detailBtn" onClick="Jit.AM.toPage('IncomeDetail')">明细</span>
+            	<span class="tit">本月收入 （元）</span>
+            </div>
+            <p id="monthIncome" class="num">0.00</p>
+        </div>
+        <div class="accumulatorOrder">
+        	<div class="clearfix">
+            	<span class="detailBtn" onClick="Jit.AM.toPage('IncomeMonthCollect')">月汇总</span>
+            	<span class="tit">累计收入（元）</span>
+            </div>
+            <div class="clearfix">
+            	<span id="totalIncome" class="num">0.00</span>
+            	<span class="defeat">你打败了全国<strong>0%</strong>的店主</span>
+            </div>
+        </div>
+        
+        <div class="statisBox">
+        	<div class="rightBox">
+            	<span class="withdrawBtn" onClick="javascript:Jit.AM.toPage('WithdrawDeposit');">去提现</span>
+            </div>
+        	<div class="leftBox">
+            	<a href="javascript:;" class="mb-48">
+                	<span>可提现收入 （元）</span>
+                    <strong>0.00</strong>
+                </a>
+                <a href="javascript:;" class="">
+                	<span>累计提现 （元）</span>
+                    <strong>0.00</strong>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</html>

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title name="CouponList">我的优惠券</title>
+  <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+<body style="background: #f1f1f1;">
+	<div class="couponNavigation">
+		<ul>
+			<li class="on">未使用</li>
+			<li>已使用</li>
+			<li>已过期</li> 
+			<div class="nativeLine"></div>
+		</ul>
+	</div>
+  <div class="wx_loading" id="masklayer" style="background-color:#FFF;" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+  </div>
+  <section class="couponCodeArea" style="margin-top: 50px;">
+    <div>
+      <div class="couponNav" style="display: none;"></div>
+      <div class="couponList" id="couponList"></div>
+    </div>
+  </section>
+</body>
+
+</html>
+
+<script type="text/html" id="couponTabList">
+            <% for (var i = 0; i < datas.length; i++) {
+              var dataInfo=datas[i];%>
+          <a href="javascript:;" class="<%=i==0?'on':''; %>" data-val="<%=dataInfo.CouponTypeID%>" ><span><%=dataInfo.CouponTypeName %></span></a>
+           <% };%></script>
+
+<script type="text/html"  id="tpCouponList" >
+        <% for (var i = 0; i < datas.length; i++) {
+          var dataInfo=datas[i];%>
+             <a href="javascript:Jit.AM.toPage('CouponDetail','couponId=<%=dataInfo.CouponID %>')" class="abled">
+               <div class="couponBox">
+                <div class="couponWrap">
+                    <div class="leftWrap">
+            <p class="couponName"><%=dataInfo.CouponName %></p>
+                        <p class="couponCode"><%=dataInfo.CouponCode %></p>
+                        <p class="givetip">立即使用</p>
+                    </div>
+          <div class="bottomWrap">
+            <p class="deadline">有效期至：<%=dataInfo.iseffective==1?'永久':dataInfo.EndDate.replace('T00:00:00', ' ') %></p>
+            
+          </div>
+                </div>
+            </div>
+            </a>
+       <% };  %>
+
+       <% for (var j = 0; j < item.length; j++) {
+          var dataInfo=item[j];%>
+            <a href="javascript:Jit.AM.toPage('','couponId=<%=dataInfo.CouponID %>')" class="disabled">
+
+            <div class="couponBox">
+                <div class="couponWrap">
+                    <div class="leftWrap">
+                       <p class="couponName"><%=dataInfo.CouponName %></p>
+                        <p class="couponCode"><%=dataInfo.CouponCode %></p>
+                        <p class="givetip">不能使用</p>
+                        <!-- <p class="givetip <%=(dataInfo.isexpired==1)?'on':''%>"><%if(dataInfo.Status==1){%>已使用<%}else if(dataInfo.isexpired==1){%>已过期<%}else if(dataInfo.isexpired==-1){%>未生效<%}else{%>未使用<%}%></p> -->
+                    </div>
+                    <div class="bottomWrap">
+                      <p class="deadline">有效期至：<%=dataInfo.iseffective==1?'永久':dataInfo.EndDate.replace('T00:00:00', ' ') %></p>
+                      
+                    </div>
+                </div>
+            </div>
+            <%if(dataInfo.Status==1){%>
+              <div class="label"></div>
+            <%}else if(dataInfo.isexpired==1){%>
+              <div class="label on"></div>
+            <%}%>
+          </a>
+       <% };  %>
+</script>

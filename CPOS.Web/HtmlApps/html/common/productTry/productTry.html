@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<title name="ProductTry">产品试用</title>
+<style>
+html,body{height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body>section{min-height:100%;padding:0 15px;background:#fff;}
+
+.productTryArea{padding-bottom:10px;background:#fff;}
+.productTryArea .formItem{min-height:45px;border-bottom:1px solid #eceaea;}
+.productTryArea .tit{float:left;width:30px;line-height:44px;text-indent:-999em;font-size:14px;color:#131313;}
+.productTryArea .inputBox,.applyFormArea .typeBox{display:block;margin-left:30px;}
+.productTryArea .inputBox input{height:44px;width:100%;font-size:13px;font-family:"Micrsoft YaHei";border:none;}
+.productTryPage .productTryBtn{display:block;line-height:48px;margin-bottom:23px;font-size:16px;font-weight:bold;text-align:center;letter-spacing:1px;border-radius:4px;background:#f95f15;color:#f7f7f7;}
+
+.companyScale select{display:block;width:100%;height:44px;border:none;background:url(../../../images/common/productTry/icon-arr.png) no-repeat 98% center;background-size:13px 8px;color:#a9a9a9;}
+.productTryArea .formItem .tit{background-size:20px 20px;}
+.nameText .tit{background:url(../../../images/common/productTry/icon01.png) no-repeat left center;}
+.telText .tit{background:url(../../../images/common/productTry/icon02.png) no-repeat left center;}
+.mailText .tit{background:url(../../../images/common/productTry/icon03.png) no-repeat left center;}
+.postText .tit{background:url(../../../images/common/productTry/icon04.png) no-repeat left center;}
+.companyName .tit{background:url(../../../images/common/productTry/icon05.png) no-repeat left center;}
+.companyScale .tit{background:url(../../../images/common/productTry/icon06.png) no-repeat left center;}
+.storeCount .tit{background:url(../../../images/common/productTry/icon07.png) no-repeat left center;}
+.hintText{line-height:24px;margin-bottom:35px;font-size:12px;color:#666;}
+</style>
+</head>
+
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+
+<section class="productTryPage">
+	<div class="productTryArea">
+    	<div class="formItem nameText">
+        	<p class="tit">姓名</p>
+            <label class="inputBox"><input type="text"  placeholder="姓名" maxlength="5"></label>
+        </div>
+        
+        <div class="formItem telText">
+        	<p class="tit">电话</p>
+            <label class="inputBox"><input type="text"  placeholder="电话" maxlength="11"></label>
+        </div>
+        
+        <div class="formItem mailText">
+        	<p class="tit">邮箱</p>
+            <label class="inputBox"><input type="text" placeholder="邮箱"></label>
+        </div>
+        
+        <div class="formItem postText">
+        	<p class="tit">职位</p>
+            <label class="inputBox"><input type="text" placeholder="职位"></label>
+        </div>
+        
+        <div class="formItem companyName">
+        	<p class="tit">公司名称</p>
+            <label class="inputBox"><input type="text" placeholder="公司名称"></label>
+        </div>
+        
+        <div class="formItem companyScale">
+        	<p class="tit">公司规模</p>
+            <label class="inputBox">
+                <select>
+                	<option>公司规模</option>
+                	<option>50人以下</option>
+                    <option>50-99人</option>
+                    <option>100-500人</option>
+                    <option>500-1000人</option>
+                    <option>1000人以上</option>
+                </select>
+            </label>
+        </div>
+        
+        <div class="formItem storeCount">
+        	<p class="tit">实体店铺数量</p>
+            <label class="inputBox"><input type="tel" placeholder="实体店铺数量"></label>
+        </div>
+        
+    </div>
+    <p class="hintText">感谢您申请连锁掌柜试用! 一周内我们将以电话+邮件形式回复您的申请，请留意您的手机和邮箱。</p>
+    <a class="productTryBtn" href="javascript:;">提交申请</a>
+</section>
+
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+
+</body>
+</html>

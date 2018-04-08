@@ -1,0 +1,54 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" >
+    <title name="Fanslist">粉丝列表</title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../../lib/require.js" cache defer async data-main="../../../launch"></script>
+</head>
+
+
+<body class="indexPage">
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;display:block;" >
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+<section class="content">
+    <div class="search">
+        <input class="searchbtn" type="text" placeholder="搜索" />
+    </div>
+     <div class="listhead">
+        <div class="tit select" data-code="">全部<div class="verticalline"></div></div><div  class="tit"  data-code="Y">已成交<div class="verticalline"></div></div><div  class="tit" data-code="N">未成交</div>
+    </div>
+     <div class="listcontent">
+        
+    </div>
+</section>
+
+    <div class="mask"></div>
+    <div class="layer">
+        <div class="l_title">拨打电话</div>
+        <div class="l_content">是否拨打<span></span></div>
+        <div class="l_foot"><a class="dial" href="tel:">拨打</a></div>
+    </div>
+    <div class="closelayer">
+        <div class="l_foot colsebtn">取消</div>
+    </div>
+
+
+    <script id="Tpl_item" type="text/html">
+         
+         <% for(var i=0;i<VipFansList.length;i++){ %>
+        <div class="item">
+            <div class="headimg"><img  src="<%=VipFansList[i].HeadImgUrl %>"  /></div>
+            <div class="itemcontent"><div class="content"><div class="name"><%=VipFansList[i].VipName %></div><div class="state"><%=VipFansList[i].CodeDes %></div></div><div class="phone">
+                <img class="phonebtn"   <% if (VipFansList[i].Phone != ""&&VipFansList[i].Phone !=null) { %> data-phone="<%=VipFansList[i].Phone %>" src="/HtmlApps/images/public/dealersPlanPact/Phone.png" <%}else{%> src="/HtmlApps/images/public/dealersPlanPact/Phone1.png"  <%}%> /></div><div class="money">￥<%=VipFansList[i].CardAmount %></div></div>
+            <div class="opt"></div>
+        </div> 
+        <%}%>
+    </script>
+
+</body>
+</html>
+

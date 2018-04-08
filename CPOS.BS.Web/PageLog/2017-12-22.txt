@@ -1,0 +1,3 @@
+2017/12/22 10:17:49	SSO登录失败，AuthWebService.asmx返回空数据
+2017/12/22 10:26:32	SSO登录失败，AuthWebService.asmx返回空数据
+2017/12/22 17:14:41	SSO登录失败，AuthWebService.asmx返回空数据

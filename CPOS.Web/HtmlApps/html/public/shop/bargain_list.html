@@ -1,0 +1,91 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title name="BargainList"></title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+</head>
+<body>
+    <div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+        <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+    </div>
+    <section >
+      <div id="scrollContainer" class="mybargain" style="position:absolute;left:0;right:0;top:0;bottom:0;background-color: #f4f4f5;">
+				<div style="padding-top:10px;">
+					<div id="pullDown">
+						<span class="pullDownIcon"></span><span class="pullDownLabel"></span>
+					</div>
+					<div id="orderList">
+						
+					</div>
+					<div id="pullUp" style="text-align: center;">
+						<span class="pullUpIcon"></span><span class="pullUpLabel"></span>
+					</div>
+				</div>
+			</div>
+    </section>
+</body>
+<script id="tplListItem" type="text/html">
+    <% if(KJEventJoinInfoList!=null){%> 
+		<%for(var i=0;i<KJEventJoinInfoList.length;i++){var _data= KJEventJoinInfoList[i];%>
+			<div class="my_bargain_list" data-orderid="<%=_data.OrderID%>">
+				<a href="javascript:Jit.AM.toPage('GoodsBargainDetail','goodsId=<%=_data.ItemId%>&VipId=<%=_data.VipId %>&KJEventJoinId=<%=_data.KJEventJoinId %>&SkuId=<%=_data.SkuID %>&eventId=<%=_data.EventId%>&type=2&isself=1');">
+					
+					<div class="my_og_item">
+						<ul>
+							<li class="clearfix">
+                                <div class="imgBox">
+									<img src="<%=_data.ItemImageURL %>" max-height="100">
+								</div>
+                                <div class="infoBox">
+									<div class="tit"><%=_data.ItemName%></div>
+                                    <% if(_data.Status==1){ %>
+									    <div class="status">进行中</div>
+                                    <%}else if(_data.Status==2){ %>
+									    <div class="status">可砍时间已到</div>
+                                    <%}else if(_data.Status==3){ %>
+									    <div class="status">已结束</div>
+                                    <%}%>
+								</div>
+								<div class="baseMoney">
+									底价：<%=_data.BasePrice%>
+								</div>
+                                <div class="shopMoney ">
+									零售价：<span class="retailPrice"><%=_data.Price%></span>
+                                    <div class="stock">剩余库存：<span><%=_data.Qty%></span></div>
+								</div>
+								<div class="SalesPrice">
+                                    <% if(_data.Status==1){ %>
+									    当前价格：<span class="color1">￥<%=_data.SalesPrice%></span>
+                                    <%}else{ %>
+									    当前价格：<span >￥<%=_data.SalesPrice%></span>
+                                    <%}%>
+									
+								</div>
+								
+							</li>
+						</ul>
+					</div>
+				</a>
+				
+                <div class="ogl_handle">
+                     <% if(_data.Status==3){ %>
+									    <a href="javascript:;" class="noselect">立即购买</a>
+                    <%}else{ %>
+						<a class="btn_buy" data-skuid="<%=_data.SkuID%>" data-eventid="<%=_data.EventId%>" data-qty="1" data-salesprice="<%=_data.SalesPrice%>" data-kjeventjoinid="<%=_data.KJEventJoinId%>" href="javascript:;" >立即购买</a>
+                    <%}%>
+					
+					<a href="javascript:;" data-kjeventjoinid="<%=_data.KJEventJoinId%>" class="deletebargain redborder">删除</a>
+				</div>
+
+				
+				
+					
+			</div>
+		<%}%>
+            <%}%>
+    </script>
+   
+</html>

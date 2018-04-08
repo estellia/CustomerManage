@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+<title name="AnswerActivity">答题积点赢大奖</title>
+<style>
+html,body{height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body>section{min-height:100%;display:none;}
+.answerIndexPage{background:#ffe562;display:block;}
+.answerIndexPage img{display:block;min-height:220px;}
+.answerIndexPage .picBox{position:relative;}
+.answerIndexPage .linkMyMark{position:absolute;bottom:32px;right:13px;font:bold 15px/1.2em "Micosoft Yahei";text-decoration:underline;color:#ed008c;}
+
+#goAnswerBtn{display:block;width:183px;height:70px;margin:0 auto;text-indent:-999em;background:url(../../../images/common/answerActivity/goAnswerBtn.png) no-repeat 0 0;background-size:183px 70px;}
+.answerFirstPage,.answerSecondPage,.answerFailurePage,.answerSuccessPage{background:#f6514b;}
+.answerFirstPage a,.answerSecondPage a{display:block;margin:16px 10px;}
+/*答题失败*/
+.answerFailurePage{}
+.topBannerBox{position:relative;}
+.topBannerBox .myMarkerBtn{position:absolute;top:13px;right:12px;width:69px;height:32px;line-height:30px;font-size:14px;text-align:center;border:1px solid #fff;border-radius:4px;background:rgba(255,255,255,.4);color:#fff;}
+.exitArea{position:relative;width:258px;height:188px;margin:0 auto;background:url(../../../images/common/answerActivity/icon-exit.png) no-repeat 0 0;background-size:258px 27px;}
+.exitArea .numBg{position:absolute;top:13px;left:22px;width:214px;height:148px;background:url(../../../images/common/answerActivity/numBg01.png) no-repeat 0 0;background-size:214px 148px;}
+.exitArea .correctCount{position:absolute;top:22px;left:110px;font-size:37px;font-family:Arial;color:#e6382f;}
+.exitArea .numBgMask{position:absolute;top:13px;left:22px;width:214px;height:148px;padding-top:95px;text-align:center;font-size:16px;background:url(../../../images/common/answerActivity/numBg03.png) no-repeat 0 0;background-size:214px 148px;color:#fff;}
+.encoreBtn{display:block;width:184px;height:69px;margin:0 auto;background:url(../../../images/common/answerActivity/encoreBtn.png) no-repeat 0 0;background-size:184px 69px;}
+/*答题成功*/
+.answerSuccessPage{}
+.answerSuccessPage .exitArea .numBg{background:url(../../../images/common/answerActivity/numBg02.png) no-repeat 0 0;background-size:214px 148px;}
+.answerSuccessPage .exitArea .numBgMask{top:6px;background:none;color:#e6382f;}
+.goDrawBtn{display:block;width:184px;height:69px;margin:0 auto;background:url(../../../images/common/answerActivity/goDrawBtn.png) no-repeat 0 0;background-size:184px 69px;}
+
+/*我的点标*/
+.answerIntegralPage{background:#f5f5f5;}
+.topProgressArea{height:150px;margin-bottom:22px;padding-top:97px;background:#fbde9f;}
+.progressBox{position:relative;width:190px;height:2px;margin:0 auto;background:#fff;}
+.progressLine{position:absolute;top:0;left:0;width:60%;height:100%;background:#f9701f;}
+.progressLine .progressDot{position:absolute;top:-13px;right:0px;display:block;width:21px;height:13px;background:url(../../../images/common/answerActivity/progressDot.png) no-repeat 0 0;background-size:21px 13px;}
+.progressBox .dotBox{position:absolute;top:-6px;width:15px;height:15px;background:url(../../../images/common/answerActivity/icon-check.png) no-repeat 0 0;background-size:15px 15px;}
+.progressBox .dot0{left:-14px;}
+.progressBox .dot5{left:28%;}
+.progressBox .dot10{left:66%;}
+.progressBox .dot15{right:-14px;}
+.progressBox .dotBox span{position:absolute;top:15px;left:-4px;width:35px;display:block;font-size:15px;font-family:Arial;color:#a95100;}
+.progressBox .dotBox.on{background:url(../../../images/common/answerActivity/icon-checked.png) no-repeat 0 0;background-size:15px 15px;}
+.progressBox .dotBox.on span{color:#f9701f;}
+.progressBox .dot0 em{background:url(../../../images/common/answerActivity/dot01.png) no-repeat 0 0;}
+.progressBox .dot5 em{background:url(../../../images/common/answerActivity/dot02.png) no-repeat 0 0;}
+.progressBox .dot10 em{background:url(../../../images/common/answerActivity/dot03.png) no-repeat 0 0;}
+.progressBox .dot15 em{background:url(../../../images/common/answerActivity/dot04.png) no-repeat 0 0;}
+.progressBox .dotBox em{position:absolute;top:-61px;left:-14px;display:block;width:40px;height:55px;background-size:40px 55px;}
+.progressBox .iconFinish{position:absolute;top:-22px;right:-50px;width:31px;height:33px;background:url(../../../images/common/answerActivity/icon-finish.png) no-repeat 0 0;background-size:31px 33px;}
+.totaleCountArea{position:relative;width:278px;height:155px;margin:0 auto 16px;background:url(../../../images/common/answerActivity/totaleCountBg.png?v1.1) no-repeat 0 0;background-size:278px 155px;}
+.totaleCountArea span{position:absolute;top:30px;left:147px;width:29px;height:32px;text-align:center;font-size:24px;font-family:Arial;color:#fff;}
+.answerIntegralPage .btnWrap{width:278px;height:43px;margin:0 auto;padding-bottom:136px;}
+.answerIntegralPage .btnWrap a{float:left;width:135px;height:43px;line-height:41px;font-size:15px;text-align:center;background:url(../../../images/common/answerActivity/bigBtn.png) no-repeat 0 0;background-size:135px 43px;color:#fff;}
+.answerIntegralPage .btnWrap a:nth-of-type(2){float:right;}
+.answerIntegralPage .bottomPic{position:fixed;right:0;bottom:0;left:0;}
+
+/*提示区域*/
+#hintNoAccess .hintBox{position:relative;width:247px;height:182px;margin:100px auto 0;border-radius:10px;background:#f6514b url(../../../images/common/answerActivity/insufficientTip.png) no-repeat center center;background-size:228px 129px;}
+#hintNoAccess .closeBtn{position:absolute;top:0;right:0;width:32px;height:35px;background:url(../../../images/common/answerActivity/closeBtn.png) no-repeat center center;background-size:14px 17px;}
+/*抽奖0624日开始提示*/
+.ui-mask .tipBox{position:relative;width:268px;height:322px;margin:50px auto 0;}
+.ui-mask .tipBox img{display:block;}
+.ui-mask .tipBox .closeBtnTwo{display:block;width:28px;height:28px;position:absolute;top:-12px;right:-12px;z-index:9999;}
+</style>
+</head>
+
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+
+<section class="answerIndexPage">
+    <p class="picBox">
+        <img src="../../../images/common/answerActivity/answerBg.jpg" title="马上答题">
+        <span class="linkMyMark">我的积点</span>
+    </p>
+    <a href="javascript:;" id="goAnswerBtn">马上答题</a>
+</section>
+
+<section class="answerFirstPage">
+	<img class="titlePic" src="" title="题目一">
+    <a class="topicA" href="javascritp:;" data-bool=0><img src=""></a>
+    <a class="topicB" href="javascritp:;" data-bool=0><img src=""></a>
+</section>
+
+
+<section class="answerSecondPage">
+	<img class="titlePic" src="" title="题目二">
+    <a class="topicA" href="javascritp:;" data-bool=0><img src=""></a>
+    <a class="topicB" href="javascritp:;" data-bool=0><img src=""></a>
+</section>
+
+
+
+<!--答题失败-->
+<section class="answerFailurePage">
+	<div class="topBannerBox">
+		<img src="../../../images/common/answerActivity/almostBanner.jpg" title="答题失败">
+        <a href="javascript:;" class="myMarkerBtn">我的积点</a>
+    </div>
+    <div class="exitArea">
+    	<div class="numBg"><span class="correctCount">0</span></div>
+        <div class="numBgMask">喝杯茶提提神</div>
+    </div>
+    <a href="javascript:;" class="encoreBtn"></a>
+</section>
+
+<!--答题成功-->
+<section class="answerSuccessPage">
+	<div class="topBannerBox">
+		<img src="../../../images/common/answerActivity/correctBanner.jpg" title="答题成功">
+        <a href="javascript:;" class="myMarkerBtn">我的积点</a>
+    </div>
+    <div class="exitArea">
+    	<div class="numBg"><span class="correctCount">2</span></div>
+        <div class="numBgMask">还差3个积点<br>下周还有抽奖哦~</div>
+    </div>
+    <a href="javascript:;" class="goDrawBtn"></a>
+</section>
+
+<!-- 我的点标 -->
+<section class="answerIntegralPage">
+	<div class="topProgressArea">
+    	<div class="progressBox">
+        	<div class="progressLine"><em class="progressDot"></em></div>
+            <div class="dotBox dot0 on"><span>0点</span><em></em></div>
+            <div class="dotBox dot5"><span>5点</span><em></em></div>
+            <div class="dotBox dot10"><span>10点</span><em></em></div>
+            <div class="dotBox dot15"><span>15点</span><em></em></div>
+            <em class="iconFinish"></em>
+        </div>
+    </div>
+    <div class="totaleCountArea">
+    	<span>5</span>
+    </div>
+    <div class="btnWrap">
+    	<a href="javascript:;" class="skipAnswerBtn">继续收集积点</a>
+        <a href="javascript:;" class="skipDrawBtn">拼手气  抓大奖咯</a>
+    </div>
+    <div class="bottomPic"><img src="../../../images/common/answerActivity/bottomBanner.jpg"></div>
+</section>
+
+
+<div class="ui-mask" id="hintNoAccess">
+	<div class="hintBox"><em class="closeBtn"></em></div>
+</div>
+
+<script type="text/javascript" src="../../../lib/require.js" defer async data-main="../../../launch"></script>
+
+</body>
+</html>

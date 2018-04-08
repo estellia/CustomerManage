@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <title name="buycar">我要买车</title>
+    <link href="../../../css/base/global.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="wx_loading" id="masklayer" style="background-color:#FFF;">
+    <div class="wx_loading_inner"><i class="wx_loading_icon"></i>正在加载...</div>
+</div>
+<section class="bottom-pic-bg">
+    <div class="nav-fixed-top">
+        <a class="userNav" href="javascript:Jit.AM.toPage('UserCenter');"></a>
+        <a class="homeNav" href="javascript:;Jit.AM.toPage('buyCar')"></a>
+        <a class="getBackNav" href="javascript:;Jit.AM.pageBack()"></a>
+    </div>
+    <div class="formInfoArea">
+        <p class="tit">姓名*</p>
+        <div class="inputBox">
+            <input type="text" value="请填写" name="userName"  id="userName" >
+
+        </div>
+        <p class="tit">性别*</p>
+        <div style="margin-bottom:12px;">
+            <div class="switchBox">
+                &nbsp;女&nbsp;&nbsp;男
+                <span id="sexCheckBox" check="T"></span>
+            </div>
+        </div>
+        <p class="tit">联系电话*</p>
+        <div class="inputBox"><input type="text" value="请填写" name="phone" id="phone"></div>
+        <p class="tit">预约门店*</p>
+        <div class="inputBox">
+            <select id="select_unit">
+                <option value="0">请选择</option>
+            </select>
+        </div>
+        <p class="tit">预约车型*</p>
+        <div class="inputBox">
+            <select id="select_CarModel">
+                <option value="0">请选择</option>
+            </select>
+        </div>
+        <p class="tit">预约时间*</p>
+        <div class="inputBox">
+
+            <input readonly="readonly" id="time_ReserveTime" placeholder="请选择预约时间" style="width:85%;float:left">
+            <select id="am0rPm" style="width:15%;float:left">
+                <option value="am">上午</option>
+                <option value="pm">下午</option>
+            </select>
+        </div>
+
+        <div class="clearfix">
+            <a class="reservationBtn" id="reservationBtn">预约试驾</a>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>
+<script type="text/javascript" src="../../../lib/require.js" defer async="true" data-main="../../../launch"></script>
